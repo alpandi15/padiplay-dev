@@ -1,0 +1,2924 @@
+/*default*/
+body, a {
+  color: #f3f3f3; }
+
+a:hover {
+  color: #f3f3f3; }
+
+input, select, textarea {
+  border-radius: 5px; }
+  input.form-control:focus, select.form-control:focus, textarea.form-control:focus {
+    outline: none;
+    box-shadow: none;
+    border-color: #f75b37; }
+  input.form-app, select.form-app, textarea.form-app {
+    border: none;
+    background: #1d252c;
+    color: #f3f3f3 !important; }
+    input.form-app:focus, select.form-app:focus, textarea.form-app:focus {
+      background: #1d252c; }
+  input[type="text"][disabled], select[type="text"][disabled], textarea[type="text"][disabled] {
+    background: #1d252c; }
+
+.input-group .input-group-prepend .input-group-text {
+  background: #1d252c;
+  border-color: transparent;
+  color: #f3f3f3; }
+
+.modalCaster .rate-detail .material-icons {
+  font-size: 18px;
+  color: orange; }
+
+.caster-avatar {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%; }
+
+.logo-wrapper {
+  width: 100px;
+  height: 100px;
+  border: 1px dashed #1d252c;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px; }
+  .logo-wrapper:hover .choose-logo {
+    opacity: 1; }
+  .logo-wrapper:hover .team-logo {
+    filter: blur(1px); }
+  .logo-wrapper .team-logo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; }
+  .logo-wrapper .choose-logo {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    color: #f3f3f3;
+    margin-bottom: 0;
+    opacity: 0;
+    transition: all .5s;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -o-transition: all .5s;
+    cursor: pointer; }
+    .logo-wrapper .choose-logo:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      top: 0;
+      display: flex;
+      background: #1d252c;
+      opacity: .5;
+      z-index: 1; }
+    .logo-wrapper .choose-logo span {
+      position: relative;
+      z-index: 2; }
+
+.member-list {
+  background: linear-gradient(to right, #1d252c, transparent);
+  padding: 2rem;
+  border-radius: 10px; }
+  .member-list .member-title {
+    font-size: 28px; }
+    .member-list .member-title small {
+      color: #797979; }
+
+.modal.transfer .modal-header, .modal.transfer .modal-footer {
+  border: none; }
+.modal.transfer .modal-content {
+  background: #111217; }
+  .modal.transfer .modal-content .evidence-wrapper {
+    border: 1px dashed #333;
+    padding: 1rem; }
+    .modal.transfer .modal-content .evidence-wrapper .evidence-image {
+      width: 100px;
+      height: 100px;
+      object-fit: cover; }
+
+.ratings .rate {
+  font-size: 26px;
+  color: lightgray; }
+  .ratings .rate.rated {
+    color: orange; }
+
+.color-app {
+  color: #f75b37; }
+
+.wrapper-app {
+  overflow: hidden; }
+
+.img-icon {
+  width: 50px;
+  height: 50px;
+  object-fit: cover; }
+
+pre {
+  margin: 0 !important; }
+  pre code {
+    display: block;
+    overflow: auto;
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+    word-break: break-all;
+    color: #262626;
+    background: #ccc;
+    margin: 0;
+    padding: .5rem; }
+
+.link-color {
+  color: #f75b37; }
+  .link-color:hover {
+    color: #e65432; }
+
+.progress-app {
+  height: .5rem;
+  background: #484848; }
+  .progress-app .progress-bar {
+    background: #f75b37; }
+
+.btn-app {
+  background: #f75b37;
+  color: #ffffff; }
+  .btn-app:hover {
+    color: #ffffff;
+    background: #e65432; }
+  .btn-app:focus {
+    color: #ffffff;
+    background: #e65432; }
+  .btn-app.login {
+    padding: .5rem 3rem; }
+
+.btn-app-outline {
+  background: transparent;
+  border: 1px solid #f75b37;
+  color: #f75b37; }
+  .btn-app-outline:hover {
+    color: #ffffff;
+    background: #e65432; }
+  .btn-app-outline:focus {
+    color: #ffffff;
+    background: #e65432; }
+
+.pace-inactive {
+  display: none; }
+
+.pace {
+  -webkit-pointer-events: none;
+  pointer-events: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none; }
+  .pace .pace-progress {
+    background: #f75b37;
+    position: fixed;
+    z-index: 2000;
+    top: 0;
+    right: 100%;
+    width: 100%;
+    height: 2px; }
+  .pace .pace-progress-inner {
+    display: block;
+    position: absolute;
+    right: 0px;
+    width: 100px;
+    height: 100%;
+    box-shadow: 0 0 10px #f75b37, 0 0 5px #f75b37;
+    opacity: 1.0;
+    -webkit-transform: rotate(3deg) translate(0px, -4px);
+    -moz-transform: rotate(3deg) translate(0px, -4px);
+    -ms-transform: rotate(3deg) translate(0px, -4px);
+    -o-transform: rotate(3deg) translate(0px, -4px);
+    transform: rotate(3deg) translate(0px, -4px); }
+  .pace .pace-activity {
+    display: block;
+    position: fixed;
+    z-index: 2000;
+    top: 15px;
+    right: 15px;
+    width: 14px;
+    height: 14px;
+    border: solid 2px transparent;
+    border-top-color: #f75b37;
+    border-left-color: #f75b37;
+    border-radius: 10px;
+    -webkit-animation: pace-spinner 400ms linear infinite;
+    -moz-animation: pace-spinner 400ms linear infinite;
+    -ms-animation: pace-spinner 400ms linear infinite;
+    -o-animation: pace-spinner 400ms linear infinite;
+    animation: pace-spinner 400ms linear infinite; }
+
+@-webkit-keyframes pace-spinner {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+@-moz-keyframes pace-spinner {
+  0% {
+    -moz-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  100% {
+    -moz-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+@-o-keyframes pace-spinner {
+  0% {
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  100% {
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+@-ms-keyframes pace-spinner {
+  0% {
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  100% {
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+@keyframes pace-spinner {
+  0% {
+    transform: rotate(0deg);
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg);
+    transform: rotate(360deg); } }
+.second-navbar-app {
+  background: #1d252c;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 0;
+  white-space: nowrap; }
+  .second-navbar-app .nav-link {
+    color: #707070; }
+  .second-navbar-app .nav-pills .nav-link.active,
+  .second-navbar-app .nav-pills .show > .nav-link {
+    background: transparent;
+    color: #f3f3f3;
+    font-weight: 800; }
+  .second-navbar-app .nav-pills .nav-item.dropdown.show .nav-link {
+    background: #f5f5f5;
+    font-weight: 600; }
+  .second-navbar-app .nav-pills .nav-item.dropdown.show .dropdown-menu {
+    background: #f5f5f5; }
+    .second-navbar-app .nav-pills .nav-item.dropdown.show .dropdown-menu .dropdown-item:active {
+      background: #f75b37; }
+
+.navbar-toggler:focus {
+  outline: none; }
+
+/*navbar*/
+.navbar-app {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8));
+  height: 100px; }
+  .navbar-app .notifications {
+    position: relative; }
+    .navbar-app .notifications.active:after {
+      content: '';
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #f75b37;
+      position: absolute;
+      top: 0;
+      right: 0;
+      display: block; }
+  .navbar-app .logo-app img {
+    width: 160px; }
+  .navbar-app a {
+    color: #fff; }
+  .navbar-app .nav-app a {
+    margin-right: 2rem;
+    color: #d9d9d9;
+    text-transform: uppercase;
+    font-weight: 600; }
+    .navbar-app .nav-app a:hover {
+      color: #fff; }
+  .navbar-app .link-app {
+    font-size: 16px;
+    font-weight: 600;
+    color: #f5f5f5;
+    transition: all .5s;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -o-transition: all .5s; }
+    .navbar-app .link-app:hover {
+      color: #fff; }
+  .navbar-app .dropdown .dropdown-menu {
+    background: #1d252c;
+    border: none;
+    border-radius: 10px; }
+    .navbar-app .dropdown .dropdown-menu .dropdown-item {
+      color: #797979;
+      font-size: 14px;
+      transition: all .3s;
+      -webkit-transition: all .3s;
+      -moz-transition: all .3s;
+      -o-transition: all .3s; }
+      .navbar-app .dropdown .dropdown-menu .dropdown-item:hover {
+        background: none;
+        color: #fff; }
+      .navbar-app .dropdown .dropdown-menu .dropdown-item.log-out:hover {
+        color: #f75b37; }
+    .navbar-app .dropdown .dropdown-menu.login {
+      padding: 1.5rem 1rem;
+      width: 300px; }
+      .navbar-app .dropdown .dropdown-menu.login .form-app {
+        background: #111217; }
+        .navbar-app .dropdown .dropdown-menu.login .form-app:focus {
+          color: #fff; }
+    .navbar-app .dropdown .dropdown-menu.notifications {
+      width: 320px; }
+      .navbar-app .dropdown .dropdown-menu.notifications .dropdown-item {
+        white-space: normal;
+        color: #fff;
+        border-bottom: 1px solid #26323c; }
+        .navbar-app .dropdown .dropdown-menu.notifications .dropdown-item small {
+          color: #797979 !important; }
+        .navbar-app .dropdown .dropdown-menu.notifications .dropdown-item:last-child {
+          border-bottom: 0; }
+  .navbar-app .dropdown-toggle {
+    display: flex;
+    align-items: center; }
+    .navbar-app .dropdown-toggle:after {
+      content: 'more_horiz';
+      font-family: 'Material Icons';
+      border: none;
+      font-size: 24px !important;
+      margin-left: 1px; }
+    .navbar-app .dropdown-toggle.profile:after {
+      display: none; }
+    .navbar-app .dropdown-toggle.profile .avatar img {
+      width: 40px;
+      height: 40px;
+      object-fit: cover;
+      border-radius: 50%; }
+    .navbar-app .dropdown-toggle.notifications.active:after {
+      content: '';
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #f75b37;
+      position: absolute;
+      top: 10px;
+      right: 8px;
+      display: block; }
+    .navbar-app .dropdown-toggle.notifications:after {
+      display: none; }
+    .navbar-app .dropdown-toggle.login:after {
+      display: none; }
+  .navbar-app .btn-app {
+    padding: .3rem 1.5rem; }
+    .navbar-app .btn-app.login {
+      background: transparent;
+      color: #fff;
+      border: 1px solid #fff;
+      margin-right: .5rem; }
+      .navbar-app .btn-app.login:hover {
+        background: #f75b37;
+        border: 1px solid transparent;
+        color: #fff; }
+
+/*content*/
+.wrapper-app {
+  /*padding-top: 5rem;*/
+  background: #111217; }
+  .wrapper-app .badge-app {
+    background: #f75b37;
+    padding: .1rem .5rem;
+    color: #fff;
+    font-weight: 600;
+    border-radius: 5px;
+    font-size: 10px;
+    display: inline-block; }
+  .wrapper-app .box.home h6 {
+    color: #f75b37; }
+  .wrapper-app .box.home:hover h6 {
+    color: #e65432; }
+  .wrapper-app .box.home .home-cover {
+    width: 100%;
+    height: 150px;
+    object-fit: cover; }
+  .wrapper-app .header .header-carousel {
+    position: relative;
+    position: relative;
+    height: 500px;
+    overflow: hidden; }
+    .wrapper-app .header .header-carousel .item {
+      height: 500px; }
+      .wrapper-app .header .header-carousel .item img.cover-app {
+        height: 500px;
+        object-fit: cover; }
+      .wrapper-app .header .header-carousel .item video.header-video {
+        width: 100%; }
+      .wrapper-app .header .header-carousel .item .header-desc {
+        position: absolute;
+        bottom: 30px;
+        width: 600px;
+        color: #fff;
+        z-index: 1;
+        padding: 1rem 5rem; }
+        .wrapper-app .header .header-carousel .item .header-desc .title-desc {
+          font-size: 32px;
+          font-weight: 600;
+          line-height: 1.2; }
+        .wrapper-app .header .header-carousel .item .header-desc .short-desc {
+          font-size: 14px; }
+        .wrapper-app .header .header-carousel .item .header-desc .logo-desc img {
+          width: 100px; }
+        .wrapper-app .header .header-carousel .item .header-desc .btn-app {
+          padding: .5rem 3rem;
+          font-size: 12px; }
+      .wrapper-app .header .header-carousel .item:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 320px;
+        background: linear-gradient(to top, #111217, rgba(17, 18, 23, 0)); }
+    .wrapper-app .header .header-carousel .owl-nav {
+      position: absolute;
+      width: 100%;
+      bottom: 3rem;
+      color: #fff;
+      visibility: hidden;
+      pointer-events: none;
+      transition: all .3s;
+      text-align: center;
+      -webkit-transition: all .3s;
+      -moz-transition: all .3s;
+      -o-transition: all .3s;
+      opacity: 0;
+      visibility: hidden;
+      z-index: 1; }
+      .wrapper-app .header .header-carousel .owl-nav .material-icons {
+        font-size: 36px;
+        line-height: 48px; }
+      .wrapper-app .header .header-carousel .owl-nav .owl-prev, .wrapper-app .header .header-carousel .owl-nav .owl-next {
+        pointer-events: all;
+        background: rgba(0, 0, 0, 0.5);
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        transition: all .3s;
+        -webkit-transition: all .3s;
+        -moz-transition: all .3s;
+        -o-transition: all .3s; }
+      .wrapper-app .header .header-carousel .owl-nav .owl-prev {
+        /*float: left;*/
+        position: relative;
+        left: -3rem;
+        opacity: .5; }
+      .wrapper-app .header .header-carousel .owl-nav .owl-next {
+        /*float: right;*/
+        position: relative;
+        right: -3rem;
+        opacity: .5; }
+    .wrapper-app .header .header-carousel:hover .owl-nav {
+      opacity: 1;
+      visibility: visible; }
+    .wrapper-app .header .header-carousel:hover .owl-prev {
+      left: -1rem; }
+      .wrapper-app .header .header-carousel:hover .owl-prev:hover {
+        opacity: 1; }
+    .wrapper-app .header .header-carousel:hover .owl-next {
+      right: -1rem; }
+      .wrapper-app .header .header-carousel:hover .owl-next:hover {
+        opacity: 1; }
+    .wrapper-app .header .header-carousel .owl-dots {
+      text-align: center;
+      position: absolute;
+      bottom: 10px;
+      width: 100%;
+      z-index: 1; }
+      .wrapper-app .header .header-carousel .owl-dots .owl-dot {
+        width: 20px;
+        height: 3px;
+        background: #fff;
+        opacity: .2;
+        margin: 0 .15rem;
+        transition: all .3s;
+        -webkit-transition: all .3s;
+        -moz-transition: all .3s;
+        -o-transition: all .3s; }
+        .wrapper-app .header .header-carousel .owl-dots .owl-dot.active {
+          background: #f75b37;
+          width: 30px;
+          opacity: 1; }
+        .wrapper-app .header .header-carousel .owl-dots .owl-dot:hover {
+          background: #f75b37;
+          opacity: 1; }
+  .wrapper-app .header.about {
+    height: 70vh;
+    background: linear-gradient(to bottom, rgba(37, 0, 103, 0.9) 0%, rgba(37, 0, 103, 0.9) 100%);
+    color: #fff;
+    position: relative; }
+    .wrapper-app .header.about .header-desc {
+      width: 500px;
+      position: relative;
+      z-index: 1; }
+    .wrapper-app .header.about .btn-app {
+      z-index: 1;
+      position: relative; }
+    .wrapper-app .header.about .header-img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover; }
+  .wrapper-app .header.verify {
+    height: 70vh;
+    background: #00c5ee;
+    font-size: 20px;
+    color: #fff; }
+    .wrapper-app .header.verify .success-checkmark {
+      width: 80px;
+      height: 115px;
+      margin: 0 auto; }
+      .wrapper-app .header.verify .success-checkmark .check-icon {
+        width: 80px;
+        height: 80px;
+        position: relative;
+        border-radius: 50%;
+        box-sizing: content-box;
+        border: 4px solid #ffffff; }
+        .wrapper-app .header.verify .success-checkmark .check-icon::before {
+          top: 3px;
+          left: -2px;
+          width: 30px;
+          transform-origin: 100% 50%;
+          border-radius: 100px 0 0 100px; }
+        .wrapper-app .header.verify .success-checkmark .check-icon::after {
+          top: 0;
+          left: 30px;
+          width: 60px;
+          transform-origin: 0 50%;
+          border-radius: 0 100px 100px 0;
+          animation: rotate-circle 4.25s ease-in; }
+        .wrapper-app .header.verify .success-checkmark .check-icon::before, .wrapper-app .header.verify .success-checkmark .check-icon::after {
+          content: '';
+          height: 100px;
+          position: absolute;
+          background: #00c5ee;
+          transform: rotate(-45deg); }
+        .wrapper-app .header.verify .success-checkmark .check-icon .icon-line {
+          height: 5px;
+          background-color: #ffffff;
+          display: block;
+          border-radius: 2px;
+          position: absolute;
+          z-index: 10; }
+          .wrapper-app .header.verify .success-checkmark .check-icon .icon-line.line-tip {
+            top: 46px;
+            left: 14px;
+            width: 25px;
+            transform: rotate(45deg);
+            animation: icon-line-tip 0.75s; }
+          .wrapper-app .header.verify .success-checkmark .check-icon .icon-line.line-long {
+            top: 38px;
+            right: 8px;
+            width: 47px;
+            transform: rotate(-45deg);
+            animation: icon-line-long 0.75s; }
+        .wrapper-app .header.verify .success-checkmark .check-icon .icon-circle {
+          top: -4px;
+          left: -4px;
+          z-index: 10;
+          width: 80px;
+          height: 80px;
+          border-radius: 50%;
+          position: absolute;
+          box-sizing: content-box;
+          /*border: 4px solid rgba(76, 175, 80, .5);*/
+          border: 4px solid rgba(255, 255, 255, 0.5); }
+        .wrapper-app .header.verify .success-checkmark .check-icon .icon-fix {
+          top: 8px;
+          width: 5px;
+          left: 26px;
+          z-index: 1;
+          height: 85px;
+          position: absolute;
+          transform: rotate(-45deg);
+          background-color: #00c5ee; }
+@keyframes rotate-circle {
+  0% {
+    transform: rotate(-45deg); }
+  5% {
+    transform: rotate(-45deg); }
+  12% {
+    transform: rotate(-405deg); }
+  100% {
+    transform: rotate(-405deg); } }
+@keyframes icon-line-tip {
+  0% {
+    width: 0;
+    left: 1px;
+    top: 19px; }
+  54% {
+    width: 0;
+    left: 1px;
+    top: 19px; }
+  70% {
+    width: 50px;
+    left: -8px;
+    top: 37px; }
+  84% {
+    width: 17px;
+    left: 21px;
+    top: 48px; }
+  100% {
+    width: 25px;
+    left: 14px;
+    top: 45px; } }
+@keyframes icon-line-long {
+  0% {
+    width: 0;
+    right: 46px;
+    top: 54px; }
+  65% {
+    width: 0;
+    right: 46px;
+    top: 54px; }
+  84% {
+    width: 55px;
+    right: 0px;
+    top: 35px; }
+  100% {
+    width: 47px;
+    right: 8px;
+    top: 38px; } }
+  .wrapper-app .content .payment ul {
+    padding-left: 2rem; }
+    .wrapper-app .content .payment ul li {
+      list-style: disc; }
+  .wrapper-app .content .payment .payment-title {
+    border-bottom: 1px solid #1d252c;
+    font-weight: 600; }
+  .wrapper-app .content .payment .payment-image {
+    width: 50px; }
+  .wrapper-app .content .payment .payment-highlight {
+    background: #1d252c;
+    border-radius: 10px; }
+  .wrapper-app .content .payment .payment-type .payment-type-name [data-toggle="collapse"] {
+    position: relative; }
+    .wrapper-app .content .payment .payment-type .payment-type-name [data-toggle="collapse"] .icon:before {
+      content: 'expand_more';
+      font-family: "Material Icons";
+      position: absolute;
+      right: 1rem; }
+  .wrapper-app .content .payment .payment-type .payment-type-name a {
+    width: 100%;
+    display: inline-block;
+    padding: 1rem;
+    cursor: pointer;
+    font-weight: bold;
+    background: #1d252c; }
+  .wrapper-app .content .payment .payment-type .form-check .name-wrapper {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; }
+    .wrapper-app .content .payment .payment-type .form-check .name-wrapper input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer; }
+      .wrapper-app .content .payment .payment-type .form-check .name-wrapper input:checked ~ .checkmark {
+        background-color: #f75b37 !important; }
+        .wrapper-app .content .payment .payment-type .form-check .name-wrapper input:checked ~ .checkmark:after {
+          display: block; }
+    .wrapper-app .content .payment .payment-type .form-check .name-wrapper .checkmark {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 20px;
+      width: 20px;
+      background-color: #1d252c;
+      border-radius: 50%; }
+      .wrapper-app .content .payment .payment-type .form-check .name-wrapper .checkmark:after {
+        content: "";
+        position: absolute;
+        display: none;
+        top: 5px;
+        left: 5px;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: #1d252c; }
+    .wrapper-app .content .payment .payment-type .form-check .name-wrapper:hover input ~ .checkmark {
+      background-color: #ccc; }
+  .wrapper-app .content.games {
+    padding-top: 8rem;
+    background: url("../img/cover/games.jpg") no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: 0 -140px; }
+    .wrapper-app .content.games:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(to top, #111217 50%, transparent 100%);
+      z-index: -1; }
+  .wrapper-app .content.about .section {
+    padding: 5rem 0; }
+    .wrapper-app .content.about .section.skew {
+      transform: skew(0deg, -5deg); }
+    .wrapper-app .content.about .section.skew-inverse {
+      transform: skew(0deg, 5deg); }
+  .wrapper-app .content.about .skew-back {
+    transform: skew(0deg, 5deg); }
+  .wrapper-app .content.about .skew-back-inverse {
+    transform: skew(0deg, -5deg); }
+  .wrapper-app .content.about .who {
+    background-image: linear-gradient(120deg, #30cfd0 0%, #330867 100%);
+    color: #fff;
+    position: relative;
+    overflow: hidden; }
+    .wrapper-app .content.about .who .who-title {
+      text-transform: uppercase;
+      font-weight: 600;
+      letter-spacing: 2px;
+      margin-bottom: 1rem; }
+    .wrapper-app .content.about .who .who-cover {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: .5; }
+  .wrapper-app .content.about .about-img {
+    width: 400px; }
+  .wrapper-app .content .mytournament {
+    padding: 1rem; }
+    .wrapper-app .content .mytournament:hover {
+      background: #e8e8e8; }
+    .wrapper-app .content .mytournament .win {
+      background: #50b649;
+      border-radius: 5px; }
+    .wrapper-app .content .mytournament .lose {
+      background: #e61a1a;
+      border-radius: 5px; }
+  .wrapper-app .content .lobby {
+    background: #fff;
+    position: relative; }
+    .wrapper-app .content .lobby .message {
+      display: flex;
+      padding: 3rem 2rem;
+      flex-direction: column;
+      font-size: 14px;
+      height: 75vh;
+      overflow-y: auto; }
+      .wrapper-app .content .lobby .message .sent {
+        margin-left: auto;
+        margin-bottom: 1rem; }
+        .wrapper-app .content .lobby .message .sent .name {
+          font-weight: 500;
+          margin-bottom: .2rem;
+          font-size: 12px; }
+        .wrapper-app .content .lobby .message .sent .text {
+          background: #dcf8c6;
+          padding: .5rem;
+          border-radius: 50px 0 50px 50px;
+          margin-bottom: .5rem; }
+      .wrapper-app .content .lobby .message .replay {
+        margin-right: auto;
+        margin-bottom: 1rem; }
+        .wrapper-app .content .lobby .message .replay .name {
+          font-size: 12px;
+          font-weight: 500;
+          margin-bottom: .2rem; }
+        .wrapper-app .content .lobby .message .replay .text {
+          background: #e6f5ff;
+          padding: .5rem;
+          border-radius: 0 50px 50px 50px;
+          margin-bottom: .5rem; }
+    .wrapper-app .content .lobby .type-area {
+      display: flex;
+      align-items: center;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      padding: 2rem;
+      background: #fff;
+      -webkit-box-shadow: 0px -10px 10px 0px rgba(0, 0, 0, 0.09);
+      -moz-box-shadow: 0px -10px 10px 0px rgba(0, 0, 0, 0.09);
+      box-shadow: 0px -10px 10px 0px rgba(0, 0, 0, 0.09); }
+      .wrapper-app .content .lobby .type-area .type-input {
+        width: 100%; }
+        .wrapper-app .content .lobby .type-area .type-input input {
+          width: 100%;
+          padding: 1rem;
+          border: none; }
+          .wrapper-app .content .lobby .type-area .type-input input:focus {
+            outline: none; }
+      .wrapper-app .content .lobby .type-area .send {
+        width: 10%; }
+        .wrapper-app .content .lobby .type-area .send .btn {
+          display: flex;
+          align-items: center; }
+  .wrapper-app .content .title-app {
+    font-size: 20px;
+    font-weight: 500; }
+  .wrapper-app .content .live {
+    background-size: cover;
+    position: relative; }
+    .wrapper-app .content .live .title {
+      font-size: 24px;
+      font-weight: 600;
+      position: absolute;
+      z-index: 2;
+      top: 2rem;
+      left: 2rem;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+      display: flex;
+      align-items: center; }
+    .wrapper-app .content .live .live-dot {
+      background: red;
+      width: 20px;
+      height: 20px;
+      display: inline-block;
+      border-radius: 50%;
+      margin-right: .5rem;
+      transform-origin: 50% 50%;
+      animation: size cubic-bezier(0.165, 0.84, 0.44, 1) 1.8s, opacity cubic-bezier(0.3, 0.61, 0.355, 1) 1.8s;
+      animation-iteration-count: infinite; }
+@-moz-keyframes blinker {
+  0% {
+    opacity: 1.0; }
+  50% {
+    opacity: 0.0; }
+  100% {
+    opacity: 1.0; } }
+@-webkit-keyframes blinker {
+  0% {
+    opacity: 1.0; }
+  50% {
+    opacity: 0.0; }
+  100% {
+    opacity: 1.0; } }
+@keyframes blinker {
+  0% {
+    opacity: 1.0; }
+  50% {
+    opacity: 0.0; }
+  100% {
+    opacity: 1.0; } }
+@keyframes size {
+  0% {
+    transform: scale(0); }
+  100% {
+    transform: scale(1); } }
+@keyframes opacity {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+    .wrapper-app .content .live #liveCarousel .list-inline {
+      white-space: nowrap;
+      overflow-x: auto; }
+    .wrapper-app .content .live #liveCarousel .carousel-indicators {
+      position: relative;
+      bottom: 4rem;
+      border: none !important; }
+    .wrapper-app .content .live #liveCarousel .carousel-indicators > li {
+      width: initial;
+      height: initial;
+      text-indent: initial;
+      opacity: 1;
+      position: relative; }
+      .wrapper-app .content .live #liveCarousel .carousel-indicators > li:after {
+        content: '';
+        background: rgba(0, 0, 0, 0.5);
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        pointer-events: none; }
+      .wrapper-app .content .live #liveCarousel .carousel-indicators > li.active:after {
+        background: rgba(0, 0, 0, 0); }
+    .wrapper-app .content .live #liveCarousel .carousel-item-wrapper {
+      cursor: pointer; }
+      .wrapper-app .content .live #liveCarousel .carousel-item-wrapper:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        background: linear-gradient(to bottom, black, rgba(0, 0, 0, 0));
+        height: 200px;
+        z-index: 1;
+        transition: all .3s;
+        -webkit-transition: all .3s;
+        -moz-transition: all .3s;
+        -o-transition: all .3s; }
+      .wrapper-app .content .live #liveCarousel .carousel-item-wrapper:hover:after {
+        height: 100%; }
+      .wrapper-app .content .live #liveCarousel .carousel-item-wrapper .play-btn {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        opacity: 0;
+        visibility: hidden;
+        transition: all .3s;
+        -webkit-transition: all .3s;
+        -moz-transition: all .3s;
+        -o-transition: all .3s;
+        z-index: 2; }
+      .wrapper-app .content .live #liveCarousel .carousel-item-wrapper:hover .play-btn {
+        opacity: 1;
+        visibility: visible; }
+    .wrapper-app .content .live #liveCarousel .live-cover {
+      width: 100%;
+      height: 90vh;
+      object-fit: cover; }
+    .wrapper-app .content .live #liveCarousel .live-thumbnail {
+      width: 100px;
+      height: 100px;
+      object-fit: cover; }
+    .wrapper-app .content .live #liveCarousel .list-inline-item {
+      margin: 0; }
+    .wrapper-app .content .live #liveCarousel .live-title {
+      position: absolute;
+      left: 3.5rem;
+      top: 5rem;
+      z-index: 2;
+      color: #fff; }
+    .wrapper-app .content .live #liveCarousel .caster {
+      position: absolute;
+      top: 2rem;
+      right: 2rem;
+      z-index: 2;
+      color: #fff; }
+      .wrapper-app .content .live #liveCarousel .caster .live-caster {
+        width: 60px;
+        height: 60px;
+        object-fit: cover;
+        border-radius: 50%; }
+      .wrapper-app .content .live #liveCarousel .caster .name {
+        width: 60px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        font-size: 12px; }
+      .wrapper-app .content .live #liveCarousel .caster .caster-title {
+        font-size: 20px;
+        font-weight: 600;
+        text-align: right;
+        padding-right: 1rem;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        z-index: 2; }
+  .wrapper-app .content .streaming.more .item-favourite .detail {
+    opacity: 1;
+    visibility: visible; }
+  .wrapper-app .content .streaming .left-item, .wrapper-app .content .streaming .right-item {
+    height: 476px; }
+    .wrapper-app .content .streaming .left-item .item, .wrapper-app .content .streaming .right-item .item {
+      position: relative;
+      border-radius: 10px;
+      overflow: hidden; }
+      .wrapper-app .content .streaming .left-item .item .channel, .wrapper-app .content .streaming .right-item .item .channel {
+        color: #fff;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        padding: .1rem .5rem;
+        font-size: 10px;
+        font-weight: 600;
+        border-radius: 50px;
+        background: #333; }
+      .wrapper-app .content .streaming .left-item .item .detail-wrapper, .wrapper-app .content .streaming .right-item .item .detail-wrapper {
+        position: absolute;
+        background: rgba(0, 0, 0, 0.7);
+        padding: 2rem;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        opacity: 0;
+        visibility: hidden;
+        transition: all .3s;
+        -webkit-transition: all .3s;
+        -moz-transition: all .3s;
+        -o-transition: all .3s; }
+        .wrapper-app .content .streaming .left-item .item .detail-wrapper .detail, .wrapper-app .content .streaming .right-item .item .detail-wrapper .detail {
+          position: relative;
+          height: 100%; }
+          .wrapper-app .content .streaming .left-item .item .detail-wrapper .detail .detail-title, .wrapper-app .content .streaming .right-item .item .detail-wrapper .detail .detail-title {
+            position: absolute;
+            text-align: center;
+            width: 100%;
+            bottom: 0;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+            font-weight: 500;
+            color: #fff;
+            font-size: 14px; }
+          .wrapper-app .content .streaming .left-item .item .detail-wrapper .detail .detail-play, .wrapper-app .content .streaming .right-item .item .detail-wrapper .detail .detail-play {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            top: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center; }
+            .wrapper-app .content .streaming .left-item .item .detail-wrapper .detail .detail-play img, .wrapper-app .content .streaming .right-item .item .detail-wrapper .detail .detail-play img {
+              height: 32px !important; }
+      .wrapper-app .content .streaming .left-item .item:hover .detail-wrapper, .wrapper-app .content .streaming .right-item .item:hover .detail-wrapper {
+        opacity: 1;
+        visibility: visible; }
+  .wrapper-app .content .streaming .left-item .item {
+    height: 100%; }
+    .wrapper-app .content .streaming .left-item .item img {
+      height: 100%;
+      object-fit: cover; }
+  .wrapper-app .content .streaming .right-item .item {
+    height: 225px; }
+    .wrapper-app .content .streaming .right-item .item img {
+      height: 100%;
+      object-fit: cover; }
+  .wrapper-app .content .streaming .item-favourite {
+    height: 200px;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden; }
+    .wrapper-app .content .streaming .item-favourite .channel {
+      color: #fff;
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      padding: .1rem .5rem;
+      font-size: 10px;
+      font-weight: 600;
+      border-radius: 50px;
+      background: #333; }
+    .wrapper-app .content .streaming .item-favourite .detail {
+      position: absolute;
+      color: #fff;
+      background: linear-gradient(to top, black, rgba(0, 0, 0, 0));
+      top: 140px;
+      padding: 1rem;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      display: flex;
+      align-items: center;
+      opacity: 0;
+      visibility: hidden;
+      transition: all .3s;
+      -webkit-transition: all .3s;
+      -moz-transition: all .3s;
+      -o-transition: all .3s;
+      font-size: 12px; }
+    .wrapper-app .content .streaming .item-favourite:hover .detail {
+      opacity: 1;
+      visibility: visible; }
+    .wrapper-app .content .streaming .item-favourite:hover img {
+      opacity: .7; }
+    .wrapper-app .content .streaming .item-favourite img {
+      height: 100%;
+      object-fit: cover;
+      transition: all .5s;
+      -webkit-transition: all .5s;
+      -moz-transition: all .5s;
+      -o-transition: all .5s; }
+  .wrapper-app .content .game input, .wrapper-app .content .game select {
+    border-radius: 5px; }
+    .wrapper-app .content .game input.form-control:focus, .wrapper-app .content .game select.form-control:focus {
+      outline: none;
+      box-shadow: none;
+      border-color: #f75b37; }
+    .wrapper-app .content .game input.form-app, .wrapper-app .content .game select.form-app {
+      border: none;
+      background: #1d252c;
+      color: #ccc; }
+  .wrapper-app .content .game .game-list {
+    border: 5px solid transparent;
+    transition: all .3s;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -o-transition: all .3s;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden; }
+    .wrapper-app .content .game .game-list:hover {
+      border: 5px solid #f75b37; }
+    .wrapper-app .content .game .game-list .game-cover-app {
+      width: 100%;
+      height: 350px;
+      object-fit: cover; }
+    .wrapper-app .content .game .game-list.last a:before {
+      content: 'All Game';
+      background: rgba(247, 91, 55, 0.8);
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      color: #fff;
+      text-transform: uppercase;
+      font-weight: 600;
+      font-size: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+  .wrapper-app .content .popular .popular-game {
+    position: relative;
+    padding: 0;
+    border: 5px solid transparent;
+    font-size: 14px; }
+    .wrapper-app .content .popular .popular-game .game-cover-app {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 10px;
+      transition: all .5s;
+      -webkit-transition: all .5s;
+      -moz-transition: all .5s;
+      -o-transition: all .5s; }
+    .wrapper-app .content .popular .popular-game:hover .organizer {
+      opacity: 1; }
+    .wrapper-app .content .popular .popular-game:hover .game-cover-app {
+      opacity: .8; }
+    .wrapper-app .content .popular .popular-game:hover .dropdown.share {
+      opacity: 1; }
+  .wrapper-app .content .popular .organizer {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: .5rem;
+    border-radius: 50px;
+    margin-bottom: .5rem;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    transition: all .5s;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -o-transition: all .5s;
+    font-weight: 600; }
+    .wrapper-app .content .popular .organizer .organizer-avatar {
+      width: 30px;
+      height: 30px;
+      object-fit: cover;
+      border-radius: 50%; }
+  .wrapper-app .content .popular .dropdown.share {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    opacity: 0;
+    transition: all .5s;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -o-transition: all .5s; }
+    .wrapper-app .content .popular .dropdown.share .btn-share {
+      width: 2.5rem;
+      height: 2.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(0, 0, 0, 0.6);
+      border-radius: 50%;
+      color: #fff; }
+      .wrapper-app .content .popular .dropdown.share .btn-share:after {
+        display: none; }
+      .wrapper-app .content .popular .dropdown.share .btn-share .material-icons-outlined {
+        margin-left: -3px; }
+    .wrapper-app .content .popular .dropdown.share .dropdown-menu {
+      border-radius: 50px;
+      overflow: hidden;
+      background: rgba(0, 0, 0, 0.6);
+      left: -5px !important; }
+      .wrapper-app .content .popular .dropdown.share .dropdown-menu.share.show {
+        min-width: unset;
+        padding: .5rem .2rem; }
+        .wrapper-app .content .popular .dropdown.share .dropdown-menu.share.show .dropdown-item {
+          padding: .5rem;
+          border-radius: 50%;
+          color: #fff; }
+          .wrapper-app .content .popular .dropdown.share .dropdown-menu.share.show .dropdown-item:hover {
+            background: #1d252c; }
+  .wrapper-app .content .popular .popular-desc {
+    color: #fff;
+    margin-top: .5rem; }
+    .wrapper-app .content .popular .popular-desc .popular-title {
+      font-weight: 600;
+      width: 100%;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap; }
+    .wrapper-app .content .popular .popular-desc .popular-console .game-name, .wrapper-app .content .popular .popular-desc .popular-console .game-platforms {
+      border-radius: 5px;
+      font-size: 12px; }
+  .wrapper-app .content .popular .popular-participans {
+    font-size: 10px; }
+    .wrapper-app .content .popular .popular-participans span {
+      margin-right: .7rem;
+      position: relative; }
+      .wrapper-app .content .popular .popular-participans span:last-child:after {
+        display: none; }
+      .wrapper-app .content .popular .popular-participans span:after {
+        content: '';
+        position: absolute;
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        background: #909090;
+        right: -9px;
+        top: 5px; }
+  .wrapper-app .content .footer {
+    background: #1d252c;
+    position: relative;
+    color: #fff; }
+    .wrapper-app .content .footer .logo-footer img {
+      width: 100px; }
+    .wrapper-app .content .footer .footer-title {
+      font-weight: 600; }
+    .wrapper-app .content .footer a {
+      color: #fff; }
+      .wrapper-app .content .footer a:hover {
+        color: #f75b37; }
+    .wrapper-app .content .footer input {
+      box-shadow: none; }
+      .wrapper-app .content .footer input:focus {
+        border: 1px solid #secondColor; }
+    .wrapper-app .content .footer .socmed {
+      width: 400px; }
+      .wrapper-app .content .footer .socmed img {
+        width: 25px;
+        filter: grayscale(100%);
+        transition: all .3s;
+        -webkit-transition: all .3s;
+        -moz-transition: all .3s;
+        -o-transition: all .3s; }
+        .wrapper-app .content .footer .socmed img:hover {
+          filter: grayscale(0%); }
+      .wrapper-app .content .footer .socmed ul li {
+        display: inline;
+        margin: 0 .3rem; }
+        .wrapper-app .content .footer .socmed ul li:first-child {
+          margin-left: 0; }
+    .wrapper-app .content .footer:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100px;
+      background: linear-gradient(to top, rgba(17, 18, 23, 0), #111217);
+      z-index: 1; }
+    .wrapper-app .content .footer .footer-wrapper-top {
+      display: flex;
+      position: relative;
+      z-index: 2;
+      align-items: center;
+      margin-bottom: 2rem; }
+    .wrapper-app .content .footer .contact {
+      width: 400px;
+      text-align: right; }
+      .wrapper-app .content .footer .contact ul li {
+        display: inline;
+        font-size: 12px;
+        font-weight: 400;
+        margin: 0 .3rem; }
+        .wrapper-app .content .footer .contact ul li .material-icons {
+          font-size: 20px;
+          margin-right: .5rem;
+          color: #909090; }
+    .wrapper-app .content .footer .footer-wrapper-bottom {
+      display: flex; }
+      .wrapper-app .content .footer .footer-wrapper-bottom .form-app {
+        border: none;
+        background: #2b3640;
+        color: #ccc;
+        border-radius: 0;
+        font-size: 12px; }
+      .wrapper-app .content .footer .footer-wrapper-bottom .btn-app {
+        border: none;
+        border-radius: 0;
+        font-size: 12px; }
+    .wrapper-app .content .footer .credit {
+      color: #909090; }
+      .wrapper-app .content .footer .credit a {
+        color: #909090; }
+        .wrapper-app .content .footer .credit a:hover {
+          color: #fff; }
+  .wrapper-app .content .participants-list {
+    color: #f3f3f3;
+    border-radius: 10px;
+    transition: all .3s;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -o-transition: all .3s; }
+    .wrapper-app .content .participants-list:hover {
+      background: #1d252c;
+      color: #f75b37; }
+    .wrapper-app .content .participants-list img {
+      height: 90px;
+      object-fit: cover;
+      background: #1d252c;
+      border-radius: 50%;
+      padding: .5rem; }
+  .wrapper-app .content .participants-match {
+    border: 1px solid #ccc;
+    padding: .5rem; }
+    .wrapper-app .content .participants-match:hover {
+      background: #e2e2e2; }
+  .wrapper-app .content .stream-box {
+    position: relative; }
+    .wrapper-app .content .stream-box img:not(.icon-app) {
+      width: 100%;
+      height: 400px; }
+    .wrapper-app .content .stream-box .btnLiveWrapper {
+      position: absolute;
+      z-index: 99;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      justify-content: center;
+      align-items: center;
+      display: flex; }
+      .wrapper-app .content .stream-box .btnLiveWrapper .btnLiveModal {
+        background: #f75b37;
+        padding: .7rem 1rem;
+        border-radius: 5px; }
+        .wrapper-app .content .stream-box .btnLiveWrapper .btnLiveModal img {
+          width: 28px !important; }
+    .wrapper-app .content .stream-box .live-desc {
+      position: absolute;
+      bottom: 2rem;
+      padding: 0 2rem;
+      color: #fff; }
+    .wrapper-app .content .stream-box:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 30%, black 90%); }
+    .wrapper-app .content .stream-box .title-app {
+      border-left: 4px solid #f75b37;
+      padding-left: 1rem; }
+    .wrapper-app .content .stream-box .video-title {
+      font-weight: 600;
+      margin-bottom: .5rem; }
+    .wrapper-app .content .stream-box .video-desc {
+      font-size: 12px; }
+  .wrapper-app .content-header {
+    background-size: cover !important;
+    height: 50vh;
+    color: #fff;
+    display: flex;
+    align-items: flex-end;
+    padding: 3rem 0;
+    background-attachment: fixed !important;
+    position: relative; }
+    .wrapper-app .content-header.browse {
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(1, 29, 130, 0.6)), url(../img/cover/games-cover.jpg); }
+    .wrapper-app .content-header.blog {
+      display: block;
+      padding-top: 7rem;
+      padding-bottom: 0;
+      height: auto !important; }
+      .wrapper-app .content-header.blog .featured-box {
+        border-radius: 10px;
+        overflow: hidden;
+        height: 500px;
+        position: relative; }
+        .wrapper-app .content-header.blog .featured-box:hover:after {
+          height: 100%; }
+        .wrapper-app .content-header.blog .featured-box:hover .featured-title {
+          color: #f75b37; }
+        .wrapper-app .content-header.blog .featured-box:after {
+          content: '';
+          position: absolute;
+          height: 80%;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          background: linear-gradient(to top, #111217, transparent);
+          z-index: 1;
+          transition: all .5s;
+          -webkit-transition: all .5s;
+          -moz-transition: all .5s;
+          -o-transition: all .5s; }
+        .wrapper-app .content-header.blog .featured-box.left-top, .wrapper-app .content-header.blog .featured-box.left-bottom {
+          height: 235px;
+          margin-bottom: 30px; }
+        .wrapper-app .content-header.blog .featured-box .featured-img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover; }
+        .wrapper-app .content-header.blog .featured-box .featured-detail {
+          position: absolute;
+          bottom: 0;
+          padding: 1rem;
+          z-index: 2; }
+          .wrapper-app .content-header.blog .featured-box .featured-detail .featured-title {
+            font-weight: 600; }
+          .wrapper-app .content-header.blog .featured-box .featured-detail .date {
+            display: inline-flex;
+            align-items: center;
+            font-size: 10px;
+            background: #1d252c;
+            padding: .5rem;
+            border-radius: 10px;
+            margin-top: .5rem; }
+            .wrapper-app .content-header.blog .featured-box .featured-detail .date .material-icons-outlined {
+              font-size: 18px; }
+          .wrapper-app .content-header.blog .featured-box .featured-detail .author {
+            font-size: 10px; }
+            .wrapper-app .content-header.blog .featured-box .featured-detail .author span {
+              margin-left: 10px;
+              position: relative; }
+              .wrapper-app .content-header.blog .featured-box .featured-detail .author span:before {
+                content: '';
+                width: 3px;
+                height: 3px;
+                border-radius: 10px;
+                background: #f3f3f3;
+                position: absolute;
+                left: -8px;
+                top: 7px; }
+    .wrapper-app .content-header.stream {
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), black), url(../img/cover/stream-cover.jpg); }
+    .wrapper-app .content-header .header-title {
+      font-weight: 600;
+      border-left: 5px solid #f75b37;
+      padding-left: 1rem;
+      position: fixed;
+      z-index: 99; }
+      .wrapper-app .content-header .header-title .dropdown.share .btn-share {
+        color: #f3f3f3;
+        line-height: 0;
+        background: rgba(255, 255, 255, 0.09);
+        width: 30px;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%; }
+        .wrapper-app .content-header .header-title .dropdown.share .btn-share .material-icons-outlined {
+          font-size: 20px;
+          margin-left: -3px; }
+        .wrapper-app .content-header .header-title .dropdown.share .btn-share:after {
+          display: none; }
+      .wrapper-app .content-header .header-title .dropdown.share .dropdown-menu.share.show {
+        display: flex;
+        padding: .5rem 1rem;
+        background: rgba(255, 255, 255, 0.03);
+        border-radius: 50px;
+        transform: initial !important;
+        top: -15px !important;
+        left: 35px !important; }
+        .wrapper-app .content-header .header-title .dropdown.share .dropdown-menu.share.show .dropdown-item {
+          color: #fff;
+          padding: 0;
+          display: flex;
+          justify-content: center;
+          padding: .5rem;
+          border-radius: 50%; }
+          .wrapper-app .content-header .header-title .dropdown.share .dropdown-menu.share.show .dropdown-item:hover {
+            background: rgba(255, 255, 255, 0.1); }
+    .wrapper-app .content-header.detail .browse-detail-cover {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 50vh;
+      object-fit: cover; }
+    .wrapper-app .content-header.detail:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      background: linear-gradient(to bottom, rgba(17, 18, 23, 0.4), #111217); }
+    .wrapper-app .content-header.detail .player {
+      position: relative;
+      z-index: 99;
+      margin-left: auto;
+      width: 350px;
+      background: rgba(255, 255, 255, 0.09);
+      padding: 1rem;
+      border-radius: 10px; }
+      .wrapper-app .content-header.detail .player .countdown {
+        display: flex;
+        margin-left: -.3rem;
+        margin-right: -.3rem;
+        color: #cacaca;
+        font-size: 12px; }
+        .wrapper-app .content-header.detail .player .countdown li {
+          justify-content: center;
+          text-align: center;
+          margin: 0 .3rem; }
+      .wrapper-app .content-header.detail .player .slot span {
+        color: #808080; }
+      .wrapper-app .content-header.detail .player .btn-app.caster {
+        background: rgba(255, 255, 255, 0.2); }
+        .wrapper-app .content-header.detail .player .btn-app.caster:hover {
+          background: #f75b37; }
+    .wrapper-app .content-header.detail .header-title {
+      position: relative; }
+      .wrapper-app .content-header.detail .header-title .header-publisher {
+        font-size: 14px;
+        font-weight: 400;
+        display: flex;
+        align-items: center;
+        margin-bottom: .5rem; }
+        .wrapper-app .content-header.detail .header-title .header-publisher .organizer-avatar {
+          width: 30px;
+          height: 30px;
+          border-radius: 50%;
+          object-fit: cover; }
+      .wrapper-app .content-header.detail .header-title .tournament-name {
+        font-size: 24px;
+        display: inherit;
+        color: #fff; }
+    .wrapper-app .content-header.stream .live-video, .wrapper-app .content-header.stream .live-chat {
+      height: 70vh; }
+    .wrapper-app .content-header.stream .counter {
+      letter-spacing: 0;
+      text-transform: capitalize;
+      font-weight: normal;
+      font-size: 14px;
+      background: #1d252c;
+      color: #1d252c;
+      padding: 1rem; }
+      .wrapper-app .content-header.stream .counter .subscriber {
+        padding: .3rem .5rem;
+        background: #f75b37;
+        color: #fff;
+        border-radius: 5px; }
+      .wrapper-app .content-header.stream .counter .number {
+        background: #f3f3f3;
+        padding: .3rem .5rem;
+        border-radius: 5px; }
+  .wrapper-app .content {
+    background: #111217;
+    min-height: 50vh;
+    position: relative;
+    z-index: 99; }
+    .wrapper-app .content .game-browse.matches {
+      overflow-x: scroll; }
+    .wrapper-app .content .game-browse .nav-pills .nav-link {
+      color: #797979; }
+    .wrapper-app .content .game-browse .schedule-box {
+      border-bottom: 1px solid #1d252c;
+      padding: 1rem;
+      background: linear-gradient(to right, #1d252c, transparent);
+      margin-bottom: .5rem;
+      border-radius: 10px; }
+      .wrapper-app .content .game-browse .schedule-box .match-name {
+        font-size: 28px;
+        font-weight: 600; }
+      .wrapper-app .content .game-browse .schedule-box .team-wrapper {
+        display: flex;
+        align-items: center; }
+        .wrapper-app .content .game-browse .schedule-box .team-wrapper .score {
+          width: 40px;
+          height: 40px;
+          background: #1d252c;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 10px; }
+          .wrapper-app .content .game-browse .schedule-box .team-wrapper .score.win {
+            font-weight: 900;
+            color: #FFD700; }
+          .wrapper-app .content .game-browse .schedule-box .team-wrapper .score.lose {
+            color: #909090; }
+        .wrapper-app .content .game-browse .schedule-box .team-wrapper .team img {
+          width: 50px;
+          height: 50px;
+          object-fit: cover; }
+      .wrapper-app .content .game-browse .schedule-box .date-wrapper .date {
+        font-size: 12px;
+        color: #ccc; }
+      .wrapper-app .content .game-browse .schedule-box .date-wrapper .time {
+        font-size: 24px; }
+        .wrapper-app .content .game-browse .schedule-box .date-wrapper .time small {
+          font-size: 10px;
+          color: #ccc; }
+    .wrapper-app .content .game-browse .game-list {
+      margin-bottom: .2rem;
+      height: 300px;
+      position: relative;
+      border-radius: 10px;
+      overflow: hidden; }
+      .wrapper-app .content .game-browse .game-list .game-cover-app {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; }
+      .wrapper-app .content .game-browse .game-list .game-title {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        color: #fff;
+        padding: 1rem;
+        font-size: 18px;
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0) -10%, rgba(0, 0, 0, 0.9) 50%); }
+        .wrapper-app .content .game-browse .game-list .game-title .game-icon-app {
+          width: 30px;
+          height: 30px;
+          object-fit: cover;
+          margin-right: .5rem; }
+    .wrapper-app .content .game-browse .information .information-title {
+      font-size: 28px;
+      font-weight: 600; }
+    .wrapper-app .content .game-browse .information a {
+      color: #f75b37; }
+      .wrapper-app .content .game-browse .information a:hover {
+        color: #e65432; }
+    .wrapper-app .content .game-browse .player .player-registered, .wrapper-app .content .game-browse .player .player-slot {
+      line-height: .75;
+      font-size: 18px;
+      font-weight: bold; }
+      .wrapper-app .content .game-browse .player .player-registered small, .wrapper-app .content .game-browse .player .player-slot small {
+        font-size: 10px; }
+    .wrapper-app .content .game-browse .player .registration-information {
+      background: #1d252c;
+      color: #f5f5f5;
+      padding: 3rem 1.5rem;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px; }
+    .wrapper-app .content .game-browse .player .line {
+      height: 1px;
+      background: #f5f5f5;
+      margin: .5rem 0; }
+    .wrapper-app .content .game-browse .player .btn-app {
+      border-top-left-radius: 0;
+      border-top-right-radius: 0; }
+    .wrapper-app .content .game-browse .information-title {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: .5rem; }
+    .wrapper-app .content .game-browse .information-content {
+      font-size: 14px; }
+      .wrapper-app .content .game-browse .information-content.detail {
+        display: flex;
+        margin-right: -.5rem;
+        margin-left: -.5rem; }
+        .wrapper-app .content .game-browse .information-content.detail .detail-box-wrapper {
+          padding: .5rem;
+          width: 160px; }
+          .wrapper-app .content .game-browse .information-content.detail .detail-box-wrapper .detail-box {
+            font-size: 12px;
+            border: 1px solid #272727;
+            border-radius: 10px;
+            padding: .5rem; }
+            .wrapper-app .content .game-browse .information-content.detail .detail-box-wrapper .detail-box .detail-title {
+              color: #797979;
+              font-weight: 600; }
+      .wrapper-app .content .game-browse .information-content.prizes .prize-box {
+        padding: .5rem 1rem;
+        color: #a0a0a0;
+        border-radius: 10px;
+        transition: all .5s;
+        -webkit-transition: all .5s;
+        -moz-transition: all .5s;
+        -o-transition: all .5s; }
+        .wrapper-app .content .game-browse .information-content.prizes .prize-box.first .material-icons-outlined {
+          color: #ffd700; }
+        .wrapper-app .content .game-browse .information-content.prizes .prize-box.second .material-icons-outlined {
+          color: #c0c0c0; }
+        .wrapper-app .content .game-browse .information-content.prizes .prize-box.third .material-icons-outlined {
+          color: #b08d57; }
+        .wrapper-app .content .game-browse .information-content.prizes .prize-box:hover {
+          background: rgba(255, 255, 255, 0.02);
+          color: #f3f3f3; }
+      .wrapper-app .content .game-browse .information-content.sponsored img {
+        width: 80px;
+        margin-right: .5rem; }
+      .wrapper-app .content .game-browse .information-content ul {
+        padding-left: 1.5rem; }
+        .wrapper-app .content .game-browse .information-content ul li {
+          list-style: disc;
+          margin-bottom: .3rem; }
+      .wrapper-app .content .game-browse .information-content a {
+        display: inline-block;
+        padding: .5rem 1rem;
+        border: 1px solid #ccc;
+        width: 100%;
+        transition: all .3s;
+        -webkit-transition: all .3s;
+        -moz-transition: all .3s;
+        -o-transition: all .3s; }
+        .wrapper-app .content .game-browse .information-content a:hover {
+          background: #f75b37;
+          color: #fff; }
+      .wrapper-app .content .game-browse .information-content.view-less .view-more {
+        height: 100px;
+        overflow: hidden; }
+      .wrapper-app .content .game-browse .information-content .btn-view {
+        font-size: 12px;
+        font-weight: 600;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        color: #f75b37; }
+    .wrapper-app .content .blog .blog-list {
+      min-height: 150px; }
+      .wrapper-app .content .blog .blog-list .blog-thumbnail {
+        overflow: hidden;
+        border-radius: 10px; }
+        .wrapper-app .content .blog .blog-list .blog-thumbnail img {
+          transition: all .3s;
+          -webkit-transition: all .3s;
+          -moz-transition: all .3s;
+          -o-transition: all .3s;
+          height: 150px;
+          object-fit: cover; }
+      .wrapper-app .content .blog .blog-list .blog-title {
+        margin-bottom: .8rem;
+        font-size: 18px;
+        font-weight: 600;
+        text-transform: uppercase;
+        transition: all .3s;
+        -webkit-transition: all .3s;
+        -moz-transition: all .3s;
+        -o-transition: all .3s; }
+      .wrapper-app .content .blog .blog-list .blog-min-desc {
+        font-size: 13px; }
+      .wrapper-app .content .blog .blog-list .author {
+        font-size: 11px;
+        margin-top: .5rem;
+        opacity: .4; }
+        .wrapper-app .content .blog .blog-list .author span {
+          margin-left: 10px;
+          position: relative; }
+          .wrapper-app .content .blog .blog-list .author span:before {
+            content: '';
+            width: 3px;
+            height: 3px;
+            border-radius: 50%;
+            background: #f3f3f3;
+            position: absolute;
+            left: -8px;
+            top: 7px; }
+      .wrapper-app .content .blog .blog-list:hover a {
+        color: #fff; }
+      .wrapper-app .content .blog .blog-list:hover .blog-title {
+        color: #f75b37; }
+      .wrapper-app .content .blog .blog-list:hover .blog-thumbnail img {
+        transform: scale(1.3); }
+    .wrapper-app .content .blog-detail .author {
+      font-size: 11px;
+      opacity: .4; }
+      .wrapper-app .content .blog-detail .author span {
+        margin-left: 10px;
+        position: relative; }
+        .wrapper-app .content .blog-detail .author span:before {
+          content: '';
+          width: 3px;
+          height: 3px;
+          border-radius: 50%;
+          background: #404040;
+          position: absolute;
+          left: -8px;
+          top: 7px; }
+    .wrapper-app .content .blog-detail .blog-detail-desc {
+      line-height: 2; }
+    .wrapper-app .content .blog-detail .other-detail-cover img {
+      height: 150px;
+      object-fit: cover;
+      margin-bottom: .5rem;
+      border-radius: 10px; }
+    .wrapper-app .content .blog-detail .other-blog-detail .blog-title {
+      margin-bottom: .8rem;
+      font-size: 16px;
+      font-weight: 600;
+      transition: all .3s;
+      -webkit-transition: all .3s;
+      -moz-transition: all .3s;
+      -o-transition: all .3s; }
+    .wrapper-app .content .blog-detail .other-blog-detail :hover .blog-title {
+      color: #f75b37; }
+    .wrapper-app .content .game-browse .nav-pills {
+      flex-wrap: initial;
+      overflow-x: auto; }
+      .wrapper-app .content .game-browse .nav-pills .nav-link.active, .wrapper-app .content .game-browse .nav-pills .show > .nav-link.active {
+        color: #f3f3f3;
+        background: transparent;
+        border-bottom: 2px solid #f75b37; }
+    .wrapper-app .content .game-browse .nav-pills, .wrapper-app .content .game-browse .nav-link {
+      border-radius: 0; }
+    .wrapper-app .content .game-browse .tournament-list {
+      display: inline-block;
+      width: 100%;
+      padding: 2rem 0;
+      position: relative;
+      overflow: hidden;
+      border-radius: 10px; }
+      .wrapper-app .content .game-browse .tournament-list:hover {
+        color: #fff; }
+      .wrapper-app .content .game-browse .tournament-list .tournament-image {
+        position: absolute;
+        right: 0;
+        top: -80px;
+        width: 500px;
+        opacity: .3;
+        z-index: -1; }
+      .wrapper-app .content .game-browse .tournament-list:before {
+        content: '';
+        background: linear-gradient(to right, #111217 60%, transparent 80%);
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        position: absolute; }
+      .wrapper-app .content .game-browse .tournament-list .tournament-name {
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 18px; }
+      .wrapper-app .content .game-browse .tournament-list .tournament-game {
+        font-size: 12px;
+        color: #909090; }
+        .wrapper-app .content .game-browse .tournament-list .tournament-game span {
+          margin-left: .5rem;
+          position: relative; }
+          .wrapper-app .content .game-browse .tournament-list .tournament-game span:before {
+            content: '';
+            position: absolute;
+            width: 3px;
+            height: 3px;
+            border-radius: 50%;
+            background: #ccc;
+            left: -6px;
+            top: 7px; }
+      .wrapper-app .content .game-browse .tournament-list .tournament-time {
+        font-size: 12px; }
+      .wrapper-app .content .game-browse .tournament-list .tournament-status {
+        color: #f75b37; }
+      .wrapper-app .content .game-browse .tournament-list .badge-app {
+        background: #f75b37;
+        padding: .1rem .5rem;
+        color: #fff;
+        font-weight: 600;
+        border-radius: 5px;
+        font-size: 10px; }
+    .wrapper-app .content .categories ul li {
+      padding: .5rem 0;
+      font-size: 18px; }
+      .wrapper-app .content .categories ul li a {
+        color: #797979; }
+        .wrapper-app .content .categories ul li a:hover {
+          color: #f3f3f3; }
+    .wrapper-app .content .pagination {
+      margin-top: 2rem; }
+      .wrapper-app .content .pagination ul li {
+        display: inline; }
+        .wrapper-app .content .pagination ul li a {
+          display: inline-block;
+          padding: .5rem 1rem;
+          background: #1d252c;
+          border-radius: 5px;
+          color: #f3f3f3; }
+          .wrapper-app .content .pagination ul li a.active {
+            background: #f75b37;
+            color: #fff; }
+          .wrapper-app .content .pagination ul li a.disbale {
+            background: #1d252c;
+            color: #3f5161; }
+    .wrapper-app .content .caster {
+      cursor: pointer;
+      display: flex;
+      height: 100px;
+      text-align: left;
+      position: relative;
+      border-radius: 10px;
+      overflow: hidden; }
+      .wrapper-app .content .caster .caster-img {
+        width: 150px;
+        height: 100%;
+        object-fit: cover;
+        margin-right: 1rem; }
+      .wrapper-app .content .caster .caster-name {
+        margin-bottom: .5rem;
+        position: relative;
+        z-index: 3; }
+      .wrapper-app .content .caster .ratings {
+        position: relative;
+        z-index: 3; }
+        .wrapper-app .content .caster .ratings .rate {
+          color: #1d252c; }
+          .wrapper-app .content .caster .ratings .rate.rated, .wrapper-app .content .caster .ratings .rate:hover {
+            color: #f75b37; }
+      .wrapper-app .content .caster:before {
+        content: '';
+        background: linear-gradient(to left, #111217 60%, transparent 100%);
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        z-index: 0; }
+    .wrapper-app .content .comment .comment-section .box {
+      background: #1d252c;
+      padding: 1rem; }
+      .wrapper-app .content .comment .comment-section .box .date {
+        font-size: 11px;
+        color: #ccc;
+        font-weight: 600; }
+      .wrapper-app .content .comment .comment-section .box .action {
+        display: flex; }
+        .wrapper-app .content .comment .comment-section .box .action .btn-transparent {
+          background: transparent;
+          border: none;
+          padding: 0;
+          margin-right: 1rem;
+          color: #a5a5a5;
+          font-size: 12px; }
+          .wrapper-app .content .comment .comment-section .box .action .btn-transparent:focus {
+            outline: none; }
+          .wrapper-app .content .comment .comment-section .box .action .btn-transparent:hover {
+            color: #1d252c; }
+        .wrapper-app .content .comment .comment-section .box .action .material-icons {
+          font-size: 14px; }
+      .wrapper-app .content .comment .comment-section .box:nth-child(even) {
+        background: #161f25; }
+      .wrapper-app .content .comment .comment-section .box .replay {
+        margin-top: 1rem;
+        margin-left: 2rem;
+        border-bottom: 1px solid #111217; }
+  .wrapper-app .tournament {
+    display: flex;
+    flex-direction: row; }
+    .wrapper-app .tournament .round {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      min-width: 200px; }
+      .wrapper-app .tournament .round .space {
+        flex-grow: 1;
+        position: relative;
+        height: 36px; }
+        .wrapper-app .tournament .round .space:first-child, .wrapper-app .tournament .round .space:last-child {
+          flex-grow: .5; }
+      .wrapper-app .tournament .round .team {
+        font-size: 14px;
+        padding: .5rem 0;
+        position: relative; }
+        .wrapper-app .tournament .round .team.space {
+          border-right: 2px solid #343b48;
+          border-top: 3px solid #343b48;
+          border-bottom: 3px solid #343b48;
+          height: 114px; }
+        .wrapper-app .tournament .round .team.top {
+          cursor: pointer;
+          z-index: 2; }
+          .wrapper-app .tournament .round .team.top .wrapper-team {
+            top: 12px; }
+        .wrapper-app .tournament .round .team.bottom {
+          cursor: pointer;
+          z-index: 2; }
+          .wrapper-app .tournament .round .team.bottom .wrapper-team {
+            bottom: 12px; }
+        .wrapper-app .tournament .round .team .wrapper-team {
+          position: absolute;
+          background: #1d252c;
+          min-width: 180px;
+          left: 10px;
+          border-radius: 10px; }
+          .wrapper-app .tournament .round .team .wrapper-team div {
+            /*padding: .3rem;*/
+            display: flex;
+            border: 1px solid #111217; }
+            .wrapper-app .tournament .round .team .wrapper-team div .score {
+              margin-left: auto;
+              padding: .1rem .3rem;
+              border-left: 1px solid #28343e;
+              min-width: 20px;
+              text-align: center;
+              font-weight: 500; }
+            .wrapper-app .tournament .round .team .wrapper-team div .name {
+              text-overflow: ellipsis;
+              white-space: nowrap;
+              overflow: hidden;
+              max-width: 150px;
+              padding: .1rem .3rem; }
+            .wrapper-app .tournament .round .team .wrapper-team div.win {
+              font-weight: 900; }
+              .wrapper-app .tournament .round .team .wrapper-team div.win .score {
+                color: #FFD700; }
+            .wrapper-app .tournament .round .team .wrapper-team div.lose {
+              color: #909090; }
+            .wrapper-app .tournament .round .team .wrapper-team div.tbd {
+              color: #3e4e5d; }
+      .wrapper-app .tournament .round.final {
+        min-width: 190px; }
+        .wrapper-app .tournament .round.final .team.top {
+          padding: .6rem; }
+        .wrapper-app .tournament .round.final .team .wrapper-team:before {
+          content: '';
+          width: 10px;
+          height: 2px;
+          background: #343b48;
+          position: absolute;
+          left: -10px;
+          top: 25px; }
+      .wrapper-app .tournament .round.one {
+        min-width: 190px; }
+        .wrapper-app .tournament .round.one .team .wrapper-team {
+          left: 0; }
+          .wrapper-app .tournament .round.one .team .wrapper-team:before {
+            display: block;
+            z-index: 1; }
+          .wrapper-app .tournament .round.one .team .wrapper-team div:after {
+            display: none; }
+          .wrapper-app .tournament .round.one .team .wrapper-team div:before {
+            top: 31px;
+            height: 3px; }
+          .wrapper-app .tournament .round.one .team .wrapper-team.has-playoffs:before {
+            display: none; }
+      .wrapper-app .tournament .round.winner .team {
+        padding: 0; }
+        .wrapper-app .tournament .round.winner .team .wrapper-team {
+          top: 15px; }
+          .wrapper-app .tournament .round.winner .team .wrapper-team:before {
+            content: '';
+            width: 10px;
+            height: 3px;
+            background: #343b48;
+            position: absolute;
+            left: -10px;
+            top: 13px; }
+          .wrapper-app .tournament .round.winner .team .wrapper-team div:after {
+            display: none; }
+          .wrapper-app .tournament .round.winner .team .wrapper-team div:before {
+            display: none; }
+      .wrapper-app .tournament .round.playoff {
+        display: block;
+        padding-top: 20px; }
+        .wrapper-app .tournament .round.playoff .space.top {
+          height: 40px; }
+        .wrapper-app .tournament .round.playoff .team.space {
+          border: none;
+          height: 52px; }
+        .wrapper-app .tournament .round.playoff .team.top .wrapper-team {
+          top: 0; }
+          .wrapper-app .tournament .round.playoff .team.top .wrapper-team:before {
+            display: none; }
+          .wrapper-app .tournament .round.playoff .team.top .wrapper-team div:after {
+            top: 24px;
+            height: 28px; }
+        .wrapper-app .tournament .round.playoff .team.top.single {
+          opacity: 0;
+          visibility: hidden; }
+        .wrapper-app .tournament .round.playoff .team.bottom {
+          margin-bottom: 7px; }
+          .wrapper-app .tournament .round.playoff .team.bottom .wrapper-team {
+            bottom: 0; }
+        .wrapper-app .tournament .round.playoff .wrapper-team {
+          left: 0; }
+          .wrapper-app .tournament .round.playoff .wrapper-team:before {
+            content: '';
+            width: 12px;
+            background: #343b48;
+            position: absolute;
+            height: 3px;
+            right: -20px;
+            top: 0; }
+          .wrapper-app .tournament .round.playoff .wrapper-team div:after {
+            content: '';
+            background: #343b48;
+            position: absolute;
+            width: 2px;
+            right: -10px;
+            left: inherit;
+            height: 24px;
+            top: 2px; }
+          .wrapper-app .tournament .round.playoff .wrapper-team div:before {
+            content: '';
+            width: 12px;
+            background: #343b48;
+            position: absolute;
+            height: 3px;
+            right: -10px;
+            left: inherit;
+            top: 24px; }
+    .wrapper-app .tournament .material-icons {
+      font-size: 12px; }
+      .wrapper-app .tournament .material-icons.lock {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        font-size: 14px; }
+    .wrapper-app .tournament.result {
+      border: 2px solid transparent; }
+      .wrapper-app .tournament.result.tbd .top, .wrapper-app .tournament.result.tbd .bottom {
+        color: #cccccc; }
+      .wrapper-app .tournament.result:hover {
+        border: 2px solid #f75b37; }
+  .wrapper-app .tournamentffa .table {
+    border: 2px solid #111217;
+    background: #1d252c;
+    color: #f3f3f3; }
+    .wrapper-app .tournamentffa .table td {
+      border-top-color: #111217; }
+    .wrapper-app .tournamentffa .table thead {
+      letter-spacing: 1px;
+      color: #f75b37;
+      -webkit-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.07);
+      -moz-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.07);
+      box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.07); }
+      .wrapper-app .tournamentffa .table thead th {
+        border-bottom-color: #111217; }
+    .wrapper-app .tournamentffa .table tr {
+      margin-bottom: .5rem; }
+      .wrapper-app .tournamentffa .table tr:nth-child(even) {
+        background: #151c21; }
+      .wrapper-app .tournamentffa .table tr:hover:not(.head) {
+        background: rgba(255, 255, 255, 0.02); }
+    .wrapper-app .tournamentffa .table td {
+      vertical-align: middle;
+      border-left: 2px solid #111217; }
+    .wrapper-app .tournamentffa .table .rank {
+      width: 50px;
+      font-weight: bold;
+      vertical-align: middle;
+      text-align: center; }
+      .wrapper-app .tournamentffa .table .rank span {
+        width: 30px;
+        height: 30px;
+        display: inline-block;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto; }
+    .wrapper-app .tournamentffa .table .player {
+      letter-spacing: 1px; }
+    .wrapper-app .tournamentffa .table .team-logo {
+      width: 40px;
+      height: 40px;
+      object-fit: cover;
+      margin-right: 1rem; }
+    .wrapper-app .tournamentffa .table .team-member span {
+      background: #1d252c;
+      color: #fff;
+      font-size: 14px;
+      padding: .2rem .5rem;
+      border-radius: 10px;
+      margin-bottom: .5rem;
+      display: inline-block; }
+    .wrapper-app .tournamentffa .table .points {
+      width: 100px;
+      font-weight: bold; }
+    .wrapper-app .tournamentffa .table .first span {
+      background: #FFD700;
+      color: #1d252c; }
+    .wrapper-app .tournamentffa .table .second span {
+      background: #C0C0C0;
+      color: #1d252c; }
+    .wrapper-app .tournamentffa .table .third span {
+      background: #cd7f32;
+      color: #1d252c; }
+  .wrapper-app .login {
+    background: url("../img/cover/login-cover-2.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    position: relative; }
+    .wrapper-app .login:after {
+      content: '';
+      position: fixed;
+      background: linear-gradient(-120deg, #111217 50%, rgba(17, 18, 23, 0.4) 100%);
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0; }
+    .wrapper-app .login .form {
+      position: relative;
+      z-index: 2; }
+    .wrapper-app .login .logo {
+      position: relative;
+      z-index: 2; }
+      .wrapper-app .login .logo img {
+        width: 200px; }
+    .wrapper-app .login .forget a, .wrapper-app .login .extra a, .wrapper-app .login .login-option a {
+      color: #f75b37; }
+      .wrapper-app .login .forget a:hover, .wrapper-app .login .extra a:hover, .wrapper-app .login .login-option a:hover {
+        color: #e65432; }
+    .wrapper-app .login .input-group .input-group-text {
+      background: #ffffff;
+      border-right: none !important;
+      color: #34424e; }
+    .wrapper-app .login .input-group .form-control {
+      border-left: none !important; }
+    .wrapper-app .login .login-title {
+      font-size: 22px; }
+    .wrapper-app .login .cover-wrapper {
+      position: relative; }
+      .wrapper-app .login .cover-wrapper .login-cover {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0; }
+        .wrapper-app .login .cover-wrapper .login-cover img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover; }
+      .wrapper-app .login .cover-wrapper .login-text {
+        color: #fff;
+        position: relative;
+        z-index: 99; }
+    .wrapper-app .login .input-group {
+      border: 1px solid #1d252c;
+      border-radius: 5px;
+      overflow: hidden; }
+      .wrapper-app .login .input-group .input-group-text {
+        background: #1d252c;
+        border: 0; }
+      .wrapper-app .login .input-group .form-control {
+        border: 0; }
+      .wrapper-app .login .input-group:focus-within {
+        border-color: #f75b37; }
+    .wrapper-app .login .btn-login {
+      width: 100%;
+      margin-bottom: 1rem;
+      margin-top: 1rem; }
+    .wrapper-app .login .custom-control-label:before {
+      background: #1d252c;
+      border-color: #1d252c; }
+    .wrapper-app .login .custom-control-input:checked ~ .custom-control-label::before {
+      background: #f75b37;
+      border-color: #f75b37; }
+  .wrapper-app .bootstrap-select .btn {
+    background: #1d252c !important;
+    border: #1d252c !important;
+    color: #f3f3f3 !important; }
+  .wrapper-app .bootstrap-select .dropdown-menu {
+    padding: 0;
+    background: #1d252c !important; }
+    .wrapper-app .bootstrap-select .dropdown-menu .bs-searchbox {
+      padding: .8rem .5rem; }
+      .wrapper-app .bootstrap-select .dropdown-menu .bs-searchbox .form-control {
+        background: #222b33;
+        border: none;
+        color: #f3f3f3; }
+    .wrapper-app .bootstrap-select .dropdown-menu .dropdown-item {
+      padding: .5rem .8rem;
+      color: #f3f3f3 !important; }
+      .wrapper-app .bootstrap-select .dropdown-menu .dropdown-item:hover {
+        background: #222b33; }
+      .wrapper-app .bootstrap-select .dropdown-menu .dropdown-item.active {
+        background: #222b33; }
+      .wrapper-app .bootstrap-select .dropdown-menu .dropdown-item:active {
+        background: #222b33; }
+  .wrapper-app .bootstrap-select .dropdown-toggle:focus, .wrapper-app .bootstrap-select .bootstrap-select > select.mobile-device:focus + .dropdown-toggle {
+    outline: none !important;
+    box-shadow: none;
+    outline-offset: none; }
+  .wrapper-app .bootstrap-select .btn-light {
+    background: #ffffff;
+    border-color: #ced4da; }
+  .wrapper-app .match-team {
+    background: #1d252c;
+    color: #ccc;
+    border-radius: 5px; }
+
+.modal-app iframe {
+  width: 100%;
+  height: 400px; }
+.modal-app .modal-content {
+  background: rgba(12, 0, 33, 0.9);
+  color: #fff;
+  border-radius: 0; }
+.modal-app button.close {
+  color: #fff; }
+  .modal-app button.close:focus {
+    box-shadow: none;
+    outline: none; }
+.modal-app .modal-header, .modal-app .modal-footer {
+  border: none; }
+
+@media (min-width: 992px) {
+  .navbar-app .navbar-collapse {
+    background: none !important; } }
+@media (min-width: 768px) and (max-width: 1024px) {
+  .tournament {
+    overflow: auto; }
+
+  .tournamentffa .table .player, .tournamentffa .table .team-member {
+    min-width: 250px; }
+  .tournamentffa .table .points {
+    min-width: 100px; }
+
+  .modalCaster .d-flex {
+    flex-direction: column;
+    text-align: center; }
+  .modalCaster .col-lg-2, .modalCaster .col-lg-10 {
+    max-width: 100%;
+    flex: 0 0 100%; }
+  .modalCaster .text-lg-left {
+    text-align: center !important; }
+  .modalCaster .mr-lg-3, .modalCaster .mr-lg-4, .modalCaster .mr-lg-5 {
+    margin-right: 0 !important; }
+  .modalCaster .mt-lg-0 {
+    margin-top: 1rem !important; }
+
+  .comment-input .btn-app {
+    width: 100%;
+    justify-content: center; }
+
+  .caster .caster-img {
+    height: 140px !important; }
+
+  .stream-box img:not(.icon-app) {
+    height: 250px !important; }
+
+  .title-app {
+    font-size: 16px !important; }
+
+  .icon-app {
+    width: 22px !important; }
+
+  .btn-app, .btn-app-outline {
+    font-size: 12px; }
+
+  .navbar-app {
+    height: inherit !important; }
+    .navbar-app .logo-app {
+      height: 60px;
+      display: flex;
+      align-items: center; }
+      .navbar-app .logo-app img {
+        width: 130px; }
+    .navbar-app .navbar-collapse {
+      background: rgba(0, 0, 0, 0.8);
+      padding: 1rem;
+      margin-top: .7rem; }
+    .navbar-app .navbar-nav .nav-link {
+      padding-right: .2rem;
+      padding-left: .2rem; }
+    .navbar-app .navbar-nav .nav-item:last-child .dropdown-menu {
+      right: 0;
+      left: auto; }
+
+  .wrapper-app .header .header-carousel {
+    height: 40vh; }
+    .wrapper-app .header .header-carousel .item img.cover-app {
+      height: 40vh; }
+    .wrapper-app .header .header-carousel .header-desc {
+      bottom: 120px !important; }
+  .wrapper-app .content.about .about-img {
+    width: 250px; }
+  .wrapper-app .content .live {
+    padding: 1rem; }
+    .wrapper-app .content .live .btn-app {
+      font-size: 12px; }
+    .wrapper-app .content .live .live-carousel .item {
+      height: 35vh; }
+      .wrapper-app .content .live .live-carousel .item .btnLiveModal {
+        padding: .5rem 1rem; }
+        .wrapper-app .content .live .live-carousel .item .btnLiveModal img {
+          width: 24px !important; }
+    .wrapper-app .content .live .video-desc {
+      display: none; }
+    .wrapper-app .content .live .title-app {
+      border: none;
+      font-size: 16px;
+      padding: 0; }
+    .wrapper-app .content .live .d-flex {
+      justify-content: center; }
+    .wrapper-app .content .live .btn-app {
+      margin: auto; }
+    .wrapper-app .content .live .mb-2 {
+      text-align: center; }
+  .wrapper-app .content .game .game-list .game-cover-app {
+    height: 200px; }
+  .wrapper-app .content .footer .logo-footer img {
+    width: 150px; }
+  .wrapper-app .content .streaming .left-item, .wrapper-app .content .streaming .right-item {
+    height: 300px; }
+  .wrapper-app .content .streaming .right-item .item {
+    height: 137px; }
+
+  .login {
+    font-size: 12px; }
+    .login .login-title {
+      font-size: 16px !important; } }
+@media (min-width: 320px) and (max-width: 480px) {
+  .member-list {
+    background: linear-gradient(to right, #1d252c, transparent);
+    padding: 1rem;
+    border-radius: 10px; }
+    .member-list .member-title {
+      font-size: 28px; }
+      .member-list .member-title small {
+        color: #797979; }
+
+  .hamburger-menu {
+    margin-right: 1rem; }
+    .hamburger-menu span {
+      height: 1px;
+      width: 20px;
+      background: #fff;
+      display: block;
+      margin-bottom: .3rem; }
+      .hamburger-menu span:last-child {
+        width: 15px; }
+
+  .row.mobile {
+    flex-wrap: nowrap; }
+    .row.mobile.first {
+      overflow-x: scroll; }
+      .row.mobile.first:after {
+        content: '';
+        width: 100px; }
+
+  .left-item .item {
+    margin: 0 1rem; }
+    .left-item .item img {
+      height: 225px !important; }
+
+  .right-item .item {
+    margin: 0 1rem; }
+
+  .streaming .item-favourite {
+    height: 185px !important; }
+    .streaming .item-favourite .detail {
+      opacity: 1 !important;
+      visibility: visible !important; }
+  .streaming .pr-m-1 {
+    padding-right: .25rem; }
+  .streaming .pl-m-1 {
+    padding-left: .25rem; }
+  .streaming .mb-3 {
+    margin-bottom: .25rem !important; }
+
+  .tournament {
+    overflow: auto; }
+
+  .tournamentffa {
+    font-size: 12px; }
+    .tournamentffa .table .player, .tournamentffa .table .team-member {
+      min-width: 250px; }
+    .tournamentffa .table .points {
+      min-width: 100px; }
+
+  .left-item, .right-item {
+    height: auto !important; }
+
+  .font-sm-12 {
+    font-size: 12px !important; }
+
+  .font-sm-14 {
+    font-size: 14px !important; }
+
+  .liveTournament .owl-nav, .favouriteTournament .owl-nav {
+    opacity: 1 !important;
+    visibility: visible !important; }
+
+  .modalCaster .d-flex {
+    flex-direction: column;
+    text-align: center; }
+
+  .comment-input .btn-app {
+    width: 100%;
+    justify-content: center; }
+
+  .caster .caster-img {
+    height: 140px !important; }
+
+  .type-input {
+    width: 70% !important; }
+
+  .stream-box img:not(.icon-app) {
+    height: 250px !important; }
+
+  .content-header.stream {
+    height: 95vh !important;
+    background: none !important; }
+    .content-header.stream .live-video, .content-header.stream .live-chat {
+      height: 30vh !important; }
+    .content-header.stream .video-title {
+      font-size: 16px; }
+    .content-header.stream .counter {
+      font-size: 12px !important; }
+
+  .information-title {
+    font-size: 20px !important; }
+
+  .nav-pills {
+    flex-wrap: initial;
+    overflow-x: auto;
+    margin-right: -1rem; }
+
+  .title-app {
+    font-size: 16px !important; }
+
+  .icon-app {
+    width: 22px !important; }
+
+  .btn-app, .btn-app-outline {
+    font-size: 12px; }
+
+  .navbar-app {
+    height: inherit !important; }
+    .navbar-app .logo-app {
+      height: 60px;
+      display: flex;
+      align-items: center; }
+      .navbar-app .logo-app img {
+        width: 100px; }
+    .navbar-app .btn-app.login {
+      padding: .2rem 1rem; }
+    .navbar-app .navbar-collapse {
+      background: rgba(0, 0, 0, 0.8);
+      padding: 1rem;
+      margin-top: .7rem; }
+    .navbar-app .navbar-menu {
+      position: fixed;
+      bottom: 0;
+      background: #1d252c;
+      width: 100%;
+      left: 0;
+      padding: .3rem 1rem; }
+      .navbar-app .navbar-menu ul.navbar-nav {
+        flex-direction: row;
+        justify-content: center; }
+        .navbar-app .navbar-menu ul.navbar-nav .nav-item {
+          margin: 0 1rem;
+          font-size: 10px;
+          line-height: 1;
+          opacity: .4; }
+          .navbar-app .navbar-menu ul.navbar-nav .nav-item .link-app {
+            font-size: 12px;
+            padding: 0; }
+          .navbar-app .navbar-menu ul.navbar-nav .nav-item.active {
+            opacity: 1; }
+
+  .wrapper-app .header .header-carousel .item {
+    height: 300px; }
+    .wrapper-app .header .header-carousel .item .header-desc {
+      padding: 1rem;
+      width: 100%; }
+      .wrapper-app .header .header-carousel .item .header-desc .title-desc {
+        font-size: 20px; }
+      .wrapper-app .header .header-carousel .item .header-desc .short-desc {
+        display: none; }
+      .wrapper-app .header .header-carousel .item .header-desc .logo-desc img {
+        width: 60px; }
+      .wrapper-app .header .header-carousel .item .header-desc .btn-app {
+        padding: .2rem 1rem; }
+        .wrapper-app .header .header-carousel .item .header-desc .btn-app.mt-3 {
+          margin-top: 0 !important; }
+  .wrapper-app .header .header-carousel {
+    height: 300px; }
+    .wrapper-app .header .header-carousel .item img.cover-app {
+      height: 300px; }
+  .wrapper-app .content-header .featured-box {
+    height: 250px !important; }
+    .wrapper-app .content-header .featured-box .featured-detail {
+      text-align: left; }
+      .wrapper-app .content-header .featured-box .featured-detail .featured-title {
+        font-size: 16px; }
+  .wrapper-app .content.information {
+    padding-top: 8rem; }
+  .wrapper-app .content.games {
+    padding-top: 3rem; }
+  .wrapper-app .content .participants-list {
+    background: #1d252c; }
+    .wrapper-app .content .participants-list img {
+      height: 50px;
+      width: 50px !important; }
+  .wrapper-app .content .streaming .left-item {
+    max-width: 300px; }
+  .wrapper-app .content .streaming .right-item .mobile .col-12 {
+    max-width: 300px; }
+  .wrapper-app .content .streaming .left-item, .wrapper-app .content .streaming .right-item {
+    height: 185px !important; }
+    .wrapper-app .content .streaming .left-item .item, .wrapper-app .content .streaming .right-item .item {
+      height: 185px; }
+      .wrapper-app .content .streaming .left-item .item .detail-wrapper, .wrapper-app .content .streaming .right-item .item .detail-wrapper {
+        top: initial;
+        height: 35px;
+        background: linear-gradient(to top, #000, transparent);
+        padding: .5rem;
+        opacity: 1;
+        visibility: visible; }
+        .wrapper-app .content .streaming .left-item .item .detail-wrapper .detail .detail-play, .wrapper-app .content .streaming .right-item .item .detail-wrapper .detail .detail-play {
+          display: none; }
+        .wrapper-app .content .streaming .left-item .item .detail-wrapper .detail .detail-title, .wrapper-app .content .streaming .right-item .item .detail-wrapper .detail .detail-title {
+          text-align: left;
+          font-size: 12px; }
+  .wrapper-app .content .streaming .col-fovourite {
+    min-width: 300px;
+    max-width: 300px; }
+  .wrapper-app .content.verify {
+    text-align: center; }
+    .wrapper-app .content.verify .text-right {
+      text-align: center !important; }
+  .wrapper-app .content.about .about-img {
+    width: 250px; }
+  .wrapper-app .content.about .text-right, .wrapper-app .content.about .text-left {
+    text-align: center !important; }
+  .wrapper-app .content.about .section {
+    text-align: center; }
+  .wrapper-app .content .live .title {
+    font-size: 16px !important; }
+  .wrapper-app .content .live .live-title {
+    font-size: 14px !important;
+    top: 4rem !important; }
+  .wrapper-app .content #liveCarousel .live-cover {
+    height: 50vh !important; }
+  .wrapper-app .content #liveCarousel .caster {
+    display: none; }
+  .wrapper-app .content #liveCarousel .carousel-indicators {
+    display: none; }
+  .wrapper-app .content .game .game-list {
+    max-width: 45%; }
+    .wrapper-app .content .game .game-list:first-child {
+      margin-left: 1rem; }
+    .wrapper-app .content .game .game-list .game-cover-app {
+      height: 200px; }
+    .wrapper-app .content .game .game-list.last a:before {
+      font-size: 16px; }
+  .wrapper-app .content .game.py-5 {
+    padding-top: 0 !important; }
+  .wrapper-app .content .popular .text-right {
+    text-align: center !important; }
+  .wrapper-app .content .popular .popular-game {
+    max-width: 80%; }
+    .wrapper-app .content .popular .popular-game:first-child {
+      margin-left: 1rem; }
+    .wrapper-app .content .popular .popular-game .game-cover-app {
+      height: 150px; }
+  .wrapper-app .content .popular .ml-auto {
+    margin-bottom: 1rem !important; }
+  .wrapper-app .content .popular .dropdown.share {
+    opacity: 1; }
+    .wrapper-app .content .popular .dropdown.share .btn-share {
+      width: 2rem;
+      height: 2rem; }
+      .wrapper-app .content .popular .dropdown.share .btn-share .material-icons-outlined {
+        font-size: 14px; }
+    .wrapper-app .content .popular .dropdown.share .dropdown-menu {
+      padding: 0 !important; }
+      .wrapper-app .content .popular .dropdown.share .dropdown-menu .icon-app {
+        width: 18px !important; }
+      .wrapper-app .content .popular .dropdown.share .dropdown-menu .material-icons {
+        font-size: 20px; }
+  .wrapper-app .content .footer {
+    display: none; }
+    .wrapper-app .content .footer .logo-footer img {
+      width: 150px; }
+    .wrapper-app .content .footer .footer-wrapper-top {
+      display: block; }
+      .wrapper-app .content .footer .footer-wrapper-top .contact {
+        width: initial;
+        text-align: center; }
+      .wrapper-app .content .footer .footer-wrapper-top .logo-footer {
+        text-align: center;
+        margin-bottom: 1rem; }
+      .wrapper-app .content .footer .footer-wrapper-top .socmed {
+        width: initial;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 1rem; }
+    .wrapper-app .content .footer .footer-wrapper-bottom .form-app {
+      width: 175px; }
+    .wrapper-app .content .footer .credit {
+      font-size: 12px; }
+  .wrapper-app .section {
+    padding: 2rem 0 !important; }
+
+  .login {
+    font-size: 12px; }
+    .login .login-title {
+      font-size: 16px !important;
+      text-align: center; }
+    .login .btn-app {
+      width: 100%; }
+
+  .game-browse .schedule-wrapper .schedule-box .match-name {
+    font-size: 18px !important; }
+  .game-browse .schedule-wrapper .schedule-box .date-wrapper .time {
+    font-size: 14px !important; }
+  .game-browse .schedule-wrapper .schedule-box .team-wrapper {
+    justify-content: center; }
+    .game-browse .schedule-wrapper .schedule-box .team-wrapper .team {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center; }
+      .game-browse .schedule-wrapper .schedule-box .team-wrapper .team img {
+        margin: auto; }
+      .game-browse .schedule-wrapper .schedule-box .team-wrapper .team.left {
+        flex-direction: column-reverse; }
+      .game-browse .schedule-wrapper .schedule-box .team-wrapper .team .mr-2, .game-browse .schedule-wrapper .schedule-box .team-wrapper .team .ml-2 {
+        margin: 0 !important; }
+    .game-browse .schedule-wrapper .schedule-box .team-wrapper .mx-3, .game-browse .schedule-wrapper .schedule-box .team-wrapper .mx-4 {
+      margin: 0 .7rem !important; }
+  .game-browse .tournament-list .tournament-name {
+    font-size: 14px !important; }
+  .game-browse .tournament-list .tournament-game {
+    font-size: 10px !important; }
+  .game-browse .game-list {
+    height: 170px !important; }
+    .game-browse .game-list .game-title {
+      font-size: 12px !important; }
+  .game-browse .information-content.detail {
+    overflow-x: scroll;
+    margin-right: -15px !important;
+    margin-left: -15px !important; }
+    .game-browse .information-content.detail .detail-box-wrapper {
+      min-width: 45%;
+      padding: .2rem !important; }
+      .game-browse .information-content.detail .detail-box-wrapper:first-child .detail-box {
+        margin-left: .6rem; }
+      .game-browse .information-content.detail .detail-box-wrapper:last-child {
+        padding-right: .6rem !important; }
+  .game-browse .information-content.sponsored img {
+    width: 50px !important; }
+  .game-browse .information-content.contact img {
+    width: 80px; }
+
+  .content-header {
+    font-size: 28px !important;
+    text-align: center;
+    height: 40vh !important; }
+    .content-header .header-title {
+      border-left: 0 !important;
+      position: relative !important; }
+    .content-header.detail {
+      text-align: left; }
+      .content-header.detail .header-title {
+        z-index: 101;
+        min-width: 100%;
+        margin-bottom: 1.5rem; }
+        .content-header.detail .header-title .tournament-name {
+          font-size: 16px !important;
+          font-weight: 900; }
+        .content-header.detail .header-title .tournament-time {
+          font-weight: 500; }
+        .content-header.detail .header-title .dropdown.share .dropdown-menu {
+          min-width: auto; }
+          .content-header.detail .header-title .dropdown.share .dropdown-menu.show.share {
+            flex-direction: column;
+            padding: 0;
+            background: #111217;
+            top: 0 !important; }
+      .content-header.detail .player {
+        min-width: 100%; }
+      .content-header.detail .d-flex.mobile {
+        flex-wrap: wrap;
+        position: relative;
+        top: 9rem;
+        z-index: 100; }
+
+  .pagination {
+    font-size: 12px; }
+    .pagination ul {
+      margin: auto; }
+
+  /*sidebar*/
+  .sidebar-app {
+    position: fixed;
+    height: 100vh;
+    background: #111217;
+    width: 280px;
+    z-index: 1031;
+    border-right: 1px solid #2a2d3a;
+    transform: translate(-280px, 0);
+    display: flex;
+    flex-direction: column;
+    padding: 2rem; }
+    .sidebar-app .profile .sidebar-avatar {
+      margin-bottom: 2rem;
+      display: flex;
+      align-items: center; }
+      .sidebar-app .profile .sidebar-avatar img {
+        width: 50px;
+        height: 50px;
+        object-fit: cover;
+        border-radius: 50%; }
+      .sidebar-app .profile .sidebar-avatar small {
+        font-size: 10px;
+        color: #969696; }
+    .sidebar-app .log-out {
+      color: #f75b37 !important; }
+    .sidebar-app .sidebar-menu {
+      display: flex;
+      flex-direction: column;
+      font-size: 14px; }
+      .sidebar-app .sidebar-menu a {
+        color: #969696;
+        display: inline-block;
+        padding: .5rem 0; }
+    .sidebar-app .sidebar-contact {
+      margin-top: 1rem;
+      font-size: 12px;
+      color: #969696; }
+      .sidebar-app .sidebar-contact ul li {
+        padding: .3rem 0; }
+    .sidebar-app .sidebar-title {
+      font-size: 12px;
+      font-weight: bold;
+      color: #4e4e4e; }
+    .sidebar-app .socmed {
+      display: flex;
+      /*justify-content: center;*/
+      margin-top: auto; }
+      .sidebar-app .socmed li {
+        margin: 0 .4rem; }
+        .sidebar-app .socmed li:first-child {
+          margin-left: 0; }
+        .sidebar-app .socmed li img {
+          width: 25px;
+          height: 25px;
+          filter: grayscale(100%); }
+
+  .notifications-app {
+    background: #111217;
+    position: fixed;
+    width: 100vw;
+    bottom: 0;
+    top: 0;
+    z-index: 1032;
+    transition: all .5s;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -o-transition: all .5s;
+    /*transform: translate(0, 100vh);*/
+    top: 100vh; }
+    .notifications-app.active {
+      /*transform: translate(0,0);*/
+      top: 0; }
+    .notifications-app .header {
+      display: flex;
+      align-items: center;
+      padding: .8rem .2rem;
+      background: #1d252c;
+      font-size: 14px;
+      font-weight: bold; }
+      .notifications-app .header .btn-close {
+        color: #fff;
+        line-height: 0; }
+        .notifications-app .header .btn-close .material-icons {
+          font-size: 20px !important; }
+    .notifications-app .content {
+      padding: .8rem 1rem; }
+      .notifications-app .content .notifications-item {
+        font-size: 12px;
+        padding: .5rem 0;
+        border-bottom: 1px solid #2c2e38; }
+        .notifications-app .content .notifications-item small {
+          color: #797979; }
+
+  .notifications-open {
+    overflow: hidden; }
+
+  .ssm-overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: none;
+    z-index: 1030; }
+
+  body {
+    position: relative; }
+
+  .second-navbar-app {
+    background: transparent;
+    font-size: 12px; }
+    .second-navbar-app .nav-link {
+      padding: .5rem; } }
+
+/*# sourceMappingURL=publicv2.css.map */
