@@ -22,8 +22,8 @@ const Login = () => {
   });
 
   const [response, setResponse] = useState({
+    showAlert: false,
     status: false,
-    error: false,
     message: '',
     code: null,
     detail: '',
@@ -55,15 +55,14 @@ const Login = () => {
     const res = await getLoginData({username, password})(dispatch);
     
     setResponse({
+      showAlert: true,
       status: res.success,
-      error: !res.success,
       message: !res.success ? res.message : res.meta.message
     });
 
     setValues({
       ...values,
-      loading: false,
-      error: res.success ? false : true
+      loading: false
     })
   };
 
@@ -114,11 +113,11 @@ const Login = () => {
                 <div className="login-title mb-4"><b>Masuk</b> ke Akun Anda</div>
                 
                 <AlertComponent
-                  error={response.error}
-                  variant="danger"
-                  title="Error"
+                  show={response.showAlert}
+                  variant={response.status ? "success" : "danger"}
+                  title={response.status ? "Success: " : "Error: "}
                   message={response.message}
-                  onClose={() => setResponse({...response, error: false})}
+                  onClose={() => setResponse({...response, showAlert: false})}
                 />
 
                 <form onSubmit={handleSubmit}>
