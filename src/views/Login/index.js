@@ -77,6 +77,10 @@ const Login = () => {
 
   useEffect(() => {
     document.title = 'Login';
+
+    return () => {
+      if(response.status) window.location.href="/"
+    }
   })
 
   const { loading } = values;
