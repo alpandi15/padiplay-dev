@@ -1,20 +1,50 @@
 import React from 'react';
+import { remove } from 'services/utils/storage';
+import { logoutUser } from 'actions/auth/loginAction';
+import { ContextStore } from 'store';
 
-const Sidebar = () => {
+const Sidebar = (props) => {
+  const [ state, dispatch ] = React.useContext(ContextStore);
+  const { authorized, userData } = props;
+
+  console.log('Autho ', authorized)
+  const _signOutAsync = async () => {
+    await remove('userToken');
+    await logoutUser()(dispatch);
+    window.location.reload()
+  }
+
   return (
     <div className="sidebar-app d-md-none">
       <div className="profile">
-      <a href="/login" className="btn btn-app btn-sm">Login</a> 
-      <a href="/login" className="btn btn-app btn-sm">Register</a>
+        { authorized ?
+          <div className="sidebar-avatar">
+            <img src={userData.image.raw} />
+            <div className="ml-3">
+              <div><small>Selamat datang</small></div>
+              <span>{userData.name}</span>
+            </div>
+          </div> 
+          : null
+        }
       </div>
       <div className="sidebar-menu">
         <a href="blog.html">Blog</a>
         <a href="../helpcenter/index.html">Help Center</a>
         <a href="index">Privacy Police</a>
         <a href="index">Term of Use</a>
-        {/* <a className="d-flex v-center log-out" href="#">
-          <i className="material-icons mr-2">exit_to_app</i> Log Out
-        </a> */}
+        {
+          authorized ? 
+            (
+              <a className="d-flex v-center log-out" href="#" onClick={() => _signOutAsync()}>
+                <i className="material-icons mr-2">exit_to_app</i> Log Out
+              </a>
+            ) : (
+              <a className="d-flex v-center log-out" href="/login">
+                <i className="material-icons mr-2">exit_to_app</i> Log In
+              </a>
+            )
+        }
       </div>
       <div className="sidebar-contact">
         <small className="sidebar-title">Contact</small>

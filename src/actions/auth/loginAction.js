@@ -69,6 +69,7 @@ const errorStatus = () => async (dispatch) => {
 }
 
 const logoutUser = () => async (dispatch) => {
+  console.log(dispatch)
   dispatch(logout());
 }
 

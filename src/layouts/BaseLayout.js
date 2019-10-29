@@ -16,13 +16,14 @@ const LayoutMember = (props) => {
 
   useEffect(() => {
     fetchUserToken();
-  },[]);
+  }, []);
+
   console.log(state);
   return (
     <div>
-      <Header />
-      <Sidebar />
-      <Notification state={state} />
+      <Header {...state} />
+      <Sidebar {...state} />
+      <Notification />
       {props.children}
     </div>
   );

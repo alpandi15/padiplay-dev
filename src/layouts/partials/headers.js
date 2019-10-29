@@ -2,7 +2,7 @@ import React from 'react';
 
 import HeaderProfile from 'layouts/partials/headerProfile';
 
-const Header = () => {
+const Header = (state) => {
   return (
     <div>
       <nav className="navbar navbar-expand-md navbar-app fixed-top">
@@ -63,7 +63,7 @@ const Header = () => {
               </li>
 
               {/* If not Login */}
-              <HeaderProfile />
+              <HeaderProfile {...state}/>
               {/* If Login */}
             </ul>
           </div>
