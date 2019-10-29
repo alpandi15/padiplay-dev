@@ -9,39 +9,39 @@ const Footer = () => {
             <ul>
               <li>
                 <a href="#">
-                  <img src="../../assets/img/icon/icon-facebookv2.svg" />
+                  <img src="../../assets/img/icon/icon-facebookv2.svg" alt=""/>
                 </a>
               </li>
               <li>
                 <a href="#">
-                  <img src="../../assets/img/icon/icon-twitterv2.svg" />
+                  <img src="../../assets/img/icon/icon-twitterv2.svg" alt=""/>
                 </a>
               </li>
               <li>
                 <a href="#">
-                  <img src="../../assets/img/icon/icon-instagramv2.svg" />
+                  <img src="../../assets/img/icon/icon-instagramv2.svg" alt=""/>
                 </a>
               </li>
               <li>
                 <a href="#">
-                  <img src="../../assets/img/icon/icon-youtubev2.svg" />
+                  <img src="../../assets/img/icon/icon-youtubev2.svg" alt=""/>
                 </a>
               </li>
             </ul>
           </div>
           <div className="logo-footer mx-auto">
-            <img src="../../assets/img/logo.png" />
+            <img src="../../assets/img/logo.png" alt=""/>
           </div>
           <div className="contact">
             <ul>
               <li>
-                <img src="../../assets/img/icon/icon-outline-phone.svg" className="icon-24" data-toggle="tooltip" data-placement="top" title="(021)-2221-4018" />
+                <img src="../../assets/img/icon/icon-outline-phone.svg" className="icon-24" data-toggle="tooltip" data-placement="top" title="(021)-2221-4018" alt=""/>
               </li>
               <li>
-                <img src="../../assets/img/icon/icon-outline-email.svg" className="icon-24" data-toggle="tooltip" data-placement="top" title="info@padiplay.com" />
+                <img src="../../assets/img/icon/icon-outline-email.svg" className="icon-24" data-toggle="tooltip" data-placement="top" title="info@padiplay.com" alt=""/>
               </li>
               <li>
-                <img src="../../assets/img/icon/icon-outline-location.svg" className="icon-24" data-toggle="tooltip" html="true" data-placement="top" title="Ruko Kebayoran Arcade 2, Jalan Boulevard Bintaro Jaya Sektor No.7, Pondok Jaya, Pondok Aren, Pd. Jaya, Kec. Pd. Aren, Kota Tangerang Selatan, Banten 15224" />
+                <img src="../../assets/img/icon/icon-outline-location.svg" className="icon-24" data-toggle="tooltip" html="true" data-placement="top" title="Ruko Kebayoran Arcade 2, Jalan Boulevard Bintaro Jaya Sektor No.7, Pondok Jaya, Pondok Aren, Pd. Jaya, Kec. Pd. Aren, Kota Tangerang Selatan, Banten 15224" alt=""/>
               </li>
             </ul>
           </div>

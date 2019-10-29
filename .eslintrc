@@ -1,0 +1,7 @@
+{
+    "extends": "react-app",
+    "rules": {
+      "camelcase": 0,
+      "no-unreachable": 0
+    }
+  }

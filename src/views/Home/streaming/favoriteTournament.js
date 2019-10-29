@@ -15,7 +15,7 @@ const FavoriteTournement = () => {
         <div className="col-lg-3 col-md-6 col-6 mb-3 col-fovourite">
           <div className="item-favourite">
             <a href="streamDetail.html">
-              <img src="https://img.youtube.com/vi/RDdBmrsrv68/sddefault.jpg" className="w-100" />
+              <img src="https://img.youtube.com/vi/RDdBmrsrv68/sddefault.jpg" className="w-100" alt=""/>
               <div className="channel">Channel 4</div>
               <div className="detail">
                 MSI 2019 Play-In Draw Show
@@ -26,7 +26,7 @@ const FavoriteTournement = () => {
         <div className="col-lg-3 col-md-6 col-6 mb-3 col-fovourite">
           <div className="item-favourite">
             <a href="streamDetail.html">
-              <img src="https://cdn2.tstatic.net/pontianak/foto/bank/images/live-streaming-grand-final-esport-piala-presiden-di-youtube-dan-gtv-mulai-jam-1000-wib.jpg" className="w-100" />
+              <img src="https://cdn2.tstatic.net/pontianak/foto/bank/images/live-streaming-grand-final-esport-piala-presiden-di-youtube-dan-gtv-mulai-jam-1000-wib.jpg" className="w-100" alt=""/>
               <div className="channel">Channel 2</div>
               <div className="detail">
                 MSI 2019 Play-In Draw Show
@@ -37,7 +37,7 @@ const FavoriteTournement = () => {
         <div className="col-lg-3 col-md-6 col-6 mb-3 col-fovourite">
           <div className="item-favourite">
             <a href="streamDetail.html">
-              <img src="https://i.ytimg.com/vi/2eiMLvFOYFI/maxresdefault_live.jpg" className="w-100" />
+              <img src="https://i.ytimg.com/vi/2eiMLvFOYFI/maxresdefault_live.jpg" className="w-100" alt=""/>
               <div className="channel">Channel 3</div>
               <div className="detail">
                 MSI 2019 Play-In Draw Show
@@ -48,7 +48,7 @@ const FavoriteTournement = () => {
         <div className="col-lg-3 col-md-6 col-6 mb-3 col-fovourite">
           <div className="item-favourite">
             <a href="streamDetail.html">
-              <img src="http://cdn2.tstatic.net/tribunnews/foto/bank/images/esl-indonesia-dota-2.jpg" className="w-100" />
+              <img src="http://cdn2.tstatic.net/tribunnews/foto/bank/images/esl-indonesia-dota-2.jpg" className="w-100" alt=""/>
               <div className="channel">Channel 1</div>
               <div className="detail">
                 MSI 2019 Play-In Draw Show

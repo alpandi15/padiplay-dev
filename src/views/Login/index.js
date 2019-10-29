@@ -93,7 +93,7 @@ const Login = () => {
           <div className="login-form col-md-8">
             <div className="logo p-4 mb-5 text-center text-md-left">
               <a href="/">
-                {/* <img src="../../assets/img/logo-white.png" /> */}
+                <img src="../../assets/img/logo-white.png" alt=""/>
               </a>
             </div>
             <div className="box-shadow">

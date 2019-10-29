@@ -22,31 +22,31 @@ const Header = (state) => {
           <ul className="navbar-nav ml-auto v-center">
             <li className="nav-item d-block d-md-none active">
               <div className="text-center mb-1">
-                <img src="../../assets/img/icon/icon-home.svg" className="icon-app icon-invert" />
+                <img src="../../assets/img/icon/icon-home.svg" className="icon-app icon-invert" alt=""/>
               </div>
               <a className="nav-link link-app" href="index.html">Home</a>
             </li>
             <li className="nav-item">
               <div className="text-center d-block d-md-none mb-1">
-                <img src="../../assets/img/icon/icon-games.svg" className="icon-app icon-invert" />
+                <img src="../../assets/img/icon/icon-games.svg" className="icon-app icon-invert" alt=""/>
               </div>
               <a className="nav-link link-app" href="games.html">Games</a>
             </li>
             <li className="nav-item">
               <div className="text-center d-block d-md-none mb-1">
-                <img src="../../assets/img/icon/icon-organize.svg" className="icon-app icon-invert" />
+                <img src="../../assets/img/icon/icon-organize.svg" className="icon-app icon-invert" alt=""/>
               </div>
               <a className="nav-link link-app" href="../organizer/index.html">Organize</a>
             </li>
             <li className="nav-item">
               <div className="text-center d-block d-md-none mb-1">
-                <img src="../../assets/img/icon/icon-shop.svg" className="icon-app icon-invert" />
+                <img src="../../assets/img/icon/icon-shop.svg" className="icon-app icon-invert" alt=""/>
               </div>
               <a className="nav-link link-app" href="../shop/index.html">Shop</a>
             </li>
             <li className="nav-item d-block d-md-none">
               <div className="text-center d-block d-md-none mb-1">
-                <img src="../../assets/img/icon/icon-casterr.svg" className="icon-app icon-invert" />
+                <img src="../../assets/img/icon/icon-casterr.svg" className="icon-app icon-invert" alt=""/>
               </div>
               <a className="nav-link link-app" href="../caster/index.html">Caster</a>
             </li>

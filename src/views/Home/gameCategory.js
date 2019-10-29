@@ -41,7 +41,7 @@ const Game = (props) => {
                   <input type="text" className="form-control form-app" placeholder="Search Tournament" />
                 </div>
                 <div className="col-2 p-1">
-                  <button type="submit" className="btn btn-app w-100"><img src="../../assets/img/icon/icon-search.svg" className="icon-app icon-18" /></button>
+                  <button type="submit" className="btn btn-app w-100"><img src="../../assets/img/icon/icon-search.svg" className="icon-app icon-18" alt=""/></button>
                 </div>
               </div>
             </form>
@@ -50,42 +50,42 @@ const Game = (props) => {
         <div className="row mobile first">
           <div className="game-list col-md-3 col-6 p-0">
             <a href="browseDetail.html" title="Player Unknown's Battlegrounds">
-              <img src="../../assets/img/cover/game-cover-1.jpg" className="game-cover-app" />
+              <img src="../../assets/img/cover/game-cover-1.jpg" className="game-cover-app" alt=""/>
             </a>
           </div>
           <div className="game-list col-md-3 col-6 p-0">
             <a href="browseDetail.html" title="Player Unknown's Battlegrounds">
-              <img src="../../assets/img/cover/game-cover-2.jpg" className="game-cover-app" />
+              <img src="../../assets/img/cover/game-cover-2.jpg" className="game-cover-app" alt=""/>
             </a>
           </div>
           <div className="game-list col-md-3 col-6 p-0">
             <a href="browseDetail.html" title="Player Unknown's Battlegrounds">
-              <img src="../../assets/img/cover/game-cover-3.jpg" className="game-cover-app" />
+              <img src="../../assets/img/cover/game-cover-3.jpg" className="game-cover-app" alt=""/>
             </a>
           </div>
           <div className="game-list col-md-3 col-6 p-0">
             <a href="browseDetail.html" title="Player Unknown's Battlegrounds">
-              <img src="../../assets/img/cover/game-cover-4.jpg" className="game-cover-app" />
+              <img src="../../assets/img/cover/game-cover-4.jpg" className="game-cover-app" alt=""/>
             </a>
           </div>
           <div className="game-list col-md-3 col-6 p-0">
             <a href="browseDetail.html" title="Player Unknown's Battlegrounds">
-              <img src="../../assets/img/cover/game-cover-5.jpg" className="game-cover-app" />
+              <img src="../../assets/img/cover/game-cover-5.jpg" className="game-cover-app" alt=""/>
             </a>
           </div>
           <div className="game-list col-md-3 col-6 p-0">
             <a href="browseDetail.html" title="Player Unknown's Battlegrounds">
-              <img src="../../assets/img/cover/game-cover-6.jpg" className="game-cover-app" />
+              <img src="../../assets/img/cover/game-cover-6.jpg" className="game-cover-app" alt=""/>
             </a>
           </div>
           <div className="game-list col-md-3 col-6 p-0">
             <a href="browseDetail.html" title="Player Unknown's Battlegrounds">
-              <img src="../../assets/img/cover/game-cover-7.jpg" className="game-cover-app" />
+              <img src="../../assets/img/cover/game-cover-7.jpg" className="game-cover-app" alt=""/>
             </a>
           </div>
           <div className="game-list col-md-3 col-6 p-0 last">
             <a href="browseDetail.html">
-              <img src="../../assets/img/cover/game-cover-1.jpg" className="game-cover-app" />
+              <img src="../../assets/img/cover/game-cover-1.jpg" className="game-cover-app" alt=""/>
             </a>
           </div>
         </div>

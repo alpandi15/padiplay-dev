@@ -16,7 +16,7 @@ const Sliders = (props) => {
       >
         <div className="item">
           <div className="header-desc">
-            <div className="logo-desc mr-2"><img src="../../assets/img/logo.png" /></div>
+            <div className="logo-desc mr-2"><img src="../../assets/img/logo.png" alt=""/></div>
             <div className="title-desc">
               <div>PUBG Battle For Freedom</div>
             </div>
@@ -24,11 +24,11 @@ const Sliders = (props) => {
             <div className="short-desc">Dalam rangka menyemarakkan hari kemerdekaan mari kita meriahkan dengan turnament esport</div>
             <a href="#" className="btn btn-app btn-sm mt-3">Play Now</a>
           </div>
-          <img src="../../assets/img/carousel/cover2-01.jpg" className="cover-app" />
+          <img src="../../assets/img/carousel/cover2-01.jpg" className="cover-app" alt="" />
         </div>
         <div className="item">
           <div className="header-desc">
-            <div className="logo-desc mr-2"><img src="../../assets/img/logo.png" /></div>
+            <div className="logo-desc mr-2"><img src="../../assets/img/logo.png" alt=""/></div>
             <div className="title-desc">
               <div>Mobile Legend Bang Bang Tournament</div>
             </div>
@@ -36,11 +36,11 @@ const Sliders = (props) => {
             <div className="short-desc">Playoff 8 Team, dimuali pada tanggal 3 Agustus 2019. Jangan lewatkan!</div>
             <a href="#" className="btn btn-app btn-sm mt-3">Play Now</a>
           </div>
-          <img src="../../assets/img/carousel/cover2-02.jpg" className="cover-app" />
+          <img src="../../assets/img/carousel/cover2-02.jpg" className="cover-app" alt=""/>
         </div>
         <div className="item">
           <div className="header-desc">
-            <div className="logo-desc mr-2"><img src="../../assets/img/logo.png" /></div>
+            <div className="logo-desc mr-2"><img src="../../assets/img/logo.png" alt=""/></div>
             <div className="title-desc">
               <div>Pes 2019 Tournament</div>
             </div>
@@ -48,7 +48,7 @@ const Sliders = (props) => {
             <div className="short-desc">Playoff offline 32 Team, daftarkan diri anda segera. Jangan lewatkan!</div>
             <a href="#" className="btn btn-app btn-sm mt-3">Play Now</a>
           </div>
-          <img src="../../assets/img/carousel/cover2-03.jpg" className="cover-app" />
+          <img src="../../assets/img/carousel/cover2-03.jpg" className="cover-app" alt=""/>
         </div>
 
       </OwlCarousel>

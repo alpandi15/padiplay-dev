@@ -15,12 +15,12 @@ const LiveStreaming = () => {
         <div className="col-md-6 col-12 px-0 pr-md-2 left-item">
             <div className="item">
             <a href="streamDetail.html">
-                <img src="https://img.youtube.com/vi/RDdBmrsrv68/sddefault.jpg" className="w-100" />
+                <img src="https://img.youtube.com/vi/RDdBmrsrv68/sddefault.jpg" className="w-100" alt=""/>
                 <div className="channel">Channel 1</div>
                 <div className="detail-wrapper">
                 <div className="detail">
                     <div className="detail-play">
-                    <img src="../../assets/img/icon/icon-play-outline.svg" className="icon-invert icon-app" />
+                    <img src="../../assets/img/icon/icon-play-outline.svg" className="icon-invert icon-app" alt=""/>
                     </div>
                     <div className="detail-title">MSI 2019 Play-In Draw Show</div>
                 </div>
@@ -33,12 +33,12 @@ const LiveStreaming = () => {
             <div className="col-12 p-0 mb-0 mb-md-4">
                 <div className="item">
                 <a href="streamDetail.html">
-                    <img src="https://cdn2.tstatic.net/pontianak/foto/bank/images/live-streaming-grand-final-esport-piala-presiden-di-youtube-dan-gtv-mulai-jam-1000-wib.jpg" className="w-100" />
+                    <img src="https://cdn2.tstatic.net/pontianak/foto/bank/images/live-streaming-grand-final-esport-piala-presiden-di-youtube-dan-gtv-mulai-jam-1000-wib.jpg" className="w-100" alt=""/>
                     <div className="channel">Channel 2</div>
                     <div className="detail-wrapper">
                     <div className="detail">
                         <div className="detail-play">
-                        <img src="../../assets/img/icon/icon-play-outline.svg" className="icon-invert icon-app" />
+                        <img src="../../assets/img/icon/icon-play-outline.svg" className="icon-invert icon-app" alt=""/>
                         </div>
                         <div className="detail-title">MSI 2019 Play-In Draw Show</div>
                     </div>
@@ -49,12 +49,12 @@ const LiveStreaming = () => {
             <div className="col-md-6 col-12 p-0 pr-md-2">
                 <div className="item">
                 <a href="streamDetail.html">
-                    <img src="https://i.ytimg.com/vi/2eiMLvFOYFI/maxresdefault_live.jpg" className="w-100" />
+                    <img src="https://i.ytimg.com/vi/2eiMLvFOYFI/maxresdefault_live.jpg" className="w-100" alt=""/>
                     <div className="channel">Channel 3</div>
                     <div className="detail-wrapper">
                     <div className="detail">
                         <div className="detail-play">
-                        <img src="../../assets/img/icon/icon-play-outline.svg" className="icon-invert icon-app" />
+                        <img src="../../assets/img/icon/icon-play-outline.svg" className="icon-invert icon-app" alt=""/>
                         </div>
                         <div className="detail-title">MSI 2019 Play-In Draw Show</div>
                     </div>
@@ -65,12 +65,12 @@ const LiveStreaming = () => {
             <div className="col-md-6 col-12 p-0 pl-md-2">
                 <div className="item">
                 <a href="streamDetail.html">
-                    <img src="http://cdn2.tstatic.net/tribunnews/foto/bank/images/esl-indonesia-dota-2.jpg" className="w-100" />
+                    <img src="http://cdn2.tstatic.net/tribunnews/foto/bank/images/esl-indonesia-dota-2.jpg" className="w-100" alt=""/>
                     <div className="channel">Channel 4</div>
                     <div className="detail-wrapper">
                     <div className="detail">
                         <div className="detail-play">
-                        <img src="../../assets/img/icon/icon-play-outline.svg" className="icon-invert icon-app" />
+                        <img src="../../assets/img/icon/icon-play-outline.svg" className="icon-invert icon-app" alt=""/>
                         </div>
                         <div className="detail-title">MSI 2019 Play-In Draw Show</div>
                     </div>
