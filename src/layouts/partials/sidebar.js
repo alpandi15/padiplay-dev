@@ -7,7 +7,6 @@ const Sidebar = (props) => {
   const [ state, dispatch ] = React.useContext(ContextStore);
   const { authorized, userData } = props;
 
-  console.log('Autho ', authorized)
   const _signOutAsync = async () => {
     await remove('userToken');
     await logoutUser()(dispatch);

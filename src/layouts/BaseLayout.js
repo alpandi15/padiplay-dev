@@ -18,14 +18,15 @@ const LayoutMember = (props) => {
     fetchUserToken();
   }, []);
 
-  console.log(state);
   return (
-    <div>
+    <>
       <Header {...state} />
       <Sidebar {...state} />
       <Notification />
-      {props.children}
-    </div>
+      <div className="wrapper-app">
+        {props.children}
+      </div>
+    </>
   );
 }
 
