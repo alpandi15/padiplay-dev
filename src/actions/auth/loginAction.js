@@ -57,6 +57,10 @@ const getUserData = () => async (dispatch) => {
   const response = await apiGetProfile()
   if (response.success) {
     dispatch(receive(response.data))
+    return response;
+  } else {
+    dispatch(failed(response));
+    return response;
   }
 }
 

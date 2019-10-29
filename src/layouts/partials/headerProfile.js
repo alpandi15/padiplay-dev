@@ -1,6 +1,9 @@
 import React from 'react';
 
-const HeaderProfile = () => {
+const HeaderProfile = ({
+  state
+}) => {
+  console.log(state);
   return (
     <>
       <li className="nav-item dropdown d-none d-md-block">

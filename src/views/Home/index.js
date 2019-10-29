@@ -2,13 +2,13 @@ import React from 'react';
 
 import { ContextStore } from 'store';
 
+import { LayoutMember } from 'layouts/BaseLayout';
+
 const Home = () => {
-  const { state } = React.useContext(ContextStore);
-  console.log('Variable Global ',state)
+  const [ state ] = React.useContext(ContextStore);
   return (
-    <div>
-      Home Page
-    </div>
+    <LayoutMember>
+    </LayoutMember>
   );
 }
 

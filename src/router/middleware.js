@@ -1,8 +1,10 @@
 import React from 'react';
 import { Route, Redirect } from 'react-router-dom';
 
+import { getUserToken } from 'services/utils/storage';
+
 function PrivateRoute({ component: Component, ...rest }) {
-  let login = localStorage.getItem("AUTH");
+  let login = getUserToken();
   return (
     <Route
       {...rest}
@@ -23,7 +25,7 @@ function PrivateRoute({ component: Component, ...rest }) {
 }
 
 function AuthRoute({ component: Component, ...rest }) {
-  let login = localStorage.getItem("AUTH");
+  let login = getUserToken();
   return (
     <Route
       {...rest}
