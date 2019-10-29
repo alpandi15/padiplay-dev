@@ -1,8 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 
+import { ContextStore } from 'store';
+import { showNotif } from 'actions/notification/notifAction';
 import HeaderProfile from 'layouts/partials/headerProfile';
 
-const Header = (state) => {
+const Header = (props) => {
+  const [ state, dispatch ] = React.useContext(ContextStore);
+  const showOrHide = () => {
+    showNotif(!state.showNotif)(dispatch)
+  }
+
   return (
     <nav className="navbar navbar-expand-md navbar-app fixed-top">
       <div className="container">
@@ -12,9 +19,9 @@ const Header = (state) => {
             <span></span>
             <span></span>
           </div>
-          {/* <a href="/" className="navbar-brand logo-app"><img src="../../assets/img/logo.png" /></a> */}
+          <a href="/" className="navbar-brand logo-app"><img src="../../assets/img/logo.png" alt=""/></a>
         </div>
-        <div className="nav-item d-block d-md-none mr-3 notifications active">
+        <div className="nav-item d-block d-md-none mr-3 notifications active" onClick={() => showOrHide()}>
           <i className="material-icons">notifications_none</i>
         </div>
   
@@ -62,7 +69,7 @@ const Header = (state) => {
             </li>
 
             {/* If not Login */}
-            <HeaderProfile {...state}/>
+            <HeaderProfile {...props}/>
             {/* If Login */}
           </ul>
         </div>

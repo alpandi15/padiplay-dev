@@ -1,10 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { ContextStore } from 'store';
+import { showNotif as notifAction } from 'actions/notification/notifAction';
 
 function Notification () {
+  const [ state, dispatch ] = React.useContext(ContextStore);
+  const { showNotif } = state;
+
+  const showOrHide = () => {
+    notifAction(!showNotif)(dispatch)
+  }
+
   return (
-    <div className="notifications-app d-md-none">
+    <div className={"notifications-app d-md-none " + (showNotif ? "active" : "")}>
       <div className="header">
-        <button className="btn btn-close"><i className="material-icons">close</i></button>
+        <button className="btn btn-close" onClick={() => showOrHide()}><i className="material-icons">close</i></button>
         <span>Pemberitahuan</span>
       </div>
       <div className="content">

@@ -7,7 +7,8 @@ const initialState = {
   userData: {},
   authorized: false,
   error: false,
-  errorMessage: ''
+  errorMessage: '',
+  showNotif: false
 }
 
 function reducer (state = initialState, action = {}) {
@@ -39,6 +40,10 @@ function reducer (state = initialState, action = {}) {
         authorized: false,
         error: false,
         userData: {}
+      })
+    case 'SHOW_NOTIFICATION':
+      return Object.assign({}, state, {
+        showNotif: action.payload.showNotif
       })
     default:
       return state;
