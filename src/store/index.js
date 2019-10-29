@@ -16,13 +16,15 @@ function reducer (state = initialState, action = {}) {
       return Object.assign({}, state, {
         loading: true,
         authorized: false,
-        error: false
+        error: false,
+        errorMessage: ''
       })
     case 'RECEIVE_LOGIN_USER':
       return Object.assign({}, state, {
         loading: false,
         authorized: true,
-        error: false
+        error: false,
+        userData: action.payload.userData
       })
     case 'FAILED_LOGIN_USER':
       return Object.assign({}, state, {

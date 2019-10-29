@@ -16,10 +16,7 @@ const receive = (data) => {
 
 const error = (status) => {
   return { 
-    type: 'ERROR_STATUS',
-    payload: {
-      error: status
-    }
+    type: 'ERROR_STATUS'
   };
 }
 
@@ -37,8 +34,6 @@ const failed = (error) => {
 }
 
 const getLoginData = (data) => async (dispatch) => {
-
-  console.log('Masuk ', data)
   try {
     dispatch(fetch());
     const response = await apiLogin(data);
@@ -46,12 +41,15 @@ const getLoginData = (data) => async (dispatch) => {
       dispatch(receive(response.data))
       if (response && response.data) {
         await set('userToken', response.data.token);
+        return response;
       }
     } else {
       dispatch(failed(response));
+      return response;
     }
   } catch (error) {
-    return dispatch(failed(error));
+    dispatch(failed(error));
+    return error;
   }
 }
 

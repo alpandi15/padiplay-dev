@@ -1,6 +1,7 @@
 import { request } from 'services/utils/request';
 
 export async function apiLogin (data) {
+  console.log('Service ', data)
   return request({
     url: 'auth/login',
     auth: false,

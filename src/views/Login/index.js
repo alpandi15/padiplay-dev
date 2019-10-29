@@ -5,6 +5,8 @@ import 'views/Login/style.css';
 import validate from 'views/Login/validation';
 import { getLoginData } from 'actions/auth/loginAction';
 
+import AlertComponent from 'components/Alert';
+
 const Login = () => {
   const [ state, dispatch ] = React.useContext(ContextStore);
 
@@ -17,6 +19,15 @@ const Login = () => {
   const [ touched, setTouched ] = useState({
     username: false,
     password: false
+  });
+
+  const [response, setResponse] = useState({
+    status: false,
+    error: false,
+    message: '',
+    code: null,
+    detail: '',
+    data: {}
   });
 
   const handleChange = e => {
@@ -41,7 +52,19 @@ const Login = () => {
     })
     const { username, password } = values;
 
-    await getLoginData({username, password})(dispatch);
+    const res = await getLoginData({username, password})(dispatch);
+    
+    setResponse({
+      status: res.success,
+      error: !res.success,
+      message: !res.success ? res.message : res.meta.message
+    });
+
+    setValues({
+      ...values,
+      loading: false,
+      error: res.success ? false : true
+    })
   };
 
   const errors = validate(values);
@@ -54,7 +77,7 @@ const Login = () => {
   }
 
   useEffect(() => {
-    // console.log(values);
+    document.title = 'Login';
   })
 
   const { loading } = values;
@@ -65,7 +88,7 @@ const Login = () => {
         <div className="login-form col-md-8">
           <div className="logo p-4 mb-5 text-center text-md-left">
             <a href="/">
-              <img src="../../assets/img/logo-white.png" />
+              {/* <img src="../../assets/img/logo-white.png" /> */}
             </a>
           </div>
           <div className="box-shadow">
@@ -89,7 +112,14 @@ const Login = () => {
               </div>
               <div className="col-md-12 col-lg-6 p-5 form">
                 <div className="login-title mb-4"><b>Masuk</b> ke Akun Anda</div>
-                {/* <AlertComponent variant="danger" title="Error" /> */}
+                
+                <AlertComponent
+                  error={response.error}
+                  variant="danger"
+                  title="Error"
+                  message={response.message}
+                  onClose={() => setResponse({...response, error: false})}
+                />
 
                 <form onSubmit={handleSubmit}>
                   {shouldMarkError("username") ? <span style={{color: 'red'}}>{errors ? errors.username : ''}</span> : ""}
