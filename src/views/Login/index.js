@@ -5,6 +5,7 @@ import 'views/Login/style.css';
 import validate from 'views/Login/validation';
 import { getLoginData } from 'actions/auth/loginAction';
 import { LayoutPublic } from 'layouts/BaseLayout';
+import SosmedLogin from 'views/Login/sosmed';
 
 import AlertComponent from 'components/Alert';
 
@@ -172,6 +173,8 @@ const Login = () => {
                     <div className="extra font-14 mt-2">
                       <span>Belum punya akun? <a href="register.html">Daftar Sekarang</a></span>
                     </div>
+
+                    <SosmedLogin />
                   </form>
                   
                 </div>
