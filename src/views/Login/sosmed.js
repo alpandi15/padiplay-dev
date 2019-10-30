@@ -23,7 +23,7 @@ const Sosmed = () => {
       />
 
       <FacebookLogin
-        appId="475654502768987"
+        appId="2435743850084417"
         fields="name,email,picture"
         callback={responseFacebook}
       />
