@@ -1,6 +1,7 @@
 import React, { Fragment, useState, useEffect } from 'react';
 import FacebookLogin from 'react-facebook-login';
 import GoogleLogin from 'react-google-login';
+import { useAlert } from "react-alert";
 
 import validate from 'views/Login/validation';
 import { getLoginData, getLoginSosmed } from 'actions/auth/loginAction';
@@ -8,6 +9,7 @@ import { ContextStore } from 'store';
 import AlertComponent from 'components/Alert';
 
 const FormLogin = () => {
+  const alert = useAlert();
   const [ state, dispatch ] = React.useContext(ContextStore);
   const [ values, setValues ] = useState({
     username: '',
@@ -126,6 +128,11 @@ const FormLogin = () => {
     console.log(resData);
   }
 
+  const onFailureIntialGoogle = (error) => {
+    console.log(error)
+    alert.error('Error use login Social Media')
+  }
+
   useEffect(() => {
     document.title = 'Login';
     if(response.status) window.location.href="/"
@@ -198,7 +205,7 @@ const FormLogin = () => {
             <GoogleLogin
               clientId={'1080911581648-vcnjasi1kv81ho4hokp4hfeqbeea7tob.apps.googleusercontent.com'}
               onSuccess={loginGoogle}
-              onFailure={loginGoogle}
+              onFailure={onFailureIntialGoogle}
               render={renderProps => (
                 <button {...renderProps} className="btn btn-danger btn-login" onClick={renderProps.onClick} disabled={renderProps.disabled}>
                   <span className="fa fa-google"></span>

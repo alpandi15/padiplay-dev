@@ -3,12 +3,21 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import { positions, Provider } from 'react-alert';
+import AlertTemplate from 'react-alert-template-basic';
 
 import {StoreProvider} from 'store';
 
+const options = {
+  timeout: 5000,
+  position: positions.BOTTOM_CENTER
+};
+
 ReactDOM.render(
   <StoreProvider>
-    <App />
+    <Provider template={AlertTemplate} {...options}>
+      <App />
+    </Provider>
   </StoreProvider>,
   document.getElementById('root')
 );
