@@ -1,4 +1,4 @@
-import { apiLogin, apiGetProfile } from 'services/auth/loginService';
+import { apiLogin, apiGetProfile, apiLoginSosmed } from 'services/auth/loginService';
 import { set } from 'services/utils/storage';
 
 const fetch = () => {
@@ -53,6 +53,26 @@ const getLoginData = (data) => async (dispatch) => {
   }
 }
 
+const getLoginSosmed = (data) => async (dispatch) => {
+  try {
+    dispatch(fetch());
+    const response = await apiLogin(data);
+    if (response && response.success) {
+      dispatch(receive(response.data))
+      if (response && response.data) {
+        await set('userToken', response.data.token);
+        return response;
+      }
+    } else {
+      dispatch(failed(response));
+      return response;
+    }
+  } catch (error) {
+    dispatch(failed(error));
+    return error;
+  }
+}
+
 const getUserData = () => async (dispatch) => {
   const response = await apiGetProfile()
   if (response.success) {
@@ -77,5 +97,6 @@ export {
   logoutUser,
   errorStatus,
   getLoginData,
+  getLoginSosmed,
   getUserData
 }

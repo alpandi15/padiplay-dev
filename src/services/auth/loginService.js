@@ -17,3 +17,13 @@ export async function apiGetProfile () {
     method: 'get'
   })
 }
+
+export async function apiLoginSosmed (data) {
+  console.log('Service ', data)
+  return request({
+    url: 'auth/sosmed/login',
+    auth: false,
+    data,
+    method: 'post'
+  })
+}
