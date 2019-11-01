@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -8,24 +9,24 @@ const Footer = () => {
           <div className="socmed">
             <ul>
               <li>
-                <a href="#">
+                <Link to="">
                   <img src="../../assets/img/icon/icon-facebookv2.svg" alt=""/>
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#">
+                <Link to="">
                   <img src="../../assets/img/icon/icon-twitterv2.svg" alt=""/>
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#">
+                <Link to="">
                   <img src="../../assets/img/icon/icon-instagramv2.svg" alt=""/>
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#">
+                <Link to="">
                   <img src="../../assets/img/icon/icon-youtubev2.svg" alt=""/>
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -62,8 +63,8 @@ const Footer = () => {
             <small>Copyright &copy; <script>new Date().getFullYear()>2010&&document.write(new Date().getFullYear());</script> Padiplay</small>
           </div>
           <div className="ml-auto font-12">
-            <a href="#" className="mr-2">Term of use</a>
-            <a href="#">Privacy Police</a>
+            <Link to="" className="mr-2">Term of use</Link>
+            <Link to="">Privacy Police</Link>
           </div>
         </div>
       </div>

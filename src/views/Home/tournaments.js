@@ -27,16 +27,16 @@ const Tournaments = () => {
                 </div>
               </div>
               <div className="dropdown share ml-2">
-                <a className="dropdown-toggle btn-share" href="#" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <div className="dropdown-toggle btn-share" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <i className="material-icons-outlined">share</i>
-                </a>
+                </div>
 
                 <div className="dropdown-menu share" aria-labelledby="dropdownMenuLink">
-                  <a className="dropdown-item d-flex v-center" href="#"><i className="material-icons">link</i></a>
-                  <a className="dropdown-item d-flex v-center" href="#"><img src="../../assets/img/icon/icon-facebookv2.svg" className="icon-app icon-24" alt=""/></a>
-                  <a className="dropdown-item d-flex v-center" href="#"><img src="../../assets/img/icon/icon-twitterv2.svg" className="icon-app icon-24" alt=""/></a>
-                  <a className="dropdown-item d-flex v-center" href="#"><img src="../../assets/img/icon/icon-instagramv2.svg" className="icon-app icon-24" alt=""/></a>
-                  <a className="dropdown-item d-flex v-center" href="#"><img src="../../assets/img/icon/icon-whatsapp.svg" className="icon-app icon-24" alt=""/></a>
+                  <a className="dropdown-item d-flex v-center" href="/"><i className="material-icons">link</i></a>
+                  <a className="dropdown-item d-flex v-center" href="/"><img src="../../assets/img/icon/icon-facebookv2.svg" className="icon-app icon-24" alt=""/></a>
+                  <a className="dropdown-item d-flex v-center" href="/"><img src="../../assets/img/icon/icon-twitterv2.svg" className="icon-app icon-24" alt=""/></a>
+                  <a className="dropdown-item d-flex v-center" href="/"><img src="../../assets/img/icon/icon-instagramv2.svg" className="icon-app icon-24" alt=""/></a>
+                  <a className="dropdown-item d-flex v-center" href="/"><img src="../../assets/img/icon/icon-whatsapp.svg" className="icon-app icon-24" alt=""/></a>
                 </div>
               </div>
               <div className="popular-desc">
@@ -68,16 +68,16 @@ const Tournaments = () => {
                 </div>
               </div>
               <div className="dropdown share ml-2">
-                <a className="dropdown-toggle btn-share" href="#" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <div className="dropdown-toggle btn-share" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <i className="material-icons-outlined">share</i>
-                </a>
+                </div>
 
                 <div className="dropdown-menu share" aria-labelledby="dropdownMenuLink">
-                  <a className="dropdown-item d-flex v-center" href="#"><i className="material-icons">link</i></a>
-                  <a className="dropdown-item d-flex v-center" href="#"><img src="../../assets/img/icon/icon-facebookv2.svg" className="icon-app icon-24" alt=""/></a>
-                  <a className="dropdown-item d-flex v-center" href="#"><img src="../../assets/img/icon/icon-twitterv2.svg" className="icon-app icon-24" alt=""/></a>
-                  <a className="dropdown-item d-flex v-center" href="#"><img src="../../assets/img/icon/icon-instagramv2.svg" className="icon-app icon-24" alt=""/></a>
-                  <a className="dropdown-item d-flex v-center" href="#"><img src="../../assets/img/icon/icon-whatsapp.svg" className="icon-app icon-24" alt=""/></a>
+                  <a className="dropdown-item d-flex v-center" href="/"><i className="material-icons">link</i></a>
+                  <a className="dropdown-item d-flex v-center" href="/"><img src="../../assets/img/icon/icon-facebookv2.svg" className="icon-app icon-24" alt=""/></a>
+                  <a className="dropdown-item d-flex v-center" href="/"><img src="../../assets/img/icon/icon-twitterv2.svg" className="icon-app icon-24" alt=""/></a>
+                  <a className="dropdown-item d-flex v-center" href="/"><img src="../../assets/img/icon/icon-instagramv2.svg" className="icon-app icon-24" alt=""/></a>
+                  <a className="dropdown-item d-flex v-center" href="/"><img src="../../assets/img/icon/icon-whatsapp.svg" className="icon-app icon-24" alt=""/></a>
                 </div>
               </div>
               <div className="popular-desc">
@@ -109,16 +109,16 @@ const Tournaments = () => {
                 </div>
               </div>
               <div className="dropdown share ml-2">
-                <a className="dropdown-toggle btn-share" href="#" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <div className="dropdown-toggle btn-share" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <i className="material-icons-outlined">share</i>
-                </a>
+                </div>
 
                 <div className="dropdown-menu share" aria-labelledby="dropdownMenuLink">
-                  <a className="dropdown-item d-flex v-center" href="#"><i className="material-icons">link</i></a>
-                  <a className="dropdown-item d-flex v-center" href="#"><img src="../../assets/img/icon/icon-facebookv2.svg" className="icon-app icon-24" alt=""/></a>
-                  <a className="dropdown-item d-flex v-center" href="#"><img src="../../assets/img/icon/icon-twitterv2.svg" className="icon-app icon-24" alt=""/></a>
-                  <a className="dropdown-item d-flex v-center" href="#"><img src="../../assets/img/icon/icon-instagramv2.svg" className="icon-app icon-24" alt=""/></a>
-                  <a className="dropdown-item d-flex v-center" href="#"><img src="../../assets/img/icon/icon-whatsapp.svg" className="icon-app icon-24" alt=""/></a>
+                  <a className="dropdown-item d-flex v-center" href="/"><i className="material-icons">link</i></a>
+                  <a className="dropdown-item d-flex v-center" href="/"><img src="../../assets/img/icon/icon-facebookv2.svg" className="icon-app icon-24" alt=""/></a>
+                  <a className="dropdown-item d-flex v-center" href="/"><img src="../../assets/img/icon/icon-twitterv2.svg" className="icon-app icon-24" alt=""/></a>
+                  <a className="dropdown-item d-flex v-center" href="/"><img src="../../assets/img/icon/icon-instagramv2.svg" className="icon-app icon-24" alt=""/></a>
+                  <a className="dropdown-item d-flex v-center" href="/"><img src="../../assets/img/icon/icon-whatsapp.svg" className="icon-app icon-24" alt=""/></a>
                 </div>
               </div>
               <div className="popular-desc">
@@ -150,16 +150,16 @@ const Tournaments = () => {
                 </div>
               </div>
               <div className="dropdown share ml-2">
-                <a className="dropdown-toggle btn-share" href="#" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <div className="dropdown-toggle btn-share" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <i className="material-icons-outlined">share</i>
-                </a>
+                </div>
 
                 <div className="dropdown-menu share" aria-labelledby="dropdownMenuLink">
-                  <a className="dropdown-item d-flex v-center" href="#"><i className="material-icons">link</i></a>
-                  <a className="dropdown-item d-flex v-center" href="#"><img src="../../assets/img/icon/icon-facebookv2.svg" className="icon-app icon-24"  alt=""/></a>
-                  <a className="dropdown-item d-flex v-center" href="#"><img src="../../assets/img/icon/icon-twitterv2.svg" className="icon-app icon-24"  alt=""/></a>
-                  <a className="dropdown-item d-flex v-center" href="#"><img src="../../assets/img/icon/icon-instagramv2.svg" className="icon-app icon-24" alt="" /></a>
-                  <a className="dropdown-item d-flex v-center" href="#"><img src="../../assets/img/icon/icon-whatsapp.svg" className="icon-app icon-24"  alt=""/></a>
+                  <a className="dropdown-item d-flex v-center" href="/"><i className="material-icons">link</i></a>
+                  <a className="dropdown-item d-flex v-center" href="/"><img src="../../assets/img/icon/icon-facebookv2.svg" className="icon-app icon-24"  alt=""/></a>
+                  <a className="dropdown-item d-flex v-center" href="/"><img src="../../assets/img/icon/icon-twitterv2.svg" className="icon-app icon-24"  alt=""/></a>
+                  <a className="dropdown-item d-flex v-center" href="/"><img src="../../assets/img/icon/icon-instagramv2.svg" className="icon-app icon-24" alt="" /></a>
+                  <a className="dropdown-item d-flex v-center" href="/"><img src="../../assets/img/icon/icon-whatsapp.svg" className="icon-app icon-24"  alt=""/></a>
                 </div>
               </div>
               <div className="popular-desc">
@@ -191,16 +191,16 @@ const Tournaments = () => {
                 </div>
               </div>
               <div className="dropdown share ml-2">
-                <a className="dropdown-toggle btn-share" href="#" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <div className="dropdown-toggle btn-share" href="#" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <i className="material-icons-outlined">share</i>
-                </a>
+                </div>
 
                 <div className="dropdown-menu share" aria-labelledby="dropdownMenuLink">
-                  <a className="dropdown-item d-flex v-center" href="#"><i className="material-icons">link</i></a>
-                  <a className="dropdown-item d-flex v-center" href="#"><img src="../../assets/img/icon/icon-facebookv2.svg" className="icon-app icon-24" alt=""/></a>
-                  <a className="dropdown-item d-flex v-center" href="#"><img src="../../assets/img/icon/icon-twitterv2.svg" className="icon-app icon-24" alt=""/></a>
-                  <a className="dropdown-item d-flex v-center" href="#"><img src="../../assets/img/icon/icon-instagramv2.svg" className="icon-app icon-24" alt=""/></a>
-                  <a className="dropdown-item d-flex v-center" href="#"><img src="../../assets/img/icon/icon-whatsapp.svg" className="icon-app icon-24" alt=""/></a>
+                  <a className="dropdown-item d-flex v-center" href="/"><i className="material-icons">link</i></a>
+                  <a className="dropdown-item d-flex v-center" href="/"><img src="../../assets/img/icon/icon-facebookv2.svg" className="icon-app icon-24" alt=""/></a>
+                  <a className="dropdown-item d-flex v-center" href="/"><img src="../../assets/img/icon/icon-twitterv2.svg" className="icon-app icon-24" alt=""/></a>
+                  <a className="dropdown-item d-flex v-center" href="/"><img src="../../assets/img/icon/icon-instagramv2.svg" className="icon-app icon-24" alt=""/></a>
+                  <a className="dropdown-item d-flex v-center" href="/"><img src="../../assets/img/icon/icon-whatsapp.svg" className="icon-app icon-24" alt=""/></a>
                 </div>
               </div>
               <div className="popular-desc">
@@ -232,16 +232,16 @@ const Tournaments = () => {
                 </div>
               </div>
               <div className="dropdown share ml-2">
-                <a className="dropdown-toggle btn-share" href="#" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <div className="dropdown-toggle btn-share" href="#" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <i className="material-icons-outlined">share</i>
-                </a>
+                </div>
 
                 <div className="dropdown-menu share" aria-labelledby="dropdownMenuLink">
-                  <a className="dropdown-item d-flex v-center" href="#"><i className="material-icons">link</i></a>
-                  <a className="dropdown-item d-flex v-center" href="#"><img src="../../assets/img/icon/icon-facebookv2.svg" className="icon-app icon-24" alt=""/></a>
-                  <a className="dropdown-item d-flex v-center" href="#"><img src="../../assets/img/icon/icon-twitterv2.svg" className="icon-app icon-24" alt=""/></a>
-                  <a className="dropdown-item d-flex v-center" href="#"><img src="../../assets/img/icon/icon-instagramv2.svg" className="icon-app icon-24" alt=""/></a>
-                  <a className="dropdown-item d-flex v-center" href="#"><img src="../../assets/img/icon/icon-whatsapp.svg" className="icon-app icon-24" alt=""/></a>
+                  <a className="dropdown-item d-flex v-center" href="/"><i className="material-icons">link</i></a>
+                  <a className="dropdown-item d-flex v-center" href="/"><img src="../../assets/img/icon/icon-facebookv2.svg" className="icon-app icon-24" alt=""/></a>
+                  <a className="dropdown-item d-flex v-center" href="/"><img src="../../assets/img/icon/icon-twitterv2.svg" className="icon-app icon-24" alt=""/></a>
+                  <a className="dropdown-item d-flex v-center" href="/"><img src="../../assets/img/icon/icon-instagramv2.svg" className="icon-app icon-24" alt=""/></a>
+                  <a className="dropdown-item d-flex v-center" href="/"><img src="../../assets/img/icon/icon-whatsapp.svg" className="icon-app icon-24" alt=""/></a>
                 </div>
               </div>
               <div className="popular-desc">

@@ -5,6 +5,8 @@ import { PrivateRoute, AuthRoute } from './middleware';
 import Login from 'views/Login';
 import Home from 'views/Home';
 import Games from 'views/Games';
+import Blog from 'views/Blog';
+import About from 'views/About';
 import Organized from 'views/Organized';
 
 const router = () => {
@@ -15,6 +17,8 @@ const router = () => {
         <AuthRoute exact path="/login" component={Login} />
         <Route exact path="/" component={Home} />
         <Route exact path="/games" component={Games} />
+        <Route exact path="/blog" component={Blog} />
+        <Route exact path="/about" component={About} />
       </Switch>
     </BrowserRouter>
   );

@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom'
 
 import { ContextStore } from 'store';
 import { showNotif } from 'actions/notification/notifAction';
@@ -19,7 +20,7 @@ const Header = (props) => {
             <span></span>
             <span></span>
           </div>
-          <a href="/" className="navbar-brand logo-app"><img src="../../assets/img/logo.png" alt=""/></a>
+          <Link to="/" className="navbar-brand logo-app"><img src="../../assets/img/logo.png" alt=""/></Link>
         </div>
         <div className="nav-item d-block d-md-none mr-3 notifications active" onClick={() => showOrHide()}>
           <i className="material-icons">notifications_none</i>
@@ -31,13 +32,13 @@ const Header = (props) => {
               <div className="text-center mb-1">
                 <img src="../../assets/img/icon/icon-home.svg" className="icon-app icon-invert" alt=""/>
               </div>
-              <a className="nav-link link-app" href="index.html">Home</a>
+              <Link className="nav-link link-app" to="/">Home</Link>
             </li>
             <li className="nav-item">
               <div className="text-center d-block d-md-none mb-1">
                 <img src="../../assets/img/icon/icon-games.svg" className="icon-app icon-invert" alt=""/>
               </div>
-              <a className="nav-link link-app" href="/games">Games</a>
+              <Link className="nav-link link-app" to="/games">Games</Link>
             </li>
             <li className="nav-item">
               <div className="text-center d-block d-md-none mb-1">
@@ -58,13 +59,13 @@ const Header = (props) => {
               <a className="nav-link link-app" href="../caster/index.html">Caster</a>
             </li>
             <li className="nav-item dropdown mr-3 d-none d-md-block">
-              <a className="nav-link link-app dropdown-toggle more" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <div style={{cursor: 'pointer'}} className="nav-link link-app dropdown-toggle more" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 More
-              </a>
+              </div>
               <div className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                 <a className="dropdown-item" href="../caster/index.html">Caster</a>
-                <a className="dropdown-item" href="blog.html">Blog</a>
-                <a className="dropdown-item" href="about.html">About</a>
+                <Link className="dropdown-item" to="/blog">Blog</Link>
+                <Link className="dropdown-item" to="/about">About</Link>
               </div>
             </li>
 

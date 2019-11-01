@@ -1,4 +1,4 @@
-import React, { Fragment, useState, useEffect } from 'react';
+import React, { Fragment, useState, useEffect, useContext } from 'react';
 import FacebookLogin from 'react-facebook-login';
 import GoogleLogin from 'react-google-login';
 import { useAlert } from "react-alert";
@@ -10,7 +10,7 @@ import AlertComponent from 'components/Alert';
 
 const FormLogin = () => {
   const alert = useAlert();
-  const [ state, dispatch ] = React.useContext(ContextStore);
+  const [ state, dispatch ] = useContext(ContextStore);
   const [ values, setValues ] = useState({
     username: '',
     password: '',

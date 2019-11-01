@@ -4,7 +4,7 @@ import { logoutUser } from 'actions/auth/loginAction';
 import { ContextStore } from 'store';
 
 const Sidebar = (props) => {
-  const [ dispatch ] = React.useContext(ContextStore);
+  const [ state, dispatch ] = React.useContext(ContextStore);
   const { authorized, userData } = props;
 
   const _signOutAsync = async () => {
@@ -28,16 +28,16 @@ const Sidebar = (props) => {
         }
       </div>
       <div className="sidebar-menu">
-        <a href="blog.html">Blog</a>
+        <a href="/blog">Blog</a>
         <a href="../helpcenter/index.html">Help Center</a>
         <a href="index">Privacy Police</a>
         <a href="index">Term of Use</a>
         {
           authorized ? 
             (
-              <a className="d-flex v-center log-out" href="#" onClick={() => _signOutAsync()}>
+              <div className="d-flex v-center log-out" onClick={() => _signOutAsync()}>
                 <i className="material-icons mr-2">exit_to_app</i> Log Out
-              </a>
+              </div>
             ) : (
               <a className="d-flex v-center log-out" href="/login">
                 <i className="material-icons mr-2">exit_to_app</i> Log In
@@ -60,22 +60,22 @@ const Sidebar = (props) => {
       </div>
       <ul className="socmed">
         <li>
-          <a href="#">
+          <a href="/">
             <img src="../../assets/img/icon/icon-facebookv2.svg" alt=""/>
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="/">
             <img src="../../assets/img/icon/icon-twitterv2.svg" alt=""/>
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="/">
             <img src="../../assets/img/icon/icon-instagramv2.svg" alt=""/>
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="/">
             <img src="../../assets/img/icon/icon-youtubev2.svg" alt=""/>
           </a>
         </li>
