@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 import { ContextStore } from 'store';
 import { showNotif } from 'actions/notification/notifAction';
@@ -37,7 +37,7 @@ const Header = (props) => {
               <div className="text-center d-block d-md-none mb-1">
                 <img src="../../assets/img/icon/icon-games.svg" className="icon-app icon-invert" alt=""/>
               </div>
-              <a className="nav-link link-app" href="games.html">Games</a>
+              <a className="nav-link link-app" href="/games">Games</a>
             </li>
             <li className="nav-item">
               <div className="text-center d-block d-md-none mb-1">

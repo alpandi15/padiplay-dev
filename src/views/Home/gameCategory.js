@@ -15,7 +15,7 @@ const Game = (props) => {
               <div className="row m-0">
                 <div className="col p-1">
                   <div className="form-group">
-                    <select className="form-control form-app" id="exampleFormControlSelect1">
+                    <select className="form-control form-app">
                       <option>All Category</option>
                       <option>FPS</option>
                       <option>SPORT</option>
@@ -28,7 +28,7 @@ const Game = (props) => {
                 </div>
                 <div className="col p-1">
                   <div className="form-group">
-                    <select className="form-control form-app" id="exampleFormControlSelect1">
+                    <select className="form-control form-app">
                       <option>All Platforms</option>
                       <option>PC</option>
                       <option>PS4</option>

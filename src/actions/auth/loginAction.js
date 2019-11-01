@@ -1,4 +1,4 @@
-import { apiLogin, apiGetProfile, apiLoginSosmed } from 'services/auth/loginService';
+import { apiLogin, apiGetProfile } from 'services/auth/loginService';
 import { set } from 'services/utils/storage';
 
 const fetch = () => {

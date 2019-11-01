@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { ContextStore } from 'store';
 import { showNotif as notifAction } from 'actions/notification/notifAction';
 

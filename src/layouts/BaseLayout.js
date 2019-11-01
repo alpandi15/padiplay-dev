@@ -10,13 +10,13 @@ import { getUserData } from 'actions/auth/loginAction';
 const LayoutMember = (props) => {
   const [ state, dispatch ] = React.useContext(ContextStore);
 
-  const fetchUserToken = async () => {
-   await getUserData()(dispatch);
-  }
-
   useEffect(() => {
+    const fetchUserToken = async () => {
+     await getUserData()(dispatch);
+    }
+
     fetchUserToken();
-  }, []);
+  }, [dispatch]);
 
   return (
     <>

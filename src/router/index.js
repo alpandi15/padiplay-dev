@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { PrivateRoute, AuthRoute } from './middleware';
 import Login from 'views/Login';
 import Home from 'views/Home';
+import Games from 'views/Games';
 import Organized from 'views/Organized';
 
 const router = () => {
@@ -13,6 +14,7 @@ const router = () => {
         <PrivateRoute exact path="/organized" component={Organized} />
         <AuthRoute exact path="/login" component={Login} />
         <Route exact path="/" component={Home} />
+        <Route exact path="/games" component={Games} />
       </Switch>
     </BrowserRouter>
   );
