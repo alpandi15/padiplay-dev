@@ -14,14 +14,16 @@ const LayoutMember = (props) => {
     const fetchUserToken = async () => {
      await getUserData()(dispatch);
     }
-
     fetchUserToken();
+    return () => {
+      console.log('State ', state)
+    }
   }, [dispatch]);
 
   return (
     <>
-      <Header {...state} />
-      <Sidebar {...state} />
+      <Header />
+      <Sidebar />
       <Notification />
       <div className="wrapper-app">
         {props.children}

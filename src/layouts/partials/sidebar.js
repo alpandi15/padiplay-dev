@@ -5,7 +5,7 @@ import { ContextStore } from 'store';
 
 const Sidebar = (props) => {
   const [ state, dispatch ] = React.useContext(ContextStore);
-  const { authorized, userData } = props;
+  const { authorized, data } = state;
 
   const _signOutAsync = async () => {
     await remove('userToken');
@@ -18,10 +18,10 @@ const Sidebar = (props) => {
       <div className="profile">
         { authorized ?
           <div className="sidebar-avatar">
-            <img src={userData.image.raw} alt=""/>
+            <img src={data.image.raw} alt=""/>
             <div className="ml-3">
               <div><small>Selamat datang</small></div>
-              <span>{userData.name}</span>
+              <span>{data.name}</span>
             </div>
           </div> 
           : null

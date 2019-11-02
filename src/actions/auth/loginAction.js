@@ -1,13 +1,19 @@
 import { apiLogin, apiGetProfile } from 'services/auth/loginService';
 import { set } from 'services/utils/storage';
 
+import {
+  FETCH_LOGIN_USER,
+  RECEIVE_LOGIN_USER,
+  FAILED_LOGIN_USER,
+  LOGOUT_USER} from 'store/type'
+
 const fetch = () => {
-  return { type: 'FETCH_LOGIN_USER' };
+  return { type: FETCH_LOGIN_USER };
 }
 
 const receive = (data) => {
   return {
-    type: 'RECEIVE_LOGIN_USER',
+    type: RECEIVE_LOGIN_USER,
     payload: {
       userData: data
     }
@@ -21,12 +27,12 @@ const error = (status) => {
 }
 
 const logout = () => {
-  return { type: 'FETCH_LOGOUT_USER' };
+  return { type: LOGOUT_USER };
 }
 
 const failed = (error) => {
   return { 
-    type: 'FAILED_LOGIN_USER',
+    type: FAILED_LOGIN_USER,
     payload: {
       error: typeof error === 'object' ? error.message : error
     } 

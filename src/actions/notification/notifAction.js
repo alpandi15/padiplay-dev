@@ -1,8 +1,10 @@
+import { SHOW_NOTIFICATION } from 'store/type'
+
 const show = (status) => {
   return { 
-    type: 'SHOW_NOTIFICATION',
+    type: SHOW_NOTIFICATION,
     payload: {
-      showNotif: status
+      onclick: status
     }
   };
 }
