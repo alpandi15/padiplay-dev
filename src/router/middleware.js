@@ -26,6 +26,7 @@ function PrivateRoute({ component: Component, ...rest }) {
 
 function AuthRoute({ component: Component, ...rest }) {
   let login = getUserToken();
+  console.log("TOKEN ", login)
   return (
     <Route
       {...rest}

@@ -1,14 +1,7 @@
 import React from 'react';
-import { ContextStore } from 'store';
-import { showNotif as notifAction } from 'actions/notification/notifAction';
 
 function Notification () {
-  const [ state, dispatch ] = React.useContext(ContextStore);
-  const { onclick } = state;
-
-  console.log('Prop ', state)
   const showOrHide = () => {
-    notifAction(!onclick)(dispatch)
   }
 
   return (

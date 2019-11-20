@@ -1,14 +1,14 @@
 import React from 'react';
 import {Link} from 'react-router-dom'
 
-import { ContextStore } from 'store';
-import { showNotif } from 'actions/notification/notifAction';
+// import { ContextStore } from 'store';
+// import { showNotif } from 'actions/notification/notifAction';
 import HeaderProfile from 'layouts/partials/headerProfile';
 
 const Header = (props) => {
-  const [ state, dispatch ] = React.useContext(ContextStore);
+  // const [ state, dispatch ] = React.useContext(ContextStore);
   const showOrHide = () => {
-    showNotif(!state.showNotif)(dispatch)
+  //   showNotif(!state.showNotif)(dispatch)
   }
 
   return (

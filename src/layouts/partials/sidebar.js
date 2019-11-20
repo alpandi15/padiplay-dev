@@ -1,15 +1,15 @@
 import React from 'react';
-import { remove } from 'services/utils/storage';
-import { logoutUser } from 'actions/auth/loginAction';
-import { ContextStore } from 'store';
+// import { remove } from 'services/utils/storage';
+// import { logoutUser } from 'actions/auth/loginAction';
+// import { ContextStore } from 'store';
 
 const Sidebar = (props) => {
-  const [ state, dispatch ] = React.useContext(ContextStore);
-  const { authorized, data } = state;
-
+  // const [ state, dispatch ] = React.useContext(ContextStore);
+  // const { authorized, data } = state;
+  const authorized = false;
   const _signOutAsync = async () => {
-    await remove('userToken');
-    await logoutUser()(dispatch);
+    // await remove('userToken');
+    // await logoutUser()(dispatch);
     window.location.reload()
   }
 
@@ -18,10 +18,10 @@ const Sidebar = (props) => {
       <div className="profile">
         { authorized ?
           <div className="sidebar-avatar">
-            <img src={data.image.raw} alt=""/>
+            <img src="" alt=""/>
             <div className="ml-3">
               <div><small>Selamat datang</small></div>
-              <span>{data.name}</span>
+              <span>Name</span>
             </div>
           </div> 
           : null

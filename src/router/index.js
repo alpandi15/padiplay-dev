@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 import { PrivateRoute, AuthRoute } from './middleware';
-import Login from 'views/Login';
+import Login from 'views/Auth/Login';
 import Home from 'views/Home';
 import Games from 'views/Games';
 import Blog from 'views/Blog';

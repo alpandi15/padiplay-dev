@@ -1,14 +1,10 @@
-import React, { useReducer, createContext } from 'react'
-import {Reducer,initialState} from 'store/reducer';
+import { combineReducers } from 'redux'
+import { reducer as formReducer } from 'redux-form'
+import userStore from './reducer/userStore'
 
-export const ContextStore = createContext();
-const { Provider } = ContextStore;
+const rooterReducers = combineReducers({
+  form: formReducer,
+  userStore
+})
 
-export function StoreProvider(props) {
-  const [state, dispatch] = useReducer(Reducer, initialState);
-  return (
-    <Provider value={[ state, dispatch ]}>
-      {props.children}
-    </Provider>
-  );
-}
+export default rooterReducers

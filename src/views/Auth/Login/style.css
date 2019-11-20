@@ -1,0 +1,27 @@
+.error {
+  border-color: red !important;
+}
+.success {
+  border-color: green !important;
+}
+
+form button:disabled {
+  color: #333;
+}
+
+form button:disabled:hover {
+  color: #333;
+}
+
+.signInButton {
+  float:none;
+  position:static;
+  display:block;
+  margin:auto;
+  width:max-content;
+}
+
+.error-input {
+  color: red;
+  font-size: 10pt;
+}
