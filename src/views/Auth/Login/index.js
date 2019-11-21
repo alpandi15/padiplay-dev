@@ -9,7 +9,15 @@ import logo from '../../../assets/img/logo-white.png'
 import './style.css'
 
 const renderField = ({
-  input, label, type, className, icon, meta: { touched, error }
+  input,
+  label,
+  type,
+  className,
+  icon,
+  meta: {
+    touched,
+    error
+  }
 }) => {
   return (
     <>
@@ -24,11 +32,35 @@ const renderField = ({
   )
 }
 
+const ButtonLogin = ({
+  input,
+  type,
+  className,
+  invalid,
+  submitting
+}) => {
+  console.log('On SUBMIT ', submitting)
+  return (
+    <button className={className} type={type} {...input} disabled={invalid || submitting}>
+      {
+        !submitting ? 'Login'
+        : (
+          <span className="spinner-border spinner-border-sm" role="status" aria-hidden="true" />
+        )
+      }
+    </button>
+  )
+}
+
+const handleSubmit = (e, dispatch) => {
+  e.preventDefault()
+  console.log('VAL ', e)
+}
+
 const LoginPage = (props) => {
   const {
     handleSubmit,
     invalid,
-    loading,
     submitting
   } = props
 
@@ -94,10 +126,12 @@ const LoginPage = (props) => {
                     </div>
                   </div>
                   <div className="login-btn mt-3">
-                    <button className="btn btn-app btn-login" type="submit" disabled={invalid || loading || submitting}>
-                      Login
-                      {/* <span className="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> */}
-                    </button>
+                    <ButtonLogin
+                      className="btn btn-app btn-login"
+                      type="submit"
+                      invalid={invalid}
+                      submitting={submitting}
+                    />
                   </div>
                   <div className="extra font-14 mt-2">
                     <span>
@@ -142,5 +176,6 @@ const LoginPage = (props) => {
 
 export default reduxForm({
   form: 'LoginForm',
-  validate
+  validate,
+  handleSubmit
 })(LoginPage)
