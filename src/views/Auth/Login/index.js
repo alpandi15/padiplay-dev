@@ -1,11 +1,14 @@
-import React from 'react'
-import { Field, reduxForm } from 'redux-form'
+import React, { useEffect } from 'react'
+import { connect } from 'react-redux'
+import { Field, reduxForm, getFormValues } from 'redux-form'
 import FacebookLogin from 'react-facebook-login'
 import GoogleLogin from 'react-google-login'
+import { useAlert } from 'react-alert'
 
-import 'views/Login/style.css'
 import validate from './validate'
+import { getLoginData } from '../../../actions/auth/loginAction'
 import logo from '../../../assets/img/logo-white.png'
+import 'views/Login/style.css'
 import './style.css'
 
 const renderField = ({
@@ -37,11 +40,11 @@ const ButtonLogin = ({
   type,
   className,
   invalid,
+  loading,
   submitting
 }) => {
-  console.log('On SUBMIT ', submitting)
   return (
-    <button className={className} type={type} {...input} disabled={invalid || submitting}>
+    <button className={className} type={type} {...input} disabled={invalid || submitting || loading}>
       {
         !submitting ? 'Login'
         : (
@@ -52,17 +55,37 @@ const ButtonLogin = ({
   )
 }
 
-const handleSubmit = (e, dispatch) => {
-  e.preventDefault()
-  console.log('VAL ', e)
-}
-
 const LoginPage = (props) => {
   const {
     handleSubmit,
     invalid,
+    loading,
     submitting
   } = props
+
+  const Alert = useAlert()
+
+  const onSubmit = async (values) => {
+    const { getLoginData, error, history } = props
+    const data = {
+      username: values.username,
+      password: values.password
+    }
+    if (!error) {
+      const res = await getLoginData(data)
+      if (res.success) {
+        Alert.success(res.meta.message)
+        history.push('/')
+      } else {
+        Alert.error(res.message)
+      }
+    }
+  }
+
+  useEffect(() => {
+    const { userData } = props
+    console.log('User ', userData)
+  }, [])
 
   return (
     <div className="wrapper-app">
@@ -99,7 +122,7 @@ const LoginPage = (props) => {
                   ke Akun Anda
                 </div>
 
-                <form onSubmit={handleSubmit}>
+                <form onSubmit={handleSubmit(onSubmit)}>
                   <Field
                     icon="mail_outline"
                     className="form-control form-app"
@@ -131,6 +154,7 @@ const LoginPage = (props) => {
                       type="submit"
                       invalid={invalid}
                       submitting={submitting}
+                      loading={loading}
                     />
                   </div>
                   <div className="extra font-14 mt-2">
@@ -174,8 +198,17 @@ const LoginPage = (props) => {
   )
 }
 
+const mapStateToProps = (state) => ({
+  loading: state.userStore.loading,
+  userData: state.userStore.userData,
+  values: getFormValues('LoginForm')(state)
+})
+
+const mapDispatchToProps = (dispatch) => ({
+  getLoginData: (data) => dispatch(getLoginData(data))
+})
+
 export default reduxForm({
   form: 'LoginForm',
-  validate,
-  handleSubmit
-})(LoginPage)
+  validate
+})(connect(mapStateToProps, mapDispatchToProps)(LoginPage))
