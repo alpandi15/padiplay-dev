@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { LayoutMember } from 'layouts/BaseLayout';
+import LayoutMember from 'layouts/BaseLayout';
 import Footer from 'layouts/partials/footer';
 
 const Games = () => {

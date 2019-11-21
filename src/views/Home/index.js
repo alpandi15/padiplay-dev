@@ -1,15 +1,16 @@
-import React from 'react';
+import React from 'react'
 
-import { LayoutMember } from 'layouts/BaseLayout';
-import Sliders from 'views/Home/sliders';
-import Games from 'views/Home/gameCategory';
-import Tournaments from 'views/Home/tournaments';
-import Footer from 'layouts/partials/footer';
-import Streaming from 'views/Home/streaming';
+import LayoutMember from 'layouts/BaseLayout'
+import LayoutLogged from 'layouts/LoggedLayout'
+import Sliders from 'views/Home/sliders'
+import Games from 'views/Home/gameCategory'
+import Tournaments from 'views/Home/tournaments'
+import Footer from 'layouts/partials/footer'
+import Streaming from 'views/Home/streaming'
 
 const Home = () => {
   return (
-    <LayoutMember>
+    <LayoutLogged>
       <Sliders />
       <div className="content">
         <Streaming />
@@ -17,8 +18,8 @@ const Home = () => {
         <Tournaments />
         <Footer />
       </div>
-    </LayoutMember>
-  );
+    </LayoutLogged>
+  )
 }
 
-export default Home;
+export default Home

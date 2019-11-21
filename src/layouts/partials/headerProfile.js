@@ -1,16 +1,9 @@
-import React from 'react';
-// import { remove } from 'services/utils/storage';
-// import { logoutUser } from 'actions/auth/loginAction';
-// import { ContextStore } from 'store';
+import React from 'react'
 
 const HeaderProfile = (props) => {
-  // const [ state, dispatch ] = React.useContext(ContextStore);
-  // const { authorized, data } = state;
   const authorized = false
 
   const _signOutAsync = async () => {
-    // await remove('userToken');
-    // await logoutUser()(dispatch);
     window.location.reload()
   }
 
@@ -71,7 +64,7 @@ const HeaderProfile = (props) => {
       <li className="nav-item dropdown d-none d-md-block">
         <a className="nav-link link-app dropdown-toggle profile" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           <div className="avatar">
-            <img src="" />
+            <img src="" alt="" />
           </div>
         </a>
         <div className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">

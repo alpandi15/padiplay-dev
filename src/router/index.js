@@ -1,13 +1,13 @@
-import React from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import React from 'react'
+import { BrowserRouter, Route, Switch } from 'react-router-dom'
 
-import { PrivateRoute, AuthRoute } from './middleware';
-import Login from 'views/Auth/Login';
-import Home from 'views/Home';
-import Games from 'views/Games';
-import Blog from 'views/Blog';
-import About from 'views/About';
-import Organized from 'views/Organized';
+import Login from 'views/Auth/Login'
+import Home from 'views/Home'
+import Games from 'views/Games'
+import Blog from 'views/Blog'
+import About from 'views/About'
+import Organized from 'views/Organized'
+import { PrivateRoute, AuthRoute } from './middleware'
 
 const router = () => {
   return (
@@ -21,7 +21,7 @@ const router = () => {
         <Route exact path="/about" component={About} />
       </Switch>
     </BrowserRouter>
-  );
+  )
 }
 
-export default router;
+export default router
