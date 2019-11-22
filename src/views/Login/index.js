@@ -5,9 +5,8 @@ import { LayoutPublic } from 'layouts/BaseLayout';
 import FormLogin from 'views/Login/form';
 
 const Login = () => {
-
   return (
-    <LayoutPublic >
+    <LayoutPublic>
       <div className="wrapper-app">
         <div className="content login d-flex v-center justify-content-center" style={{minHeight: '100vh'}}>
           <div className="login-form col-md-8">

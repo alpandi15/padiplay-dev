@@ -1,5 +1,5 @@
 import { apiLogin, apiGetProfile } from 'services/auth/loginService'
-import { set } from 'services/utils/storage'
+import { set, remove } from 'services/utils/storage'
 
 import {
   FETCH_LOGIN_USER,
@@ -95,7 +95,7 @@ const errorStatus = () => async (dispatch) => {
 }
 
 const logoutUser = () => async (dispatch) => {
-  console.log(dispatch)
+  await remove('userToken')
   dispatch(logout())
 }
 
