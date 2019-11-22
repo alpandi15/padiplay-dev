@@ -4,7 +4,7 @@ import Layout from 'layouts'
 import Sliders from 'views/Home/sliders'
 import Games from 'views/Home/gameCategory'
 import Tournaments from 'views/Home/tournaments'
-import Footer from 'layouts/partials/footer'
+import Footer from 'layouts/partials/Footer'
 import Streaming from 'views/Home/streaming'
 
 const Home = () => {

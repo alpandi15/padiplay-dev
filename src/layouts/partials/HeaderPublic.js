@@ -13,9 +13,6 @@ const HeaderPublic = () => {
           </div>
           <Link to="/" className="navbar-brand logo-app"><img src="../../assets/img/logo.png" alt="" /></Link>
         </div>
-        <div className="nav-item d-block d-md-none mr-3 notifications active">
-          <i className="material-icons">notifications_none</i>
-        </div>
 
         <div className="navbar-menu">
           <ul className="navbar-nav ml-auto v-center">

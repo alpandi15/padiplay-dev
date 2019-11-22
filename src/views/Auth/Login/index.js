@@ -85,7 +85,7 @@ const LoginPage = (props) => {
   useEffect(() => {
     const { userData } = props
     console.log('User ', userData)
-  }, [])
+  }, [props])
 
   return (
     <div className="wrapper-app">

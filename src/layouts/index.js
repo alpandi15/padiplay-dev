@@ -1,13 +1,14 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { connect } from 'react-redux'
 
 import HeaderPublic from 'layouts/partials/HeaderPublic'
 import HeaderLogged from 'layouts/partials/HeaderLogged'
-import Sidebar from 'layouts/partials/sidebar'
-import Notification from 'layouts/partials/notification'
+import Sidebar from 'layouts/partials/Sidebar'
+import Notification from 'layouts/partials/Notification'
 import { getUserData, logoutUser } from 'actions/auth/loginAction'
 
 const Layout = ({ children, ...props }) => {
+  const [showNotif, setShowNotif] = useState(false)
   const {
     getUserData,
     userData,
@@ -20,10 +21,14 @@ const Layout = ({ children, ...props }) => {
       await getUserData()
     }
     fetchUserToken()
-  }, [])
+  }, [getUserData])
 
   const __signOut = () => {
     logoutUser()
+  }
+
+  const __handleShowNotif = () => {
+    setShowNotif(!showNotif)
   }
 
   if (authorized) {
@@ -31,10 +36,14 @@ const Layout = ({ children, ...props }) => {
       <>
         <HeaderLogged
           __signOut={__signOut}
+          __handleShowNotif={__handleShowNotif}
           userData={userData}
         />
         <Sidebar />
-        <Notification />
+        <Notification
+          active={showNotif}
+          __handleShowNotif={__handleShowNotif}
+        />
         <div className="wrapper-app">
           { children }
         </div>

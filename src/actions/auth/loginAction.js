@@ -86,6 +86,7 @@ const getUserData = () => async (dispatch) => {
     dispatch(receive(response.data))
     return response
   }
+  await remove('userToken')
   dispatch(failed(response))
   return response
 }

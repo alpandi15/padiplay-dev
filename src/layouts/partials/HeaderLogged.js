@@ -4,7 +4,8 @@ import { Link } from 'react-router-dom'
 
 const HeaderPublic = ({
   userData,
-  __signOut
+  __signOut,
+  __handleShowNotif
 }) => {
   return (
     <nav className="navbar navbar-expand-md navbar-app fixed-top">
@@ -18,7 +19,7 @@ const HeaderPublic = ({
           <Link to="/" className="navbar-brand logo-app"><img src="../../assets/img/logo.png" alt="" /></Link>
         </div>
         <div className="nav-item d-block d-md-none mr-3 notifications active">
-          <i className="material-icons">notifications_none</i>
+          <i className="material-icons" onClick={__handleShowNotif}>notifications_none</i>
         </div>
 
         <div className="navbar-menu">
