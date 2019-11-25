@@ -1,17 +1,26 @@
-import React from 'react';
-import { Alert } from 'react-bootstrap';
+import React from 'react'
+import { Alert } from 'react-bootstrap'
 
-const AlertComponent = ({
+function AlertComponent ({
+  variant = 'danger',
+  title,
+  show,
+  message,
+  onClose,
   ...props
-}) => {
+}) {
   return (
-    <Alert {...props} dismissible>
-      <strong>{props.title}: </strong>
+    <Alert show={show} variant={variant} onClose={onClose} dismissible {...props}>
+      <strong>
+        {title}
+        :
+        {' '}
+      </strong>
       <p>
-        {props.message}
+        {message}
       </p>
     </Alert>
-  );
+  )
 }
 
-export default AlertComponent;
+export default AlertComponent

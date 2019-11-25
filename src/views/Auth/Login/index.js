@@ -1,14 +1,15 @@
-import React, { useEffect } from 'react'
+import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { Field, reduxForm, getFormValues } from 'redux-form'
 import FacebookLogin from 'react-facebook-login'
 import GoogleLogin from 'react-google-login'
 import { useAlert } from 'react-alert'
 
+import AlerComponent from '../../../components/Alert'
 import validate from './validate'
 import { getLoginData } from '../../../actions/auth/loginAction'
 import logo from '../../../assets/img/logo-white.png'
-import 'views/Login/style.css'
 import './style.css'
 
 const renderField = ({
@@ -56,6 +57,12 @@ const ButtonLogin = ({
 }
 
 const LoginPage = (props) => {
+  const [alertState, setAlertState] = useState({
+    show: false,
+    success: false,
+    message: ''
+  })
+
   const {
     handleSubmit,
     invalid,
@@ -75,17 +82,29 @@ const LoginPage = (props) => {
       const res = await getLoginData(data)
       if (res.success) {
         Alert.success(res.meta.message)
+        setAlertState({
+          message: res.meta.message,
+          success: res.success,
+          show: true
+        })
         history.push('/')
       } else {
         Alert.error(res.message)
+        setAlertState({
+          message: res.message,
+          success: res.success,
+          show: true
+        })
       }
     }
   }
 
-  useEffect(() => {
-    const { userData } = props
-    console.log('User ', userData)
-  }, [props])
+  const handleAlert = () => {
+    setAlertState({
+      ...alertState,
+      show: !alertState.show
+    })
+  }
 
   return (
     <div className="wrapper-app">
@@ -121,7 +140,13 @@ const LoginPage = (props) => {
                   <b>Masuk</b>
                   ke Akun Anda
                 </div>
-
+                <AlerComponent
+                  show={alertState.show}
+                  variant={alertState.success ? 'success' : 'danger'}
+                  title={alertState.success ? 'Success: ' : 'Error: '}
+                  message={alertState.message}
+                  onClose={handleAlert}
+                />
                 <form onSubmit={handleSubmit(onSubmit)}>
                   <Field
                     icon="mail_outline"
@@ -160,7 +185,7 @@ const LoginPage = (props) => {
                   <div className="extra font-14 mt-2">
                     <span>
                       Belum punya akun?
-                      <a href="/"> Daftar Sekarang</a>
+                      <Link to="/"> Daftar Sekarang</Link>
                     </span>
                   </div>
 

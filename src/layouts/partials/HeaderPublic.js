@@ -85,7 +85,7 @@ const HeaderPublic = () => {
               </div>
             </li>
             <li className="nav-item d-none d-md-block">
-              <a href="/login" className="btn btn-app btn-sm">Register</a>
+              <Link to="/login" className="btn btn-app btn-sm">Register</Link>
             </li>
           </ul>
         </div>
