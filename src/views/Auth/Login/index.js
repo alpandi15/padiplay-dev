@@ -75,7 +75,7 @@ const LoginPage = (props) => {
   const onSubmit = async (values) => {
     const { getLoginData, error, history } = props
     const data = {
-      username: values.username,
+      email: values.username,
       password: values.password
     }
     if (!error) {

@@ -1,4 +1,4 @@
-import { request } from 'services/utils/request';
+import { request } from 'services/utils/request'
 
 export async function apiLogin (data) {
   console.log('Service ', data)
