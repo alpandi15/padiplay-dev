@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter, Route, Switch } from 'react-router-dom'
+import { BrowserRouter, Switch } from 'react-router-dom'
 
 import Login from 'views/Auth/Login'
 import Home from 'views/Home'
@@ -7,18 +7,18 @@ import Games from 'views/Games'
 import Blog from 'views/Blog'
 import About from 'views/About'
 import Organized from 'views/Organized'
-import { PrivateRoute, AuthRoute } from './middleware'
+import { PrivateRoute, AuthRoute, PublicRoute } from './middleware'
 
 const router = () => {
   return (
     <BrowserRouter>
       <Switch>
-        <PrivateRoute exact path="/organized" component={Organized} />
-        <AuthRoute exact path="/login" component={Login} />
-        <Route exact path="/" component={Home} />
-        <Route exact path="/games" component={Games} />
-        <Route exact path="/blog" component={Blog} />
-        <Route exact path="/about" component={About} />
+        <PrivateRoute exact path="/organized" component={Organized} title="Organized" />
+        <AuthRoute exact path="/login" component={Login} title="Login" />
+        <PublicRoute exact path="/" component={Home} title="Home" />
+        <PublicRoute exact path="/games" component={Games} title="Games" />
+        <PublicRoute exact path="/blog" component={Blog} title="Blog" />
+        <PublicRoute exact path="/about" component={About} title="About" />
       </Switch>
     </BrowserRouter>
   )

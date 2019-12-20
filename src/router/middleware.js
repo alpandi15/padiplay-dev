@@ -2,14 +2,18 @@ import React from 'react'
 import { Route, Redirect } from 'react-router-dom'
 
 import { getUserToken } from 'services/utils/storage'
+import TitleComponent from '../components/utils/Title'
 
-function PrivateRoute ({ component: Component, ...rest }) {
+function PrivateRoute ({ component: Component, title, ...rest }) {
   let login = getUserToken()
   return (
     <Route
       {...rest}
       render={(props) => (login ? (
-        <Component {...props} />
+        <>
+          <TitleComponent title={title} />
+          <Component {...props} />
+        </>
       ) : (
         <Redirect
           to={{
@@ -22,13 +26,16 @@ function PrivateRoute ({ component: Component, ...rest }) {
   )
 }
 
-function AuthRoute ({ component: Component, ...rest }) {
+function AuthRoute ({ component: Component, title, ...rest }) {
   let login = getUserToken()
   return (
     <Route
       {...rest}
       render={(props) => (!login ? (
-        <Component {...props} />
+        <>
+          <TitleComponent title={title} />
+          <Component {...props} />
+        </>
       ) : (
         <Redirect
           to={{
@@ -41,4 +48,16 @@ function AuthRoute ({ component: Component, ...rest }) {
   )
 }
 
-export { PrivateRoute, AuthRoute }
+function PublicRoute ({ component: Component, title, ...rest }) {
+  return (
+    <Route {...rest}
+      render={(props) => (
+        <>
+          <TitleComponent title={title} />
+          <Component {...props} />
+        </>
+      )}
+    />
+  )
+}
+export { PrivateRoute, AuthRoute, PublicRoute }
