@@ -11,7 +11,7 @@ import AlerComponent from '../../../components/Alert'
 
 const renderField = ({
   input,
-  label,
+  placeholder,
   type,
   className,
   icon,
@@ -27,7 +27,7 @@ const renderField = ({
         <div className="input-group-prepend">
           <span className="input-group-text" id="basic-addon1"><i className="material-icons">{icon}</i></span>
         </div>
-        <input {...input} className={className} placeholder={label} type={type} />
+        <input {...input} className={className} placeholder={placeholder} type={type} />
       </div>
     </>
   )

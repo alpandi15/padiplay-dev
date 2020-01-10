@@ -63,7 +63,7 @@ const LoginPage = (props) => {
                 <div className="extra font-14 mt-2">
                   <span>
                         Belum punya akun?
-                    <Link to="/"> Daftar Sekarang</Link>
+                    <Link to="/register"> Daftar Sekarang</Link>
                   </span>
                 </div>
 

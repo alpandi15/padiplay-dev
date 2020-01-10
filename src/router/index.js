@@ -2,6 +2,7 @@ import React from 'react'
 import { BrowserRouter, Switch } from 'react-router-dom'
 
 import Login from 'views/Auth/Login'
+import Register from 'views/Auth/Register'
 import Home from 'views/Home'
 import Games from 'views/Games'
 import Blog from 'views/Blog'
@@ -15,6 +16,7 @@ const router = () => {
       <Switch>
         <PrivateRoute exact path="/organized" component={Organized} title="Organized" />
         <AuthRoute exact path="/login" component={Login} title="Login" />
+        <AuthRoute exact path="/register" component={Register} title="Register" />
         <PublicRoute exact path="/" component={Home} title="Home" />
         <PublicRoute exact path="/games" component={Games} title="Games" />
         <PublicRoute exact path="/blog" component={Blog} title="Blog" />
