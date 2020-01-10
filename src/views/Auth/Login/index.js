@@ -8,7 +8,8 @@ import './style.css'
 
 import FormLogin from './ModalLogin'
 
-const LoginPage = () => {
+const LoginPage = (props) => {
+  const { history } = props
   const [showModal, setShowModal] = useState(false)
 
   const handleModal = () => setShowModal(!showModal)
@@ -94,7 +95,7 @@ const LoginPage = () => {
           </div>
         </div>
       </div>
-      <FormLogin show={showModal} handleModal={handleModal} />
+      <FormLogin show={showModal} handleModal={handleModal} history={history} />
     </div>
   )
 }

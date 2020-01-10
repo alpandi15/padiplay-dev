@@ -21,7 +21,7 @@ const Menu = () => {
         <div className="text-center d-block d-md-none mb-1">
           <img src="../../assets/img/icon/icon-organize.svg" className="icon-app icon-invert" alt="" />
         </div>
-        <Link className="nav-link link-app" to="/organizer">Organize</Link>
+        <Link className="nav-link link-app" to="/organizer">Community</Link>
       </li>
       <li className="nav-item">
         <div className="text-center d-block d-md-none mb-1">

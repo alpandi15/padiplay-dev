@@ -56,7 +56,7 @@ const HeaderPublic = ({
             <li className="nav-item dropdown d-none d-md-block">
               <a className="nav-link link-app dropdown-toggle profile" href="/" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <div className="avatar">
-                  <img src="../../assets/img/avatar.jpg" alt="" />
+                  <img src={userData.image.raw} alt="" />
                 </div>
               </a>
               <div className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
