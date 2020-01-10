@@ -1,110 +1,17 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { connect } from 'react-redux'
-import { Field, reduxForm, getFormValues } from 'redux-form'
-import FacebookLogin from 'react-facebook-login'
-import GoogleLogin from 'react-google-login'
-import { useAlert } from 'react-alert'
+// import FacebookLogin from 'react-facebook-login'
+// import GoogleLogin from 'react-google-login'
 
-import AlerComponent from '../../../components/Alert'
-import validate from './validate'
-import { getLoginData } from '../../../actions/auth/loginAction'
 import logo from '../../../assets/img/logo-white.png'
 import './style.css'
 
-const renderField = ({
-  input,
-  label,
-  type,
-  className,
-  icon,
-  meta: {
-    touched,
-    error
-  }
-}) => {
-  return (
-    <>
-      {touched && ((error && <span className="error-input">{error}</span>))}
-      <div className="input-group mb-3">
-        <div className="input-group-prepend">
-          <span className="input-group-text" id="basic-addon1"><i className="material-icons">{icon}</i></span>
-        </div>
-        <input {...input} className={className} placeholder={label} type={type} />
-      </div>
-    </>
-  )
-}
+import FormLogin from './ModalLogin'
 
-const ButtonLogin = ({
-  input,
-  type,
-  className,
-  invalid,
-  loading,
-  submitting
-}) => {
-  return (
-    <button className={className} type={type} {...input} disabled={invalid || submitting || loading}>
-      {
-        !submitting ? 'Login'
-        : (
-          <span className="spinner-border spinner-border-sm" role="status" aria-hidden="true" />
-        )
-      }
-    </button>
-  )
-}
+const LoginPage = () => {
+  const [showModal, setShowModal] = useState(false)
 
-const LoginPage = (props) => {
-  const [alertState, setAlertState] = useState({
-    show: false,
-    success: false,
-    message: ''
-  })
-
-  const {
-    handleSubmit,
-    invalid,
-    loading,
-    submitting
-  } = props
-
-  const Alert = useAlert()
-
-  const onSubmit = async (values) => {
-    const { getLoginData, error, history } = props
-    const data = {
-      email: values.username,
-      password: values.password
-    }
-    if (!error) {
-      const res = await getLoginData(data)
-      if (res.success) {
-        Alert.success(res.meta.message)
-        setAlertState({
-          message: res.meta.message,
-          success: res.success,
-          show: true
-        })
-        history.push('/')
-      } else {
-        Alert.error(res.message)
-        setAlertState({
-          message: res.message,
-          success: res.success,
-          show: true
-        })
-      }
-    }
-  }
-
-  const handleAlert = () => {
-    setAlertState({
-      ...alertState,
-      show: !alertState.show
-    })
-  }
+  const handleModal = () => setShowModal(!showModal)
 
   return (
     <div className="wrapper-app">
@@ -136,104 +43,60 @@ const LoginPage = (props) => {
               </div>
 
               <div className="col-md-12 col-lg-6 p-5 form">
-                <div className="login-title mb-4">
-                  <b>Masuk</b>
-                  ke Akun Anda
+
+                <div className="login-btn mt-3">
+                  <button className="btn btn-app btn-login" type="button">
+                    <span className="fa fa-facebook" />
+                    Masuk Dengan Facebook
+                  </button>
+                  <button className="btn btn-app btn-login" type="button">
+                    <span className="fa fa-google" />
+                    Masuk Dengan Google
+                  </button>
+                  <button className="btn btn-app btn-login" onClick={handleModal}>
+                    <span className="fa fa-envelope" />
+                    Masuk Dengan Email
+                  </button>
                 </div>
-                <AlerComponent
-                  show={alertState.show}
-                  variant={alertState.success ? 'success' : 'danger'}
-                  title={alertState.success ? 'Success: ' : 'Error: '}
-                  message={alertState.message}
-                  onClose={handleAlert}
-                />
-                <form onSubmit={handleSubmit(onSubmit)}>
-                  <Field
-                    icon="mail_outline"
-                    className="form-control form-app"
-                    name="username"
-                    type="text"
-                    component={renderField}
-                    placeholder="Email/Username"
+
+                <div className="extra font-14 mt-2">
+                  <span>
+                        Belum punya akun?
+                    <Link to="/"> Daftar Sekarang</Link>
+                  </span>
+                </div>
+
+                {/* <div className="login-btn mt-3">
+                  <GoogleLogin
+                    clientId="1080911581648-vcnjasi1kv81ho4hokp4hfeqbeea7tob.apps.googleusercontent.com"
+                    // onSuccess={loginGoogle}
+                    // onFailure={onFailureIntialGoogle}
+                    render={(renderProps) => (
+                      <button {...renderProps} className="btn btn-danger btn-login" onClick={renderProps.onClick} disabled={renderProps.disabled}>
+                        <span className="fa fa-google" />
+                        Login with Google
+                      </button>
+                    )}
                   />
 
-                  <Field
-                    icon="lock_open"
-                    className="form-control form-app"
-                    name="password"
-                    type="password"
-                    component={renderField}
-                    placeholder="Password"
+                  <FacebookLogin
+                    appId="2435743850084417"
+                    autoLoad={false}
+                    fields="name,email,picture"
+                    // callback={loginFacebook}
+                    cssClass="btn btn-primary btn-login"
+                    icon="fa-facebook"
                   />
-                  <div className="login-option d-flex">
-                    <div className="custom-control custom-switch mr-auto">
-                      <input type="checkbox" className="custom-control-input" id="customSwitch1" />
-                    </div>
-                    <div className="forget">
-                      <a href="/"><small>Lupa Password</small></a>
-                    </div>
-                  </div>
-                  <div className="login-btn mt-3">
-                    <ButtonLogin
-                      className="btn btn-app btn-login"
-                      type="submit"
-                      invalid={invalid}
-                      submitting={submitting}
-                      loading={loading}
-                    />
-                  </div>
-                  <div className="extra font-14 mt-2">
-                    <span>
-                      Belum punya akun?
-                      <Link to="/"> Daftar Sekarang</Link>
-                    </span>
-                  </div>
+                </div> */}
 
-                  <div className="login-btn mt-3">
-
-                    <GoogleLogin
-                      clientId="1080911581648-vcnjasi1kv81ho4hokp4hfeqbeea7tob.apps.googleusercontent.com"
-                      // onSuccess={loginGoogle}
-                      // onFailure={onFailureIntialGoogle}
-                      render={(renderProps) => (
-                        <button {...renderProps} className="btn btn-danger btn-login" onClick={renderProps.onClick} disabled={renderProps.disabled}>
-                          <span className="fa fa-google" />
-                          Login with Google
-                        </button>
-                      )}
-                    />
-
-                    <FacebookLogin
-                      appId="2435743850084417"
-                      autoLoad={false}
-                      fields="name,email,picture"
-                      // callback={loginFacebook}
-                      cssClass="btn btn-primary btn-login"
-                      icon="fa-facebook"
-                    />
-
-                  </div>
-                </form>
               </div>
             </div>
           </div>
         </div>
       </div>
+      <FormLogin show={showModal} handleModal={handleModal} />
     </div>
   )
 }
 
-const mapStateToProps = (state) => ({
-  loading: state.userStore.loading,
-  userData: state.userStore.userData,
-  values: getFormValues('LoginForm')(state)
-})
-
-const mapDispatchToProps = (dispatch) => ({
-  getLoginData: (data) => dispatch(getLoginData(data))
-})
-
-export default reduxForm({
-  form: 'LoginForm',
-  validate
-})(connect(mapStateToProps, mapDispatchToProps)(LoginPage))
+export default LoginPage
