@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 import { Modal } from 'react-bootstrap'
 import { useAlert } from 'react-alert'
 import { connect } from 'react-redux'
@@ -131,10 +132,10 @@ const ModalLogin = (props) => {
             <Field
               icon="mail_outline"
               className="form-control form-app"
-              name="username"
+              name="email"
               type="text"
               component={renderField}
-              placeholder="Email/Username"
+              placeholder="Email/Phone"
             />
 
             <Field
@@ -150,7 +151,7 @@ const ModalLogin = (props) => {
                 <input type="checkbox" className="custom-control-input" id="customSwitch1" />
               </div>
               <div className="forget">
-                <a href="/"><small>Lupa Password</small></a>
+                <Link to="/forgot-password"> Lupa Password</Link>
               </div>
             </div>
             <div className="login-btn mt-3">

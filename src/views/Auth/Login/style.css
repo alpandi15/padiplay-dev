@@ -32,4 +32,6 @@ form button:disabled:hover {
 
 .modal-content {
   background-color: #000000 !important;
+  border-radius: 0px !important;
+  border-color: #f75b37 !important;
 }
