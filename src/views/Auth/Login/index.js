@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-// import FacebookLogin from 'react-facebook-login'
-// import GoogleLogin from 'react-google-login'
+import FacebookLogin from 'react-facebook-login'
+import GoogleLogin from 'react-google-login'
 
 import logo from '../../../assets/img/logo-white.png'
 import './style.css'
@@ -11,8 +11,24 @@ import FormLogin from './ModalLogin'
 const LoginPage = (props) => {
   const { history } = props
   const [showModal, setShowModal] = useState(false)
+  // const refInput = useRef()
 
   const handleModal = () => setShowModal(!showModal)
+  // const prepareLoginButton = () => {
+  //   console.log(refInput.googleLoginBtn)
+  //   auth2.attachClickHandler(refInput.googleLoginBtn, {},
+  //     (googleUser) => {
+  //       let profile = googleUser.getBasicProfile()
+  //       console.log(`Token || ${googleUser.getAuthResponse().id_token}`)
+  //       console.log(`ID: ${profile.getId()}`)
+  //       console.log(`Name: ${profile.getName()}`)
+  //       console.log(`Image URL: ${profile.getImageUrl()}`)
+  //       console.log(`Email: ${profile.getEmail()}`)
+  //       // YOUR CODE HERE
+  //     }, (error) => {
+  //       alert(JSON.stringify(error, undefined, 2))
+  //     })
+  // }
 
   return (
     <div className="wrapper-app">
@@ -46,14 +62,35 @@ const LoginPage = (props) => {
               <div className="col-md-12 col-lg-6 p-5 form">
 
                 <div className="login-btn mt-3">
-                  <button className="btn btn-app btn-login" type="button">
+                  {/* <button className="btn btn-app btn-login" type="button">
                     <span className="fa fa-facebook" />
                     Masuk Dengan Facebook
                   </button>
-                  <button className="btn btn-app btn-login" type="button">
+                  <button className="btn btn-app btn-login" type="button" ref={refInput}>
                     <span className="fa fa-google" />
                     Masuk Dengan Google
-                  </button>
+                  </button> */}
+
+                  <GoogleLogin
+                    clientId="1080911581648-vcnjasi1kv81ho4hokp4hfeqbeea7tob.apps.googleusercontent.com"
+                    // onSuccess={loginGoogle}
+                    // onFailure={onFailureIntialGoogle}
+                    render={(renderProps) => (
+                      <button {...renderProps} className="btn btn-app btn-login" onClick={renderProps.onClick} disabled={renderProps.disabled}>
+                        <span className="fa fa-google" />
+                        Login with Google
+                      </button>
+                    )}
+                  />
+
+                  <FacebookLogin
+                    appId="2435743850084417"
+                    autoLoad={false}
+                    fields="name,email,picture"
+                    // callback={loginFacebook}
+                    cssClass="btn btn-app btn-login"
+                    icon="fa-facebook"
+                  />
                   <button className="btn btn-app btn-login" onClick={handleModal}>
                     <span className="fa fa-envelope" />
                     Masuk Dengan Email
@@ -67,28 +104,7 @@ const LoginPage = (props) => {
                   </span>
                 </div>
 
-                {/* <div className="login-btn mt-3">
-                  <GoogleLogin
-                    clientId="1080911581648-vcnjasi1kv81ho4hokp4hfeqbeea7tob.apps.googleusercontent.com"
-                    // onSuccess={loginGoogle}
-                    // onFailure={onFailureIntialGoogle}
-                    render={(renderProps) => (
-                      <button {...renderProps} className="btn btn-danger btn-login" onClick={renderProps.onClick} disabled={renderProps.disabled}>
-                        <span className="fa fa-google" />
-                        Login with Google
-                      </button>
-                    )}
-                  />
-
-                  <FacebookLogin
-                    appId="2435743850084417"
-                    autoLoad={false}
-                    fields="name,email,picture"
-                    // callback={loginFacebook}
-                    cssClass="btn btn-primary btn-login"
-                    icon="fa-facebook"
-                  />
-                </div> */}
+                <div className="login-btn mt-3" />
 
               </div>
             </div>

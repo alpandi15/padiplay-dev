@@ -10,6 +10,16 @@ export async function apiLogin (data) {
   })
 }
 
+export async function apiRegister (data) {
+  console.log('Service ', data)
+  return request({
+    url: 'auth/register',
+    auth: false,
+    data,
+    method: 'post'
+  })
+}
+
 export async function apiGetProfile () {
   return request({
     url: 'auth/me',

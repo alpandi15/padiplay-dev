@@ -1,3 +1,4 @@
+// import GoogleLogin from 'react-google-login'
 import { apiLogin, apiGetProfile } from 'services/auth/loginService'
 import { set, remove } from 'services/utils/storage'
 
@@ -99,6 +100,26 @@ const logoutUser = () => async (dispatch) => {
   await remove('userToken')
   dispatch(logout())
 }
+
+// const LoginGoogle = async (navigation, props) => {
+//   try {
+//     GoogleLogin.signIn()
+//     // await GoogleSignin.configure()
+//     // await GoogleSignin.signOut()
+//     // await GoogleSignin.signIn()
+//     // const token = await GoogleSignin.getTokens()
+
+//     // handleLogin(navigation, {
+//     //   props,
+//     //   expoSosmed: { type: 'success', ...token },
+//     //   driver: 'google'
+//     // })
+//   } catch (error) {
+//     await props.success()
+//     console.log('Request Failed: ', error)
+//     failed(error)
+//   }
+// }
 
 export {
   logoutUser,
