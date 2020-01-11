@@ -1,24 +1,12 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-import FacebookLogin from 'react-facebook-login'
-import GoogleLogin from 'react-google-login'
 
 import logo from '../../../assets/img/logo-white.png'
 import './style.css'
 
 import FormLogin from './ModalLogin'
-
-const loginFacebook = (response) => {
-  console.log('Facebook ', response)
-}
-
-const loginGoogle = (response) => {
-  console.log('Google ', response)
-}
-const loginGoogleError = (error) => {
-  alert('Error')
-  console.log(error)
-}
+import GoogleLogin from '../../../components/auth/sosmed/Google'
+import FacebookLogin from '../../../components/auth/sosmed/Facebook'
 
 const LoginPage = (props) => {
   const { history } = props
@@ -58,26 +46,8 @@ const LoginPage = (props) => {
               <div className="col-md-12 col-lg-6 p-5 form">
 
                 <div className="login-btn mt-3">
-                  <GoogleLogin
-                    clientId="1080911581648-vcnjasi1kv81ho4hokp4hfeqbeea7tob.apps.googleusercontent.com"
-                    onSuccess={loginGoogle}
-                    onFailure={loginGoogleError}
-                    render={(renderProps) => (
-                      <button {...renderProps} className="btn btn-app btn-sosmed" onClick={renderProps.onClick} disabled={renderProps.disabled}>
-                        <i className="fa fa-google pull-left" />
-                        Login with Google
-                      </button>
-                    )}
-                  />
-
-                  <FacebookLogin
-                    appId="2435743850084417"
-                    autoLoad={false}
-                    fields="name,email,picture"
-                    callback={loginFacebook}
-                    cssClass="btn btn-app btn-sosmed"
-                    icon="fa-facebook pull-left"
-                  />
+                  <GoogleLogin />
+                  <FacebookLogin />
                   <button className="btn btn-app btn-sosmed" onClick={handleModal}>
                     <i className="fa fa-envelope pull-left" />
                     Masuk Dengan Email
@@ -90,8 +60,6 @@ const LoginPage = (props) => {
                     <Link to="/register"> Daftar Sekarang</Link>
                   </span>
                 </div>
-
-                <div className="login-btn mt-3" />
 
               </div>
             </div>

@@ -7,5 +7,7 @@ export const config = {
   apiProtocol: process.env.REACT_APP_API_PROTOCOL || 'http',
   apiHost: process.env.REACT_APP_API_HOST || 'localhost',
   apiPort: process.env.REACT_APP_API_PORT || '',
-  apiVersion: process.env.REACT_APP_API_VERSION || ''
+  apiVersion: process.env.REACT_APP_API_VERSION || '',
+  appIdGoogle: process.env.REACT_APP_ID_GOOGLE || '',
+  appIdFacebook: process.env.REACT_APP_ID_FACEBOOK || ''
 }
