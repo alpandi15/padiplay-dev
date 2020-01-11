@@ -8,27 +8,23 @@ import './style.css'
 
 import FormLogin from './ModalLogin'
 
+const loginFacebook = (response) => {
+  console.log('Facebook ', response)
+}
+
+const loginGoogle = (response) => {
+  console.log('Google ', response)
+}
+const loginGoogleError = (error) => {
+  alert('Error')
+  console.log(error)
+}
+
 const LoginPage = (props) => {
   const { history } = props
   const [showModal, setShowModal] = useState(false)
-  // const refInput = useRef()
 
   const handleModal = () => setShowModal(!showModal)
-  // const prepareLoginButton = () => {
-  //   console.log(refInput.googleLoginBtn)
-  //   auth2.attachClickHandler(refInput.googleLoginBtn, {},
-  //     (googleUser) => {
-  //       let profile = googleUser.getBasicProfile()
-  //       console.log(`Token || ${googleUser.getAuthResponse().id_token}`)
-  //       console.log(`ID: ${profile.getId()}`)
-  //       console.log(`Name: ${profile.getName()}`)
-  //       console.log(`Image URL: ${profile.getImageUrl()}`)
-  //       console.log(`Email: ${profile.getEmail()}`)
-  //       // YOUR CODE HERE
-  //     }, (error) => {
-  //       alert(JSON.stringify(error, undefined, 2))
-  //     })
-  // }
 
   return (
     <div className="wrapper-app">
@@ -62,22 +58,13 @@ const LoginPage = (props) => {
               <div className="col-md-12 col-lg-6 p-5 form">
 
                 <div className="login-btn mt-3">
-                  {/* <button className="btn btn-app btn-login" type="button">
-                    <span className="fa fa-facebook" />
-                    Masuk Dengan Facebook
-                  </button>
-                  <button className="btn btn-app btn-login" type="button" ref={refInput}>
-                    <span className="fa fa-google" />
-                    Masuk Dengan Google
-                  </button> */}
-
                   <GoogleLogin
                     clientId="1080911581648-vcnjasi1kv81ho4hokp4hfeqbeea7tob.apps.googleusercontent.com"
-                    // onSuccess={loginGoogle}
-                    // onFailure={onFailureIntialGoogle}
+                    onSuccess={loginGoogle}
+                    onFailure={loginGoogleError}
                     render={(renderProps) => (
-                      <button {...renderProps} className="btn btn-app btn-login" onClick={renderProps.onClick} disabled={renderProps.disabled}>
-                        <span className="fa fa-google" />
+                      <button {...renderProps} className="btn btn-app btn-sosmed" onClick={renderProps.onClick} disabled={renderProps.disabled}>
+                        <i className="fa fa-google pull-left" />
                         Login with Google
                       </button>
                     )}
@@ -87,19 +74,19 @@ const LoginPage = (props) => {
                     appId="2435743850084417"
                     autoLoad={false}
                     fields="name,email,picture"
-                    // callback={loginFacebook}
-                    cssClass="btn btn-app btn-login"
-                    icon="fa-facebook"
+                    callback={loginFacebook}
+                    cssClass="btn btn-app btn-sosmed"
+                    icon="fa-facebook pull-left"
                   />
-                  <button className="btn btn-app btn-login" onClick={handleModal}>
-                    <span className="fa fa-envelope" />
+                  <button className="btn btn-app btn-sosmed" onClick={handleModal}>
+                    <i className="fa fa-envelope pull-left" />
                     Masuk Dengan Email
                   </button>
                 </div>
 
                 <div className="extra font-14 mt-2">
                   <span>
-                        Belum punya akun?
+                    Belum punya akun?
                     <Link to="/register"> Daftar Sekarang</Link>
                   </span>
                 </div>

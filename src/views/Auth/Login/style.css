@@ -35,3 +35,8 @@ form button:disabled:hover {
   border-radius: 0px !important;
   border-color: #f75b37 !important;
 }
+
+.btn-sosmed {
+  width: 100%;
+  margin-bottom: 1rem;
+}
