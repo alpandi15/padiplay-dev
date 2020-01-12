@@ -66,8 +66,8 @@ const HeaderPublic = ({
                   <small>Selamat datang</small>
                   <div className="font-bold">{userData.name}</div>
                 </span>
-                <a className="dropdown-item" href="/account">Profil Saya</a>
-                <a className="dropdown-item" href="/">Tournament</a>
+                <Link className="dropdown-item" to="/account">Profil Saya</Link>
+                <Link className="dropdown-item" to="/tournament">Tournament</Link>
                 <div className="dropdown-item d-flex v-center log-out" style={{ cursor: 'pointer' }} onClick={__signOut}>
                   <i className="material-icons mr-2">exit_to_app</i>
                   {' '}
