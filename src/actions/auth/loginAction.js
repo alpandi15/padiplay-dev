@@ -1,5 +1,5 @@
 // import GoogleLogin from 'react-google-login'
-import { apiLogin, apiGetProfile } from 'services/auth/loginService'
+import { apiLogin, apiGetProfile, apiRegister } from 'services/auth/loginService'
 import { set, remove } from 'services/utils/storage'
 
 import {
@@ -45,7 +45,8 @@ const getLoginData = (data) => async (dispatch) => {
   try {
     dispatch(fetch())
     console.log('Data ', data)
-    const response = await apiLogin(data)
+    const response = await apiRegister(data)
+    console.log('Res ', response)
     if (response && response.success) {
       dispatch(receive(response.data))
       if (response && response.data) {
@@ -122,10 +123,31 @@ const logoutUser = () => async (dispatch) => {
 //   }
 // }
 
+const registerUser = (data) => async (dispatch) => {
+  try {
+    dispatch(fetch())
+    console.log('Data Masuk ', data)
+    const response = await apiRegister(data)
+    if (response && response.success) {
+      dispatch(receive(response.data))
+      if (response && response.data) {
+        return response
+      }
+    } else {
+      dispatch(failed(response))
+      return response
+    }
+  } catch (error) {
+    dispatch(failed(error))
+    return error
+  }
+}
+
 export {
   logoutUser,
   errorStatus,
   getLoginData,
   getLoginSosmed,
-  getUserData
+  getUserData,
+  registerUser
 }

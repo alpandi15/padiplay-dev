@@ -1,10 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
+import { useAlert } from 'react-alert'
 import { Field, reduxForm, getFormValues } from 'redux-form'
 
 import validate from './validate'
-// import { getLoginData } from '../../../actions/auth/loginAction'
+import { registerUser } from '../../../actions/auth/loginAction'
 
 import logo from '../../../assets/img/logo-white.png'
 import './style.css'
@@ -73,8 +74,46 @@ const Register = (props) => {
   const {
     invalid,
     loading,
-    submitting
+    submitting,
+    handleSubmit
   } = props
+
+  const [alertState, setAlertState] = useState({
+    show: false,
+    success: false,
+    message: ''
+  })
+
+  const Alert = useAlert()
+
+  const onSubmit = async (values) => {
+    const { registerUser, error, history } = props
+    const data = {
+      phone: values.phone,
+      email: values.email,
+      password: values.password
+    }
+    if (!error) {
+      const res = await registerUser(data)
+      console.log('Data', res)
+      if (res.success) {
+        Alert.success(res.meta.message)
+        setAlertState({
+          message: res.meta.message,
+          success: res.success,
+          show: true
+        })
+        history.push('/login')
+      } else {
+        Alert.error(res.message)
+        setAlertState({
+          message: res.message,
+          success: res.success,
+          show: true
+        })
+      }
+    }
+  }
 
   return (
     <div className="wrapper-app">
@@ -109,7 +148,7 @@ const Register = (props) => {
                 <div className="login-title mb-4">
                   Bergabung Sekarang
                 </div>
-                <form onSubmit={() => alert('Register')}>
+                <form onSubmit={handleSubmit(onSubmit)}>
                   <Field
                     icon="mail_outline"
                     className="form-control form-app"
@@ -190,11 +229,11 @@ const mapStateToProps = (state) => ({
   values: getFormValues('LoginForm')(state)
 })
 
-// const mapDispatchToProps = (dispatch) => ({
-// getLoginData: (data) => dispatch(getLoginData(data))
-// })
+const mapDispatchToProps = (dispatch) => ({
+  registerUser: (data) => dispatch(registerUser(data))
+})
 
 export default reduxForm({
   form: 'LoginForm',
   validate
-})(connect(mapStateToProps, null)(Register))
+})(connect(mapStateToProps, mapDispatchToProps)(Register))
