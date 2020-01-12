@@ -2,6 +2,8 @@ import React from 'react'
 
 import { Link } from 'react-router-dom'
 
+import Logo from 'assets/img/logo.png'
+
 import Menu from './HeaderMenu'
 
 const HeaderPublic = ({
@@ -18,7 +20,7 @@ const HeaderPublic = ({
             <span />
             <span />
           </div>
-          <Link to="/" className="navbar-brand logo-app"><img src="../../assets/img/logo.png" alt="" /></Link>
+          <Link to="/" className="navbar-brand logo-app"><img src={Logo} alt="" /></Link>
         </div>
         <div className="nav-item d-block d-md-none mr-3 notifications active">
           <i className="material-icons" onClick={__handleShowNotif}>notifications_none</i>
@@ -64,7 +66,7 @@ const HeaderPublic = ({
                   <small>Selamat datang</small>
                   <div className="font-bold">{userData.name}</div>
                 </span>
-                <a className="dropdown-item" href="/">Profil Saya</a>
+                <a className="dropdown-item" href="/account">Profil Saya</a>
                 <a className="dropdown-item" href="/">Tournament</a>
                 <div className="dropdown-item d-flex v-center log-out" style={{ cursor: 'pointer' }} onClick={__signOut}>
                   <i className="material-icons mr-2">exit_to_app</i>
