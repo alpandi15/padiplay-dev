@@ -44,6 +44,7 @@ const failed = (error) => {
 const getLoginData = (data) => async (dispatch) => {
   try {
     dispatch(fetch())
+    console.log('Data ', data)
     const response = await apiLogin(data)
     if (response && response.success) {
       dispatch(receive(response.data))

@@ -1,8 +1,8 @@
-export default ({ email, password }) => {
+export default ({ account, password }) => {
   const error = {
-    email: !email ? '*Required'
-    : email.length < 6 ? 'Min 10 Character'
-    : email.length > 50 ? 'Username Max 50 Character'
+    account: !account ? '*Required'
+    : account.length < 10 ? 'Min 10 Character'
+    : account.length > 50 ? 'Username Max 50 Character'
     : undefined,
     password: !password ? '*Required'
     : password.length < 6 ? 'Password Min 6 Character'

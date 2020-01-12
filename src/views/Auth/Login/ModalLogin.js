@@ -74,7 +74,7 @@ const ModalLogin = (props) => {
   const onSubmit = async (values) => {
     const { getLoginData, error, history } = props
     const data = {
-      email: values.email,
+      account: values.account,
       password: values.password
     }
     if (!error) {
@@ -132,7 +132,7 @@ const ModalLogin = (props) => {
             <Field
               icon="mail_outline"
               className="form-control form-app"
-              name="email"
+              name="account"
               type="text"
               component={renderField}
               placeholder="Email/Phone"

@@ -1,37 +1,42 @@
 import React from 'react'
 
 import { Link } from 'react-router-dom'
+import IconHome from 'assets/img/icon/icon-home.svg'
+import IconGames from 'assets/img/icon/icon-games.svg'
+import IconCommunity from 'assets/img/icon/icon-organize.svg'
+import IconShop from 'assets/img/icon/icon-shop.svg'
+import IconCaster from 'assets/img/icon/icon-casterr.svg'
 
 const Menu = () => {
   return (
     <>
       <li className="nav-item d-block d-md-none active">
         <div className="text-center mb-1">
-          <img src="../../assets/img/icon/icon-home.svg" className="icon-app icon-invert" alt="" />
+          <img src={IconHome} className="icon-app icon-invert" alt="" />
         </div>
         <Link className="nav-link link-app" to="/">Home</Link>
       </li>
       <li className="nav-item">
         <div className="text-center d-block d-md-none mb-1">
-          <img src="../../assets/img/icon/icon-games.svg" className="icon-app icon-invert" alt="" />
+          <img src={IconGames} className="icon-app icon-invert" alt="" />
         </div>
         <Link className="nav-link link-app" to="/games">Games</Link>
       </li>
       <li className="nav-item">
         <div className="text-center d-block d-md-none mb-1">
-          <img src="../../assets/img/icon/icon-organize.svg" className="icon-app icon-invert" alt="" />
+          <img src={IconCommunity} className="icon-app icon-invert" alt="" />
         </div>
         <Link className="nav-link link-app" to="/organizer">Community</Link>
       </li>
       <li className="nav-item">
         <div className="text-center d-block d-md-none mb-1">
-          <img src="../../assets/img/icon/icon-shop.svg" className="icon-app icon-invert" alt="" />
+          <img src={IconShop} className="icon-app icon-invert" alt="" />
         </div>
         <Link className="nav-link link-app" to="/shop">Shop</Link>
       </li>
       <li className="nav-item d-block d-md-none">
         <div className="text-center d-block d-md-none mb-1">
-          <img src="../../assets/img/icon/icon-casterr.svg" className="icon-app icon-invert" alt="" />
+          <img src={IconCaster} className="icon-app icon-invert" alt="" />
         </div>
         <Link className="nav-link link-app" to="/caster">Caster</Link>
       </li>
