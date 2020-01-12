@@ -1,14 +1,17 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 import { connect } from 'react-redux'
 import moment from 'moment'
 
 import Layout from 'layouts'
 
 import WallApp from 'assets/img/carousel/cover2-01.jpg'
+import './styles.css'
 
 const Account = (props) => {
   const {
-    userData
+    userData,
+    children
   } = props
 
   return (
@@ -37,59 +40,20 @@ const Account = (props) => {
         </div>
       </div>
       <div className="content information">
-        <nav id="navbar" className="navbar second-navbar-app">
-          <div className="container">
-            <ul className="nav nav-pills">
-              <li className="nav-item">
-                <a className="nav-link active" href="tournamentInformation.html">Information</a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="participants.html">Participants</a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="matches.html">Matches</a>
-              </li>
-            </ul>
-          </div>
-        </nav>
         <div className="game-browse py-5">
           <div className="container">
-            <div className="payment font-14 py-5">
-              <div className="p-4">
-                <div className="mb-3">
-                  <div><small>Total Payment</small></div>
-                  <div className="font-24 font-bold">Rp. 50.000</div>
-                  <small>Note: Bayar sesuai dengan jumlah di atas</small>
+            <div className="row">
+              <div className="col">
+                <div id="list-example" className="list-group">
+                  <NavLink className="list-group-item list-group-item-action" activeClassName="active" to="/account/profile">Profil</NavLink>
+                  <NavLink className="list-group-item list-group-item-action" activeClassName="active" to="/account/team">Tim</NavLink>
+                  <NavLink className="list-group-item list-group-item-action" activeClassName="active" to="/account/tournament">Turnamen</NavLink>
+                  <NavLink className="list-group-item list-group-item-action" activeClassName="active" to="/account/transaction">Riwayat Transaksi</NavLink>
+                  <NavLink className="list-group-item list-group-item-action" activeClassName="active" to="/account/settings">Pengaturan</NavLink>
                 </div>
-                <div className="mb-3">
-                  Dicek dalam 24 jam setelah bukti transfer diupload. Diwajibkan untuk membayar sesuai total pembayaran sebelum batas waktu berakhir.
-                </div>
-                <div className="p-3 mb-3 payment-highlight">
-                  Silahkan transfer ke rekening padiplay berikut:
-                  <div className="mt-1 d-flex v-center">
-                    <img src="../../assets/img/payment/bni.png" className="payment-image mr-3" alt="" />
-                    Bank BNI
-                  </div>
-                  <div className="mr-2 l-h-2 pl-3 mt-2">
-                    <p className="m-0">
-                      No Rekening:
-                      {' '}
-                      <b>1230495868</b>
-                    </p>
-                    <p className="m-0">
-                      Nama Rekening:
-                      {' '}
-                      <b>PT. Indocorpora Investama</b>
-                    </p>
-                  </div>
-                </div>
-                <div>
-                  <ul>
-                    <li>Silahkan upload bukti transfer sebelum tanggal 23 Agustus 2019</li>
-                    <li>Demi keamanan transaksi mohont untuk tidak membagikan bukti atau konfirmasi pembayaran pesanan kepada siapapun. selain mengunggahnya via aplikasi Padiplay</li>
-                  </ul>
-                </div>
-                <button className="btn btn-app btn-upload mt-5">Upload Bukti Transfer</button>
+              </div>
+              <div className="col-9">
+                {children}
               </div>
             </div>
           </div>

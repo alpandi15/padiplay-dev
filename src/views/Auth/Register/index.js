@@ -209,7 +209,7 @@ const Register = (props) => {
 const mapStateToProps = (state) => ({
   loading: state.userStore.loading,
   userData: state.userStore.userData,
-  values: getFormValues('LoginForm')(state)
+  values: getFormValues('RegisterForm')(state)
 })
 
 const mapDispatchToProps = (dispatch) => ({
@@ -217,6 +217,6 @@ const mapDispatchToProps = (dispatch) => ({
 })
 
 export default reduxForm({
-  form: 'LoginForm',
+  form: 'RegisterForm',
   validate
 })(connect(mapStateToProps, mapDispatchToProps)(Register))
