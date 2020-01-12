@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { useAlert } from 'react-alert'
@@ -78,12 +78,6 @@ const Register = (props) => {
     handleSubmit
   } = props
 
-  const [alertState, setAlertState] = useState({
-    show: false,
-    success: false,
-    message: ''
-  })
-
   const Alert = useAlert()
 
   const onSubmit = async (values) => {
@@ -95,22 +89,11 @@ const Register = (props) => {
     }
     if (!error) {
       const res = await registerUser(data)
-      console.log('Data', res)
       if (res.success) {
         Alert.success(res.meta.message)
-        setAlertState({
-          message: res.meta.message,
-          success: res.success,
-          show: true
-        })
         history.push('/login')
       } else {
         Alert.error(res.message)
-        setAlertState({
-          message: res.message,
-          success: res.success,
-          show: true
-        })
       }
     }
   }
