@@ -19,10 +19,11 @@ const EditProfile = (props) => {
     userData
   } = props
   const [gender, setGender] = useState('1')
+  console.log('Gender ', gender)
 
   useEffect(() => {
     setGender(String(userData.gender))
-  })
+  }, [userData])
 
   const radioItem = [
     { label: 'Laki - Laki', value: '1' },

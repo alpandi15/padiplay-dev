@@ -12,9 +12,8 @@ const Calendar = ({
   if (typeof input.value === 'object') {
     input.value = new Date(input.value)
   } else if (typeof input.value === 'string') {
-    input.value = parseFloat(input.value)
+    input.value = input && input.value ? input.value : null
   }
-
   return (
     <div className="field-container">
       {touched && ((error && <span className="error-input">{error}</span>))}
