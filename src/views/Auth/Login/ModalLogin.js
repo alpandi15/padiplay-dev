@@ -5,6 +5,8 @@ import { useAlert } from 'react-alert'
 import { connect } from 'react-redux'
 import { Field, reduxForm, getFormValues } from 'redux-form'
 
+import ButtonLogin from 'components/Button'
+
 import validate from './validate'
 import { getLoginData } from '../../../actions/auth/loginAction'
 
@@ -31,26 +33,6 @@ const renderField = ({
         <input {...input} className={className} placeholder={placeholder} type={type} />
       </div>
     </>
-  )
-}
-
-const ButtonLogin = ({
-  input,
-  type,
-  className,
-  invalid,
-  loading,
-  submitting
-}) => {
-  return (
-    <button className={className} type={type} {...input} disabled={invalid || submitting || loading}>
-      {
-        !submitting ? 'Login'
-        : (
-          <span className="spinner-border spinner-border-sm" role="status" aria-hidden="true" />
-        )
-      }
-    </button>
   )
 }
 
@@ -161,6 +143,7 @@ const ModalLogin = (props) => {
                 invalid={invalid}
                 submitting={submitting}
                 loading={loading}
+                label="Login"
               />
             </div>
           </form>

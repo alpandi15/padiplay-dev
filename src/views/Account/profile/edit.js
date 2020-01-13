@@ -1,25 +1,33 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { connect } from 'react-redux'
 import { Field, reduxForm, getFormValues } from 'redux-form'
-import Calendar from 'components/Calendar'
-import { convertDateToTimeStamp, convertTimeStampToDate } from '../../../utils/time'
 
-import InputComponent from '../../../components/InputWithError'
+import Calendar from 'components/Calendar'
+import InputComponent from 'components/InputWithError'
+import Radio from 'components/Radio'
+import Button from 'components/Button'
+
+import { convertDateToTimeStamp, convertTimeStampToDate } from '../../../utils/time'
 import Layout from '../index'
 
 const EditProfile = (props) => {
   const {
-    handleSubmit
-    // invalid,
-    // loading,
-    // submitting,
-    // userData
+    handleSubmit,
+    invalid,
+    loading,
+    submitting,
+    userData
   } = props
+  const [gender, setGender] = useState('1')
 
-  // const radioItem = [
-  //   { label: 'Male', value: '1' },
-  //   { label: 'Female', value: '0' }
-  // ]
+  useEffect(() => {
+    setGender(String(userData.gender))
+  })
+
+  const radioItem = [
+    { label: 'Laki - Laki', value: '1' },
+    { label: 'Perempuan', value: '0' }
+  ]
 
   const onSubmit = (data) => {
     if (data.birth) {
@@ -47,22 +55,40 @@ const EditProfile = (props) => {
           <div className="col-12">
 
             <form onSubmit={handleSubmit(onSubmit)}>
-              <div className="titleList">Lokasi</div>
+              <div className="titleList">First Name</div>
               <Field
                 className="form-control"
-                name="location"
+                name="firstName"
                 type="text"
                 component={InputComponent}
-                placeholder="Lokasi"
+                placeholder="First Name"
+              />
+              <div className="titleList">Last Name</div>
+              <Field
+                className="form-control"
+                name="lastName"
+                type="text"
+                component={InputComponent}
+                placeholder="Last Name"
               />
               <div className="titleList">Jenis Kelamin</div>
-              <Field
-                className="form-control"
-                name="gender"
-                type="text"
-                component={InputComponent}
-                placeholder="Lokasi"
-              />
+              {
+                radioItem.map((data, key) => {
+                  return (
+                    <div className="field-container" key={key}>
+                      <Field
+                        id={data.value}
+                        name="gender"
+                        label={data.label}
+                        component={Radio}
+                        className="form-check-input"
+                        checked={data.value === gender}
+                        handleClick={() => setGender(data.value)}
+                      />
+                    </div>
+                  )
+                })
+              }
               <div className="titleList">Tanggal Lahir</div>
               <Field
                 name="birth"
@@ -86,13 +112,23 @@ const EditProfile = (props) => {
                 component={InputComponent}
                 placeholder="Email"
               />
+              <div className="titleList">Address</div>
+              <Field
+                className="form-control"
+                name="address"
+                type="text"
+                component={InputComponent}
+                placeholder="address"
+              />
 
-              <button
+              <Button
                 className="btn btn-app btn-login"
                 type="submit"
-              >
-              Ubah
-              </button>
+                invalid={invalid}
+                submitting={submitting}
+                loading={loading}
+                label="Ubah"
+              />
             </form>
           </div>
         </div>
@@ -109,7 +145,8 @@ const mapStateToProps = (state) => {
     userData: userStore.userData,
     authorized: userStore.authorized,
     initialValues: ({
-      location: userData.location,
+      firstName: userData.firstName,
+      lastName: userData.lastName,
       email: userData.email,
       phone: userData.phone,
       address: userData.address,
