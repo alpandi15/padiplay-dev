@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { connect } from 'react-redux'
 import { Field, reduxForm, getFormValues } from 'redux-form'
 import moment from 'moment'
@@ -14,20 +14,6 @@ const EditProfile = (props) => {
     // submitting,
     userData
   } = props
-
-  const _refresh = async () => {
-    const { userData, initialize } = props
-    initialize({
-      email: userData.email,
-      phone: userData.phone,
-      address: userData.address,
-      gender: String(userData.gender)
-    })
-  }
-
-  useEffect(() => {
-    _refresh()
-  }, [])
 
   const onSubmit = (data) => {
     console.log(data)
@@ -91,7 +77,7 @@ const EditProfile = (props) => {
                 className="btn btn-app btn-login"
                 type="submit"
               >
-            Ubah
+              Ubah
               </button>
             </form>
           </div>
@@ -101,13 +87,26 @@ const EditProfile = (props) => {
   )
 }
 
-const mapStateToProps = (state) => ({
-  values: getFormValues('EditForm')(state),
-  userData: state.userStore.userData,
-  authorized: state.userStore.authorized
-})
+const mapStateToProps = (state) => {
+  const { userStore } = state
+  const { userData } = userStore
+  return {
+    values: getFormValues('EditForm')(state),
+    userData: userStore.userData,
+    authorized: userStore.authorized,
+    initialValues: ({
+      location: userData.location,
+      email: userData.email,
+      phone: userData.phone,
+      address: userData.address,
+      gender: String(userData.gender)
+    })
+  }
+}
 
-export default reduxForm({
-  form: 'EditForm'
+export default connect(mapStateToProps)(reduxForm({
+  form: 'EditForm',
+  enableReinitialize: true,
+  keepDirtyOnReinitialize: true
   // validate
-})(connect(mapStateToProps, null)(EditProfile))
+})(EditProfile))
