@@ -1,21 +1,30 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { Field, reduxForm, getFormValues } from 'redux-form'
-import moment from 'moment'
+import Calendar from 'components/Calendar'
+import { convertDateToTimeStamp, convertTimeStampToDate } from '../../../utils/time'
 
 import InputComponent from '../../../components/InputWithError'
 import Layout from '../index'
 
 const EditProfile = (props) => {
   const {
-    handleSubmit,
+    handleSubmit
     // invalid,
     // loading,
     // submitting,
-    userData
+    // userData
   } = props
 
+  // const radioItem = [
+  //   { label: 'Male', value: '1' },
+  //   { label: 'Female', value: '0' }
+  // ]
+
   const onSubmit = (data) => {
+    if (data.birth) {
+      data.birth = convertTimeStampToDate(data.birth)
+    }
     console.log(data)
   }
 
@@ -55,7 +64,12 @@ const EditProfile = (props) => {
                 placeholder="Lokasi"
               />
               <div className="titleList">Tanggal Lahir</div>
-              <div>{moment(userData.birth).format('DD-MM-YYYY')}</div>
+              <Field
+                name="birth"
+                component={Calendar}
+                className="form-control"
+                placeholder="DD-MM-YYYY"
+              />
               <div className="titleList">Phone Number</div>
               <Field
                 className="form-control"
@@ -99,7 +113,8 @@ const mapStateToProps = (state) => {
       email: userData.email,
       phone: userData.phone,
       address: userData.address,
-      gender: String(userData.gender)
+      gender: String(userData.gender),
+      birth: userData && userData.birth ? convertDateToTimeStamp(userData.birth) : null
     })
   }
 }
