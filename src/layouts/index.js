@@ -8,6 +8,7 @@ import Notification from 'layouts/partials/Notification'
 import { getUserData, logoutUser } from 'actions/auth/loginAction'
 
 const Layout = ({ children, ...props }) => {
+  const [showSide, setShowSide] = useState(false)
   const [showNotif, setShowNotif] = useState(false)
   const {
     getUserData,
@@ -31,15 +32,21 @@ const Layout = ({ children, ...props }) => {
     setShowNotif(!showNotif)
   }
 
+  const __handleShowSide = () => {
+    setShowSide(!showSide)
+    console.log(showSide)
+  }
+
   if (authorized) {
     return (
       <>
         <HeaderLogged
           __signOut={__signOut}
           __handleShowNotif={__handleShowNotif}
+          __handleShowSide={__handleShowSide}
           userData={userData}
         />
-        <Sidebar />
+        <Sidebar show={showSide} __handleShowSide={__handleShowSide} />
         <Notification
           active={showNotif}
           __handleShowNotif={__handleShowNotif}

@@ -1,11 +1,35 @@
 import React from 'react'
+import AvatarDefault from 'assets/img/avatar.jpg'
 
-const Sidebar = () => {
+const style = {
+  active: {
+    transitionDuration: '0.3s',
+    transform: 'translate(0px, 0px)'
+  },
+  unactive: {
+    transitionDuration: '0.3s',
+    transform: 'translate(-280px, 0px)'
+  }
+}
+
+const Sidebar = (props) => {
+  const {
+    show,
+    __handleShowSide
+  } = props
+
+  const defaultProfile = (evt) => {
+    evt.target.src = AvatarDefault
+  }
+
   return (
-    <div className="sidebar-app d-md-none ssm-nav-visible">
+    <div className="sidebar-app d-md-none ssm-nav-visible" style={show ? style.active : style.unactive}>
+      <div style={{ marginBottom: '20px' }}>
+        <i className="material-icons mr-2" onClick={__handleShowSide}>close</i>
+      </div>
       <div className="profile">
         <div className="sidebar-avatar">
-          <img src="" alt="" />
+          <img src="" alt="" onError={defaultProfile} />
           <div className="ml-3">
             <div><small>Selamat datang</small></div>
             <span>Name</span>

@@ -10,17 +10,17 @@ import Menu from './HeaderMenu'
 const HeaderPublic = ({
   userData,
   __signOut,
-  __handleShowNotif
+  __handleShowNotif,
+  __handleShowSide
 }) => {
   const defaultProfile = (evt) => {
     evt.target.src = AvatarDefault
   }
-
   return (
     <nav className="navbar navbar-expand-md navbar-app fixed-top">
       <div className="container">
         <div className="d-flex v-center">
-          <div className="hamburger-menu d-block d-md-none ssm-toggle-nav">
+          <div className="hamburger-menu d-block d-md-none ssm-toggle-nav" onClick={__handleShowSide}>
             <span />
             <span />
             <span />
