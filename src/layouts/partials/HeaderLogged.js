@@ -3,6 +3,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 import Logo from 'assets/img/logo.png'
+import AvatarDefault from 'assets/img/avatar.jpg'
 
 import Menu from './HeaderMenu'
 
@@ -11,6 +12,10 @@ const HeaderPublic = ({
   __signOut,
   __handleShowNotif
 }) => {
+  const defaultProfile = (evt) => {
+    evt.target.src = AvatarDefault
+  }
+
   return (
     <nav className="navbar navbar-expand-md navbar-app fixed-top">
       <div className="container">
@@ -58,7 +63,7 @@ const HeaderPublic = ({
             <li className="nav-item dropdown d-none d-md-block">
               <a className="nav-link link-app dropdown-toggle profile" href="/" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <div className="avatar">
-                  <img src={userData.image.raw} alt="" />
+                  <img src={userData.image.raw} onError={defaultProfile} alt="" />
                 </div>
               </a>
               <div className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
