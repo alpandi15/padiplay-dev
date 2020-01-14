@@ -33,7 +33,7 @@ const router = () => {
         <PrivateRoute exact path="/account/tournament" component={AccountTournament} title="Tournament" />
         <PrivateRoute exact path="/account/transaction" component={AccountTransaction} title="Transaction" />
         <PrivateRoute exact path="/account/settings" component={AccountSetting} title="Settings" />
-        <PrivateRoute exact path="/organized" component={Organized} title="Organized" />
+        <PrivateRoute exact path="/organizer" component={Organized} title="Organized" />
       </Switch>
     </BrowserRouter>
   )
