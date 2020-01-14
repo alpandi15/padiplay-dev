@@ -1,4 +1,9 @@
-import { apiLogin, apiGetProfile, apiRegister, apiLoginSosmed } from 'services/auth/loginService'
+import {
+  apiLogin,
+  apiGetProfile,
+  apiRegister,
+  apiLoginSosmed
+} from 'services/auth/loginService'
 import { set, remove } from 'services/utils/storage'
 
 import {

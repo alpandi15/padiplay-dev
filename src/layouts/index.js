@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { connect } from 'react-redux'
+import { Redirect } from 'react-router-dom'
 
 import HeaderPublic from 'layouts/partials/HeaderPublic'
 import HeaderLogged from 'layouts/partials/HeaderLogged'
@@ -7,14 +8,16 @@ import Sidebar from 'layouts/partials/Sidebar'
 import Notification from 'layouts/partials/Notification'
 import { getUserData, logoutUser } from 'actions/auth/loginAction'
 
-const Layout = ({ children, ...props }) => {
+const Layout = (props) => {
   const [showSide, setShowSide] = useState(false)
   const [showNotif, setShowNotif] = useState(false)
   const {
     getUserData,
     userData,
     authorized,
-    logoutUser
+    logoutUser,
+    children,
+    history
   } = props
 
   useEffect(() => {
@@ -26,6 +29,9 @@ const Layout = ({ children, ...props }) => {
 
   const __signOut = () => {
     logoutUser()
+    console.log('Hist ', history)
+    return <Redirect to="/" />
+    // history.push('/')
   }
 
   const __handleShowNotif = () => {
