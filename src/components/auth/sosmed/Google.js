@@ -1,18 +1,36 @@
 import React from 'react'
 import GoogleLogin from 'react-google-login'
+import { useAlert } from 'react-alert'
+import { connect } from 'react-redux'
+import { getLoginSosmed } from '../../../actions/auth/loginAction'
 import './styles.css'
 import { config } from '../../../config'
 
-const loginGoogle = (response) => {
-  console.log('Google ', response)
-}
 const loginGoogleError = (error) => {
   alert('Error')
   console.log(error)
 }
 
-const LoginButton = () => {
+const LoginButton = (props) => {
   const { appIdGoogle } = config
+
+  const Alert = useAlert()
+
+  const loginGoogle = async (response) => {
+    const { getLoginSosmed, history } = props
+    const data = {
+      token: `${response.accessToken}`,
+      driver: 'google'
+    }
+    const res = await getLoginSosmed(data)
+    if (res.success) {
+      Alert.success(res.meta.message)
+      history.push('/')
+    } else {
+      Alert.error(res.message)
+    }
+    console.log('Google ', response.accessToken)
+  }
   return (
     <GoogleLogin
       clientId={appIdGoogle}
@@ -28,4 +46,12 @@ const LoginButton = () => {
   )
 }
 
-export default LoginButton
+const mapStateToProps = (state) => ({
+  loading: state.userStore.loading
+})
+
+const mapDispatchToProps = (dispatch) => ({
+  getLoginSosmed: (data) => dispatch(getLoginSosmed(data))
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(LoginButton)

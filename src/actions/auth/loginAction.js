@@ -1,4 +1,4 @@
-import { apiLogin, apiGetProfile, apiRegister } from 'services/auth/loginService'
+import { apiLogin, apiGetProfile, apiRegister, apiLoginSosmed } from 'services/auth/loginService'
 import { set, remove } from 'services/utils/storage'
 
 import {
@@ -65,7 +65,7 @@ const getLoginData = (data) => async (dispatch) => {
 const getLoginSosmed = (data) => async (dispatch) => {
   try {
     dispatch(fetch())
-    const response = await apiLogin(data)
+    const response = await apiLoginSosmed(data)
     if (response && response.success) {
       dispatch(receive(response.data))
       if (response && response.data) {
@@ -101,26 +101,6 @@ const logoutUser = () => async (dispatch) => {
   await remove('userToken')
   dispatch(logout())
 }
-
-// const LoginGoogle = async (navigation, props) => {
-//   try {
-//     GoogleLogin.signIn()
-//     // await GoogleSignin.configure()
-//     // await GoogleSignin.signOut()
-//     // await GoogleSignin.signIn()
-//     // const token = await GoogleSignin.getTokens()
-
-//     // handleLogin(navigation, {
-//     //   props,
-//     //   expoSosmed: { type: 'success', ...token },
-//     //   driver: 'google'
-//     // })
-//   } catch (error) {
-//     await props.success()
-//     console.log('Request Failed: ', error)
-//     failed(error)
-//   }
-// }
 
 const registerUser = (data) => async (dispatch) => {
   try {

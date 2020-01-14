@@ -46,7 +46,7 @@ const LoginPage = (props) => {
               <div className="col-md-12 col-lg-6 p-5 form">
 
                 <div className="login-btn mt-3">
-                  <GoogleLogin />
+                  <GoogleLogin history={history} />
                   <FacebookLogin />
                   <button className="btn btn-app btn-sosmed" onClick={handleModal}>
                     <i className="fa fa-envelope pull-left" />
