@@ -1,5 +1,5 @@
 import React from 'react'
-
+import ContentLoader, { Instagram } from 'react-content-loader'
 import LayoutMember from 'layouts'
 import Footer from 'layouts/partials/Footer'
 
@@ -57,6 +57,26 @@ const Games = () => {
               </div>
             </div>
             <div className="row">
+              <div className="col-md-3 col-6 p-md-2">
+                <ContentLoader
+                  height={480}
+                  speed={1}
+                  primaryColor="#333"
+                  secondaryColor="#999"
+                >
+                  <rect x="0" y="0" width="400" height="480" />
+                </ContentLoader>
+              </div>
+              <div className="col-md-3 col-6 p-md-2">
+                <ContentLoader
+                  height={480}
+                  speed={1}
+                  primaryColor="#333"
+                  secondaryColor="#999"
+                >
+                  <rect x="0" y="0" width="400" height="480" />
+                </ContentLoader>
+              </div>
               <div className="col-md-3 col-6 p-md-2">
                 <div className="game-list">
                   <a href="browseDetail.html" title="Player Unknown's Battlegrounds">
@@ -192,23 +212,23 @@ const Games = () => {
             </div>
             <div className="pagination pb-5">
               <ul>
-                <li><a className="disbale" href="/">></a></li>
+                <li><a className="disbale" href="/">{'>'}</a></li>
                 <li><a className="active" href="/">1</a></li>
                 <li><a href="/">2</a></li>
                 <li><a href="/">3</a></li>
                 <li>...</li>
                 <li><a href="/">198</a></li>
                 <li><a href="/">199</a></li>
-                <li><a href="/">></a></li>
+                <li><a href="/">{'>'}</a></li>
               </ul>
             </div>
           </div>
         </div>
-        
+
         <Footer />
       </div>
     </LayoutMember>
-  );
+  )
 }
 
-export default Games;
+export default Games
