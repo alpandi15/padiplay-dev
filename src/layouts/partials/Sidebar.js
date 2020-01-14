@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import AvatarDefault from 'assets/img/avatar.jpg'
 
 const style = {
@@ -14,8 +15,10 @@ const style = {
 
 const Sidebar = (props) => {
   const {
+    data,
     show,
-    __handleShowSide
+    __handleShowSide,
+    __signOut
   } = props
 
   const defaultProfile = (evt) => {
@@ -27,25 +30,42 @@ const Sidebar = (props) => {
       <div style={{ marginBottom: '20px' }}>
         <i className="material-icons mr-2" onClick={__handleShowSide}>close</i>
       </div>
-      <div className="profile">
-        <div className="sidebar-avatar">
-          <img src="" alt="" onError={defaultProfile} />
-          <div className="ml-3">
-            <div><small>Selamat datang</small></div>
-            <span>Name</span>
+      {data
+        ? (
+          <div className="profile">
+            <div className="sidebar-avatar">
+              <img src={data && data.image ? data.image.raw : null} alt="" onError={defaultProfile} />
+              <div className="ml-3">
+                <div><small>Selamat datang</small></div>
+                <span>{data ? `${data.firstName} ${data.lastName}` : null}</span>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
+        )
+        : (
+          <div className="profile">
+            <div className="ml">
+              <Link to="/login" className="btn btn-app btn-sm">Masuk</Link>
+            </div>
+          </div>
+        )}
+
       <div className="sidebar-menu">
-        <a href="/blog">Blog</a>
-        <a href="../helpcenter/index.html">Help Center</a>
-        <a href="index">Privacy Police</a>
-        <a href="index">Term of Use</a>
-        <div className="d-flex v-center log-out">
-          <i className="material-icons mr-2">exit_to_app</i>
-          {' '}
-          Log Out
-        </div>
+        {data
+          ? (<Link to="/account/profile">Profile Saya</Link>)
+          : null}
+        <Link to="/tournament">Tournament</Link>
+        <Link to="/blog">Blog</Link>
+        <Link to="../helpcenter/index.html">Help Center</Link>
+        <Link to="index">Privacy Police</Link>
+        <Link to="index">Term of Use</Link>
+        {data
+          ? (
+            <div className="d-flex v-center log-out" onClick={__signOut}>
+              <i className="material-icons mr-2">exit_to_app</i>
+              {'Log Out'}
+            </div>
+          ) : null}
       </div>
       <div className="sidebar-contact">
         <small className="sidebar-title">Contact</small>
@@ -63,22 +83,22 @@ const Sidebar = (props) => {
       <ul className="socmed">
         <li>
           <a href="/">
-            <img src="../../assets/img/icon/icon-facebookv2.svg" alt="" />
+            <img src="assets/img/icon/icon-facebookv2.svg" alt="" />
           </a>
         </li>
         <li>
           <a href="/">
-            <img src="../../assets/img/icon/icon-twitterv2.svg" alt="" />
+            <img src="assets/img/icon/icon-twitterv2.svg" alt="" />
           </a>
         </li>
         <li>
           <a href="/">
-            <img src="../../assets/img/icon/icon-instagramv2.svg" alt="" />
+            <img src="assets/img/icon/icon-instagramv2.svg" alt="" />
           </a>
         </li>
         <li>
           <a href="/">
-            <img src="../../assets/img/icon/icon-youtubev2.svg" alt="" />
+            <img src="assets/img/icon/icon-youtubev2.svg" alt="" />
           </a>
         </li>
       </ul>

@@ -46,7 +46,7 @@ const Layout = ({ children, ...props }) => {
           __handleShowSide={__handleShowSide}
           userData={userData}
         />
-        <Sidebar show={showSide} __handleShowSide={__handleShowSide} />
+        <Sidebar __signOut={__signOut} data={userData} show={showSide} __handleShowSide={__handleShowSide} />
         <Notification
           active={showNotif}
           __handleShowNotif={__handleShowNotif}
@@ -59,8 +59,10 @@ const Layout = ({ children, ...props }) => {
   }
   return (
     <>
-      <HeaderPublic />
-      <Sidebar />
+      <HeaderPublic
+        __handleShowSide={__handleShowSide}
+      />
+      <Sidebar show={showSide} __handleShowSide={__handleShowSide} />
       <Notification />
       <div className="wrapper-app">
         { children }
