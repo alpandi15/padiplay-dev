@@ -1,7 +1,8 @@
 import {
-  FETCH_LOGIN_USER,
-  RECEIVE_LOGIN_USER,
-  FAILED_LOGIN_USER,
+  FETCH_AUTH,
+  RECEIVE_AUTH,
+  FAILED_AUTH,
+  SUCCESS_AUTH,
   FETCH_LOGOUT_USER
 } from 'store/types'
 
@@ -15,14 +16,14 @@ const initialState = {
 
 export default (state = initialState, action = {}) => {
   switch (action.type) {
-    case FETCH_LOGIN_USER:
+    case FETCH_AUTH:
       return {
         ...state,
         loading: true,
         authorized: false,
         error: false
       }
-    case RECEIVE_LOGIN_USER:
+    case RECEIVE_AUTH:
       return {
         ...state,
         loading: false,
@@ -31,7 +32,9 @@ export default (state = initialState, action = {}) => {
         errorMessage: '',
         userData: action.payload.userData
       }
-    case FAILED_LOGIN_USER:
+    case SUCCESS_AUTH:
+      return { ...state, loading: false }
+    case FAILED_AUTH:
       return {
         ...state,
         loading: false,

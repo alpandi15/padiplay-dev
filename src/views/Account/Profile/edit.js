@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { connect } from 'react-redux'
 import { Field, reduxForm, getFormValues } from 'redux-form'
+import { useAlert } from 'react-alert'
 
 import Calendar from 'components/Calendar'
 import InputComponent from 'components/InputWithError'
@@ -8,6 +9,7 @@ import Radio from 'components/Radio'
 import Button from 'components/Button'
 
 import { convertDateToTimeStamp, convertTimeStampToDate } from '../../../utils/time'
+import { updateProfile } from '../../../actions/account/profileAction'
 import Layout from '../index'
 
 const EditProfile = (props) => {
@@ -30,9 +32,31 @@ const EditProfile = (props) => {
     { label: 'Perempuan', value: '0' }
   ]
 
-  const onSubmit = (data) => {
+  const Alert = useAlert()
+
+  const onSubmit = async (data) => {
+    const { updateProfile, error, history } = props
     if (data.birth) {
       data.birth = convertTimeStampToDate(data.birth)
+    }
+
+    const editData = {
+      firstName: data.firstName,
+      lastName: data.lastName,
+      address: data.address,
+      gender,
+      birth: data.birth
+    }
+
+    if (!error) {
+      const res = await updateProfile(editData)
+      console.log('Response ', res)
+      if (res.success) {
+        Alert.success(res.meta.message)
+        history.push('/account/profile')
+      } else {
+        Alert.error(res.message)
+      }
     }
     console.log(data)
   }
@@ -157,9 +181,12 @@ const mapStateToProps = (state) => {
   }
 }
 
-export default connect(mapStateToProps)(reduxForm({
+const mapDispatchToProps = (dispatch) => ({
+  updateProfile: (data) => dispatch(updateProfile(data))
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(reduxForm({
   form: 'EditForm',
-  enableReinitialize: true,
-  keepDirtyOnReinitialize: true
+  enableReinitialize: true
   // validate
 })(EditProfile))

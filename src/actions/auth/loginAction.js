@@ -1,21 +1,20 @@
-// import GoogleLogin from 'react-google-login'
 import { apiLogin, apiGetProfile, apiRegister } from 'services/auth/loginService'
 import { set, remove } from 'services/utils/storage'
 
 import {
-  FETCH_LOGIN_USER,
-  RECEIVE_LOGIN_USER,
-  FAILED_LOGIN_USER,
+  FETCH_AUTH,
+  RECEIVE_AUTH,
+  FAILED_AUTH,
   FETCH_LOGOUT_USER
 } from 'store/types'
 
 const fetch = () => {
-  return { type: FETCH_LOGIN_USER }
+  return { type: FETCH_AUTH }
 }
 
 const receive = (data) => {
   return {
-    type: RECEIVE_LOGIN_USER,
+    type: RECEIVE_AUTH,
     payload: {
       userData: data
     }
@@ -34,7 +33,7 @@ const logout = () => {
 
 const failed = (error) => {
   return {
-    type: FAILED_LOGIN_USER,
+    type: FAILED_AUTH,
     payload: {
       error: typeof error === 'object' ? error.message : error
     }
@@ -89,7 +88,7 @@ const getUserData = () => async (dispatch) => {
     dispatch(receive(response.data))
     return response
   }
-  await remove('userToken')
+  // await remove('userToken')
   dispatch(failed(response))
   return response
 }
