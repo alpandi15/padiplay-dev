@@ -1,5 +1,5 @@
 import React from 'react'
-import ContentLoader, { Instagram } from 'react-content-loader'
+import ContentLoader from 'react-content-loader'
 import LayoutMember from 'layouts'
 import Footer from 'layouts/partials/Footer'
 
@@ -48,7 +48,9 @@ const Games = () => {
                           <input type="text" className="form-control form-app" placeholder="Search Tournament" />
                         </div>
                         <div className="col-2 p-0">
-                          <button type="submit" className="btn btn-app w-100 h-100 d-flex v-center justify-content-center"><img alt="" src="../../assets/img/icon/icon-search.svg" className="icon-app icon-18" /></button>
+                          <button type="submit" className="btn btn-app w-100 h-100 d-flex v-center justify-content-center">
+                            <img alt="" src="../../assets/img/icon/icon-search.svg" className="icon-app icon-18" />
+                          </button>
                         </div>
                       </div>
                     </div>
@@ -63,6 +65,8 @@ const Games = () => {
                   speed={1}
                   primaryColor="#333"
                   secondaryColor="#999"
+                  primaryOpacity={0.5}
+                  secondaryOpacity={0.5}
                 >
                   <rect x="0" y="0" width="400" height="480" />
                 </ContentLoader>
@@ -73,6 +77,8 @@ const Games = () => {
                   speed={1}
                   primaryColor="#333"
                   secondaryColor="#999"
+                  primaryOpacity={0.5}
+                  secondaryOpacity={0.5}
                 >
                   <rect x="0" y="0" width="400" height="480" />
                 </ContentLoader>
