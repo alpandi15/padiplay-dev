@@ -56,7 +56,7 @@ const ModalLogin = (props) => {
   const onSubmit = async (values) => {
     const { getLoginData, error, history } = props
     const data = {
-      account: values.account,
+      email: values.account,
       password: values.password
     }
     if (!error) {
