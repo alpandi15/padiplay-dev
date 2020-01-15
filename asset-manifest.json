@@ -1,0 +1,35 @@
+{
+  "files": {
+    "main.css": "/alpandi15/padiplay-dev.git/static/css/main.dd56081c.chunk.css",
+    "main.js": "/alpandi15/padiplay-dev.git/static/js/main.b66c1e4e.chunk.js",
+    "main.js.map": "/alpandi15/padiplay-dev.git/static/js/main.b66c1e4e.chunk.js.map",
+    "runtime-main.js": "/alpandi15/padiplay-dev.git/static/js/runtime-main.5594376b.js",
+    "runtime-main.js.map": "/alpandi15/padiplay-dev.git/static/js/runtime-main.5594376b.js.map",
+    "static/css/2.90a77d8a.chunk.css": "/alpandi15/padiplay-dev.git/static/css/2.90a77d8a.chunk.css",
+    "static/js/2.643c223e.chunk.js": "/alpandi15/padiplay-dev.git/static/js/2.643c223e.chunk.js",
+    "static/js/2.643c223e.chunk.js.map": "/alpandi15/padiplay-dev.git/static/js/2.643c223e.chunk.js.map",
+    "index.html": "/alpandi15/padiplay-dev.git/index.html",
+    "precache-manifest.37f0551dcec069d5c77a89d2091996d2.js": "/alpandi15/padiplay-dev.git/precache-manifest.37f0551dcec069d5c77a89d2091996d2.js",
+    "service-worker.js": "/alpandi15/padiplay-dev.git/service-worker.js",
+    "static/css/2.90a77d8a.chunk.css.map": "/alpandi15/padiplay-dev.git/static/css/2.90a77d8a.chunk.css.map",
+    "static/css/main.dd56081c.chunk.css.map": "/alpandi15/padiplay-dev.git/static/css/main.dd56081c.chunk.css.map",
+    "static/media/main.css": "/alpandi15/padiplay-dev.git/static/media/Poppins-SemiBold.5bb31283.ttf",
+    "static/media/avatar.jpg": "/alpandi15/padiplay-dev.git/static/media/avatar.1e818054.jpg",
+    "static/media/cover2-01.jpg": "/alpandi15/padiplay-dev.git/static/media/cover2-01.a79a94e5.jpg",
+    "static/media/publicv2.css": "/alpandi15/padiplay-dev.git/static/media/stream-cover.fa72fd5e.jpg",
+    "static/media/icon-casterr.svg": "/alpandi15/padiplay-dev.git/static/media/icon-casterr.374af3b8.svg",
+    "static/media/icon-games.svg": "/alpandi15/padiplay-dev.git/static/media/icon-games.6550487b.svg",
+    "static/media/icon-home.svg": "/alpandi15/padiplay-dev.git/static/media/icon-home.6c0b994a.svg",
+    "static/media/icon-organize.svg": "/alpandi15/padiplay-dev.git/static/media/icon-organize.5970e2f0.svg",
+    "static/media/icon-shop.svg": "/alpandi15/padiplay-dev.git/static/media/icon-shop.4522d06d.svg",
+    "static/media/logo-white.png": "/alpandi15/padiplay-dev.git/static/media/logo-white.1b550482.png",
+    "static/media/logo.png": "/alpandi15/padiplay-dev.git/static/media/logo.70bc3d2a.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.5594376b.js",
+    "static/css/2.90a77d8a.chunk.css",
+    "static/js/2.643c223e.chunk.js",
+    "static/css/main.dd56081c.chunk.css",
+    "static/js/main.b66c1e4e.chunk.js"
+  ]
+}
